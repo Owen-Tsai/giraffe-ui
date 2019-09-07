@@ -1,0 +1,62 @@
+@import '../common/var.scss';
+@import '../common/mixins/mixins.scss';
+@import '../common/functions.scss';
+
+html {
+  font-family: $font-list;
+  font-size: $font-size-base;
+}
+
+body {
+  &::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 3px color('grey-200');
+    border-radius: 10px;
+    background-color: #F5F5F5;
+  }
+
+  &::-webkit-scrollbar {
+    width: 8px;
+    background-color: #F5F5F5;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: color('grey-400');
+  }
+}
+
+code {
+  background-color: mix(color('yellow'), #ffffff, 10%);
+  color: color('pink');
+  margin: 0 5px;
+  padding: 5px;
+  font-weight: 500;
+}
+
+.blockquote{
+  padding: 1.2em 40px 1.2em 40px;
+  border-left: 8px solid color('purple');
+  line-height: 1.6;
+  position: relative;
+  background-color: color('grey-200');
+
+  &::before {
+    content: "\“";
+    color: color('purple');;
+    font-size: 4em;
+    position: absolute;
+    left: 10px;
+    top:-10px;
+  }
+
+  &::after {
+    content: '';
+  }
+
+  span {
+    display:block;
+    color:#333333;
+    font-weight: bold;
+    margin-top:1em;
+  }
+}

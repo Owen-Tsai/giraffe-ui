@@ -1,0 +1,31 @@
+/* Mixins for Checkboxes
+----------------------------------- */
+@mixin make-colored-checkbox($color) {
+  @include when('is-checked') {
+    color: $color;
+  }
+
+  .c-checkbox-inner {
+    @include when('is-checked') {
+      background-color: $color;
+    }
+
+    &::after {
+      transition: transform .2s ease-in;
+    }
+  }
+}
+
+@mixin make-colored-checkbox-button($color) {
+  &:hover {
+    color: $color;
+  }
+  
+  @include when('is-checked') {
+    .c-checkbox-btn-inner {
+      border-color: $color;
+      background: $color;
+      color: get-font-color-by-background($color);
+    }
+  }
+}

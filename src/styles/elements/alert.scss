@@ -1,0 +1,59 @@
+@import '../common/var.scss';
+@import '../common/functions.scss';
+@import '../common/mixins/alert.scss';
+@import '../common/transtion.scss';
+
+.c-alert {
+  padding: 10px 20px;
+  border: 1px solid color('grey-400');
+  background-color: color('grey-100');
+  border-radius: 4px;
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  .c-alert-content {
+    display: table-cell;
+  }
+
+  .c-alert-title {
+    font-weight: bold;
+    font-size: $font-size-base;
+    margin-bottom: 5px;
+  }
+
+  .c-alert-description {
+    font-size: $font-size-small;
+    margin: 0;
+  }
+
+  .c-alert-icon {
+    margin-right: 10px;
+    vertical-align: middle;
+
+    @include when(big-icon) {
+      font-size: 30px;
+      width: 30px;
+    }
+  }
+
+  .c-alert-close-icon {
+    position: absolute;
+    font-size: $font-size-large;
+    right: 20px;
+    top: 14px;
+    cursor: pointer;
+  }
+
+  /* Color variations
+  --------------------------------- */
+  @each $c, $v in $variations {
+    @include when($c) {
+      @include make-colored-alert($v);
+      
+      @include when(outlined) {
+        @include make-outlined-alert($v);
+      }
+    }
+  }
+}

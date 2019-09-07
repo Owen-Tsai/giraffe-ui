@@ -1,0 +1,100 @@
+@import '../common/var.scss';
+@import '../common/mixins/mixins.scss';
+@import '../common/mixins/button.scss';
+
+
+.c-btn {
+  /* Default style rules
+  -------------------------------- */
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+  cursor: pointer;
+  padding: $button-padding;
+  background-color: color('grey-100');
+  border: 1px solid color('grey-400');
+  border-radius: 4px;
+  transition: all .3s;
+
+  &[disabled] {
+    cursor: not-allowed;
+  }
+
+  span {
+    font-size: $font-size-base;
+    line-height: 18px;
+  }
+
+  &:not([disabled]):hover, &:not([disabled]):focus {
+    transition: all .3s;
+    background-color: color('grey-300');
+    outline: 0;
+  }
+
+  /* Size variations
+  --------------------------------- */
+  &.btn-lg {
+    padding: $button-lg-padding
+  }
+  &.btn-sm {
+    padding: $button-sm-padding
+  }
+  &.btn-mini {
+    padding: $button-mini-padding;
+  }
+
+  /* Color variations
+  --------------------------------- */
+  @each $c, $v in $variations {
+    @include when($c) {
+      @include make-colored-button($v);
+      @include when('outlined') {
+        @include make-outlined-button($v);
+      }
+      @include when('simplified') {
+        @include make-simplified-button($v);
+      }
+      @include when('pure-text') {
+        @include make-text-only-button($v);
+      }
+    }
+  }
+  
+  /* Shape variations
+  --------------------------------- */
+  @include when('sharp') {
+    border-radius: 0;
+  }
+
+  @include when('round') {
+    border-radius: 20px;
+  }
+
+  @include when('circle') {
+    border-radius: 50%;
+    padding: 10px;
+    &.btn-lg {
+      padding: 12px;
+    }
+    &.btn-sm {
+      padding: 8px;
+    }
+    &.btn-mini {
+      padding: 5px;
+    }
+  }
+
+  /* Style variations
+  --------------------------------- */
+  @include when('raised') {
+    box-shadow: $box-shadow-lighter;
+
+    &:not([disabled]):hover {
+      box-shadow: $box-shadow-light;
+    }
+
+    &[disabled] {
+      box-shadow: none;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+/* Mixins for Alerts
+----------------------------------- */
+@mixin make-colored-alert($color) {
+  @include set-colors($color);
+}
+
+@mixin make-outlined-alert($color) {
+  color: $color;
+  border: 1px solid $color;
+  background-color: mix($color, #ffffff, 20%);
+}

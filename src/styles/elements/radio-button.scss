@@ -1,0 +1,84 @@
+@import '../common/var.scss';
+@import '../common/mixins/mixins.scss';
+@import '../common/mixins/radio.scss';
+
+.c-radio-group {
+  .c-radio-btn {
+    position: relative;
+    display: inline-block;
+    outline: none;
+
+    &:not(:first-child) {
+      margin-left: -1px;
+    }
+
+    &:first-child {
+      .c-radio-btn-inner {
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+      }
+    }
+    &:last-child {
+      .c-radio-btn-inner {
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+      }
+    }
+
+    @include when('is-active') {
+      .c-radio-btn-inner {
+        border-color: color('grey-600');
+        background: color('grey-600');
+        color: #ffffff;
+      }
+    }
+  
+    @include when('is-disabled') {
+      .c-radio-btn-inner {
+        cursor: not-allowed;
+        color: color('grey-500');
+        background-color: color('grey-200');
+        border: 1px solid color('grey-400');
+      }
+    }
+
+    @each $c, $v in $variations {
+      @include when($c) {
+        @include make-colored-radio-button($v);
+      }
+    }
+  
+    .c-radio-btn-input {
+      opacity: 0;
+      outline: none;
+      position: absolute;
+      z-index: -1;
+    }
+  
+    /* inner applied with button styles */
+    .c-radio-btn-inner {
+      display: inline-block;
+      vertical-align: middle;
+      background-color: color('grey-100');
+      border: 1px solid color('grey-400');
+      text-align: center;
+      outline: none;
+      box-sizing: border-box;
+      margin: 0;
+      position: relative;
+      cursor: pointer;
+      transition: all .2s;
+      padding: $button-padding;
+  
+      &.btn-lg {
+        padding: $button-lg-padding
+      }
+      &.btn-sm {
+        padding: $button-sm-padding
+      }
+      &.btn-mini {
+        padding: $button-mini-padding;
+      }
+    }
+  }
+}

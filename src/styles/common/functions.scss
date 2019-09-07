@@ -1,0 +1,13 @@
+@function color($color) {
+  @return map-get($colors, $color)
+}
+
+@function get-font-color-by-background($bg-color) {
+  $brightness: lightness($bg-color);
+
+  @if($brightness < 45) {
+    @return #000000;
+  } @else {
+    @return #ffffff;
+  }
+}

@@ -1,0 +1,28 @@
+
+/* dropdown-item
+----------------------------------- */
+.c-dropdown-item {
+  list-style: none;
+  padding: 10px;
+  cursor: pointer;
+
+  &:hover {
+    color: $primary-color;
+    background-color: mix($primary-color, #ffffff, 10%);
+  }
+}
+
+/* dropdown-menu
+----------------------------------- */
+.c-dropdown-menu {
+  box-shadow: $box-shadow-light;
+  padding: 5px 0;
+  margin: 5px 0;
+  text-align: center;
+  z-index: 9;
+  background-color: #ffffff;
+}
+
+.c-dropdown {
+  display: inline-block;
+}

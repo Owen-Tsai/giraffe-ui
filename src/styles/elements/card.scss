@@ -1,0 +1,43 @@
+@import '../common/var.scss';
+@import '../common/functions.scss';
+@import '../common/mixins/mixins.scss';
+
+.c-card {
+  border: 1px solid color('grey-400');
+  border-radius: 4px;
+  transition: box-shadow .3s;
+
+  .c-card-header {
+    padding: 16px;
+    background-color: color('grey-100');
+    border-radius: 4px 4px 0px 0px;
+    border-bottom: 1px solid color('grey-300');
+  }
+
+  .c-card-body {
+    padding: 16px;
+  }
+
+  .c-card-footer {
+    border-top: 1px solid color('grey-300');
+    padding: 8px 16px 8px 16px;
+  }
+
+  &:not(.simplified):not(.raised):hover {
+    box-shadow: $box-shadow-medium;
+    transition: box-shadow .3s;
+  }
+
+  @each $c, $v in $variations {
+    @include when($c) {
+      @include set-colors($v);
+      .c-card-header {
+        background-color: mix($v, color('grey-500'), 90%);
+      }
+    }
+  }
+  
+  @include when(raised) {
+    box-shadow: $box-shadow-medium;
+  }
+}

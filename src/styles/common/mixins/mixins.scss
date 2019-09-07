@@ -1,0 +1,17 @@
+/* Basic [semantic]
+----------------------------------- */
+@mixin when($state) {
+  @at-root {
+    &.#{$state} {
+      @content;
+    }
+  }
+}
+
+@mixin when-attr($attr) {
+  @at-root {
+    &[#{$attr}] {
+      @content;
+    }
+  }
+}
