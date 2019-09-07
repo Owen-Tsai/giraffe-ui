@@ -1,0 +1,80 @@
+@import '../common/var.scss';
+@import '../common/functions.scss';
+@import '../common/mixins/mixins.scss';
+@import '../common/mixins/radio.scss';
+
+.c-radio {
+  line-height: 1;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  font-size: $font-size-base;
+  margin-right: 12px;
+  vertical-align: middle;
+  
+  @each $c, $v in $variations {
+    @include when($c) {
+      @include make-colored-radio($v);
+    }
+  }
+
+  @include when('is-disabled') {
+    color: color('grey-400');
+    cursor: not-allowed;
+
+    .c-radio-inner {
+      border: 1px solid color('grey-400');
+      cursor: not-allowed;
+    }
+  }
+
+  .c-radio-label {
+    padding-left: 5px;
+  }
+
+  .c-radio-input {
+    vertical-align: middle;
+  }
+
+  .c-radio-inner {
+    width: $font-size-base;
+    height: $font-size-base;
+    border: 1px solid color('grey-600');
+    border-radius: 100%;
+    background-color: #ffffff;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    box-sizing: border-box;
+    
+    @include when('is-checked') {
+      background-color: color('grey-600');
+
+      &::after {
+        transform: translate(-50%, -50%) scale(1.2);
+      }
+    }
+
+    &::after {
+      width: 4px;
+      height: 4px;
+      border-radius: 100%;
+      background-color: #ffffff;
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      transition: transform .2s ease-in;
+    }
+
+    & + input {
+      opacity: 0;
+      outline: none;
+      z-index: -9;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
+}
