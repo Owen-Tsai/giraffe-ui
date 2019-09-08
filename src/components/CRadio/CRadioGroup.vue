@@ -1,8 +1,5 @@
 <template>
-  <div
-    class="c-radio-group"
-    @keydown="handleKeydown"
-  >
+  <div class="c-radio-group">
     <slot></slot>
   </div>
 </template>
@@ -15,12 +12,8 @@
     componentName: 'CRadioGroup',
     props: {
       value: {},
-      btnColor: String
-    },
-    methods: {
-      handleKeydown(ev) {
-        console.log(ev)
-      }
+      btnColor: String,
+      size: String
     },
     created() {
       this.$on('handleChange', value => {

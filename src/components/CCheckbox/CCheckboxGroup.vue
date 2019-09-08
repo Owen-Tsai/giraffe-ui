@@ -10,7 +10,8 @@
     componentName: 'CCheckboxGroup',
     props: {
       value: {},
-      btnColor: String
+      btnColor: String,
+      size: String
     },
   }
 </script>

@@ -30,7 +30,7 @@
 </template>
 
 <script>
-  import { getParentInstance, appendColorClass } from '@/utilities/utilities'
+  import { cuiDefaultColors, getParentInstance, appendColorClass } from '@/utilities/utilities'
   import Messenger from '@/utilities/messenger'
 
   export default {
@@ -47,7 +47,31 @@
     computed: {
       c() {
         let classList = Array.of('c-radio-btn');
-        appendColorClass(this.color, classList);
+
+        if(this._radioGroup && this._radioGroup.btnColor) {
+          if(cuiDefaultColors.includes(this._radioGroup.btnColor))
+          classList.push(this._radioGroup.btnColor)
+        } else {
+          appendColorClass(this.color, classList);
+        }
+
+        switch(this._radioGroup.size) {
+          case 'small':
+            classList.push('sm');
+            break;
+
+          case 'large':
+            classList.push('lg');
+            break;
+
+          case 'mini':
+            classList.push('mini');
+            break;
+
+          default:
+            break;
+        }
+        
         return classList;
       },
       _radioGroup() {

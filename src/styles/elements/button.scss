@@ -13,7 +13,7 @@
   padding: $button-padding;
   background-color: color('grey-100');
   border: 1px solid color('grey-400');
-  border-radius: 4px;
+  border-radius: $basic-border-radius;
   transition: all .3s;
 
   &[disabled] {
@@ -67,20 +67,20 @@
   }
 
   @include when('round') {
-    border-radius: 20px;
+    border-radius: $round-border-radius;
   }
 
   @include when('circle') {
     border-radius: 50%;
-    padding: 10px;
+    padding: $button-round-padding;
     &.btn-lg {
-      padding: 12px;
+      padding: $button-lg-round-padding;
     }
     &.btn-sm {
-      padding: 8px;
+      padding: $button-sm-round-padding;
     }
     &.btn-mini {
-      padding: 5px;
+      padding: $button-mini-round-padding;
     }
   }
 

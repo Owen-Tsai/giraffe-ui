@@ -77,8 +77,8 @@ $variations: (
 
 /* font-color
 ----------------------------------- */
-$font-color: color(grey-800);
-$title-color: color(grey-900);
+$font-color: color('grey-800');
+$title-color: color('grey-900');
 
 /* buttons
 ----------------------------------- */
@@ -86,6 +86,15 @@ $button-lg-padding: 12px 15px;
 $button-padding: 8px 12px;
 $button-sm-padding: 5px 8px;
 $button-mini-padding: 2px 5px;
+$button-lg-round-padding: 12px;
+$button-round-padding: 10px;
+$button-sm-round-padding: 8px;
+$button-mini-round-padding: 5px;
+
+/* borders
+----------------------------------- */
+$basic-border-radius: 4px;
+$round-border-radius: 20px;
 
 /* elevation levels
 ----------------------------------- */

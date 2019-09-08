@@ -1,9 +1,9 @@
-const defaultColors = [
+export const cuiDefaultColors = [
   'primary', 'success', 'warning', 'info', 'danger', 'indigo', 'teal', 'cyan', 'pink', 'yellow'
 ];
 
 export function appendColorClass(type, classes) {
-  if(defaultColors.includes(type)) {
+  if(cuiDefaultColors.includes(type)) {
     classes.push(type);
   }
 }

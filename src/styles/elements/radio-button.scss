@@ -47,6 +47,22 @@
         @include make-colored-radio-button($v);
       }
     }
+      
+    &.lg {
+      .c-radio-btn-inner {
+        padding: $button-lg-padding;
+      }
+    }
+    &.sm {
+      .c-radio-btn-inner {
+        padding: $button-sm-padding;
+      }
+    }
+    &.mini {
+      .c-radio-btn-inner {
+        padding: $button-mini-padding;
+      }
+    }
   
     .c-radio-btn-input {
       opacity: 0;
@@ -69,16 +85,6 @@
       cursor: pointer;
       transition: all .2s;
       padding: $button-padding;
-  
-      &.btn-lg {
-        padding: $button-lg-padding
-      }
-      &.btn-sm {
-        padding: $button-sm-padding
-      }
-      &.btn-mini {
-        padding: $button-mini-padding;
-      }
     }
   }
 }

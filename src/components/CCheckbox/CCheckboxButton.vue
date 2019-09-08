@@ -29,7 +29,7 @@
 </template>
 
 <script>
-  import { getParentInstance, findParentComponent, appendColorClass } from '@/utilities/utilities'
+  import {  cuiDefaultColors, getParentInstance, findParentComponent, appendColorClass } from '@/utilities/utilities'
   import Messenger from '@/utilities/messenger'
 
   export default {
@@ -41,7 +41,7 @@
       value: {},
       checked: Boolean,
       name: String, 
-      color: String
+      color: String,
     },
     mixins: [
       Messenger
@@ -49,19 +49,44 @@
     computed: {
       c() {
         let classList = Array.of('c-checkbox-btn');
-        appendColorClass(this.color, classList);
+
+        if(this._checkboxGroup && this._checkboxGroup.btnColor) {
+          if(cuiDefaultColors.includes(this._checkboxGroup.btnColor))
+          classList.push(this._checkboxGroup.btnColor)
+        } else {
+          appendColorClass(this.color, classList);
+        }
+
+        switch(this._checkboxGroup.size) {
+          case 'small':
+            classList.push('sm');
+            break;
+
+          case 'large':
+            classList.push('lg');
+            break;
+
+          case 'mini':
+            classList.push('mini');
+            break;
+
+          default:
+            break;
+        }
+
         return classList;
       },
       isDisabled() {
         return this.isGroup ? 
           this._checkboxGroup.disabled || this.disabled : this.disabled;
       },
+      _checkboxGroup() {
+        return getParentInstance(this, 'CCheckboxGroup');
+      },
       isGroup() {
         if(findParentComponent(this, 'CCheckboxGroup')) {
-          this._checkboxGroup = getParentInstance(this, 'CCheckboxGroup');
           return true;
         } else {
-          this._checkboxGroup = null;
           return false;
         }
       },

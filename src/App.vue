@@ -8,6 +8,9 @@
         <c-button size="small" color="warning">小按钮</c-button>
         <c-button size="mini" color="success">迷你尺寸</c-button>
         <c-button round color="primary">圆角按钮</c-button>
+        <c-button round size="large" color="primary">圆角按钮</c-button>
+        <c-button round size="small" color="primary">圆角按钮</c-button>
+        <c-button round size="mini" color="primary">圆角按钮</c-button>
         <c-button sharp color="info">尖锐按钮</c-button>
         <c-button outlined color="success" size="large">边框按钮</c-button>
         <c-button raised color="primary">凸起按钮</c-button>
@@ -17,13 +20,16 @@
         <c-button size="small" icon="thumb_up">带图标</c-button>
         <c-button color="primary" disabled>禁用</c-button>
         <c-button size="mini" icon="face" circle color="teal"></c-button>
+        <c-button size="small" icon="face" circle color="teal"></c-button>
+        <c-button icon="face" circle color="teal"></c-button>
+        <c-button size="large" icon="face" circle color="teal"></c-button>
       </div>
       <div class="btn-group">
         <p>按钮组是一组类似的操作的集合 A button group can be used to group a series of similar operations</p>
         <c-button-group>
-          <c-button color="primary">左按钮</c-button>
-          <c-button color="primary">中间按钮</c-button>
-          <c-button color="primary">右按钮</c-button>
+          <c-button color="primary" round>左按钮</c-button>
+          <c-button color="primary" round>中间按钮</c-button>
+          <c-button color="primary" round>右按钮</c-button>
         </c-button-group>
         <c-button-group>
           <c-button color="info" size="small" icon="play_arrow">播放</c-button>
@@ -99,7 +105,7 @@
           <p>selected is {{ radioGroup }}</p>
         </c-radio-group>
         <p>按钮形状的单选框组</p>
-        <c-radio-group v-model="radioGroup">
+        <c-radio-group v-model="radioGroup" btn-color="primary" size="small">
           <c-radio-btn label="男性" color="info"></c-radio-btn>
           <c-radio-btn label="保密" disabled></c-radio-btn>
           <c-radio-btn label="double" color="primary">双性</c-radio-btn>
@@ -123,10 +129,10 @@
         </c-checkbox-group>
         <p>selected is {{checkboxGroup}}</p>
         <p>按钮样式的复选框组</p>
-        <c-checkbox-group v-model="checkboxGroup">
+        <c-checkbox-group v-model="checkboxGroup" btn-color="warning">
           <c-checkbox-btn label="男性" color="info"></c-checkbox-btn>
-          <c-checkbox-btn label="保密" color="primary" disabled></c-checkbox-btn>
-          <c-checkbox-btn label="double">双性</c-checkbox-btn>
+          <c-checkbox-btn label="保密" disabled></c-checkbox-btn>
+          <c-checkbox-btn label="double" color="primary">双性</c-checkbox-btn>
           <c-checkbox-btn label="女性"></c-checkbox-btn>
         </c-checkbox-group>
         <p>selected is {{checkboxGroup}}</p>

@@ -1,13 +1,12 @@
 @import '../common/var.scss';
 @import '../common/functions.scss';
 @import '../common/mixins/alert.scss';
-@import '../common/transtion.scss';
 
 .c-alert {
   padding: 10px 20px;
   border: 1px solid color('grey-400');
   background-color: color('grey-100');
-  border-radius: 4px;
+  border-radius: $basic-border-radius;
   position: relative;
   display: flex;
   align-items: center;
