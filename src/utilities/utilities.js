@@ -2,9 +2,32 @@ export const cuiDefaultColors = [
   'primary', 'success', 'warning', 'info', 'danger', 'indigo', 'teal', 'cyan', 'pink', 'yellow'
 ];
 
-export function appendColorClass(type, classes) {
-  if(cuiDefaultColors.includes(type)) {
-    classes.push(type);
+export function appendColorClass(color, classes) {
+  if(cuiDefaultColors.includes(color)) {
+    classes.push(color);
+  }
+}
+
+export function appendSizeClass(size, classes, classPrefix = '') {
+  if(classPrefix) {
+    classPrefix = `${classPrefix}-`;
+  }
+
+  switch(size) {
+    case 'large':
+      classes.push(`${classPrefix}lg`);
+      break;
+
+    case 'small':
+      classes.push(`${classPrefix}sm`);
+      break;
+
+    case 'mini':
+      classes.push(`${classPrefix}mini`);
+      break;
+
+    default:
+      break;
   }
 }
 

@@ -30,7 +30,7 @@
 </template>
 
 <script>
-  import { cuiDefaultColors, getParentInstance, appendColorClass } from '@/utilities/utilities'
+  import { cuiDefaultColors, getParentInstance, appendColorClass, appendSizeClass } from '@/utilities/utilities'
   import Messenger from '@/utilities/messenger'
 
   export default {
@@ -55,22 +55,7 @@
           appendColorClass(this.color, classList);
         }
 
-        switch(this._radioGroup.size) {
-          case 'small':
-            classList.push('sm');
-            break;
-
-          case 'large':
-            classList.push('lg');
-            break;
-
-          case 'mini':
-            classList.push('mini');
-            break;
-
-          default:
-            break;
-        }
+        this._radioGroup && appendSizeClass(this._radioGroup.size, classList);
         
         return classList;
       },

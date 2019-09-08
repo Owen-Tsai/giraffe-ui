@@ -1,0 +1,146 @@
+@import '../common/var.scss';
+@import '../common/mixins/mixins.scss';
+@import '../common/mixins/input.scss';
+@import '../common/functions.scss';
+
+.c-input {
+  position: relative;
+  font-size: $font-size-base;
+  display: inline-block;
+  width: 100%;
+
+  .c-input-input {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    border-radius: $basic-border-radius;
+    border: 1px solid color('grey-400');
+    display: inline-block;
+    font-size: $font-size-base;
+    height: $input-height;
+    line-height: $input-height;
+    padding: 0 15px;
+    outline: none;
+    transition: all .3s;
+
+    &:hover {
+      border: 1px solid color('grey-500');
+    }
+
+    &:focus {
+      outline: none;
+      border: 1px solid $primary-color;
+    }
+  }
+
+  .c-input-hint {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: color('grey-600');
+    padding: 2px 5px;
+    font-size: $font-size-small;
+  }
+
+  @include when('round') {
+    .c-input-input {
+      border-radius: $round-border-radius;
+    }
+  }
+
+  @include when('simplified') {
+    .c-input-input {
+      border-left: 0;
+      border-top: 0;
+      border-right: 0;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      border-bottom-width: 2px;
+      padding: 0 5px;
+    }
+  }
+
+  @each $c, $v in $variations {
+    @include when($c) {
+      @include make-colored-input($v)
+    }
+  }
+
+  @include when('prefix') {
+    .c-input-input {
+      padding-left: 32px;
+    }
+    .c-input-prefix {
+      position: absolute;
+      left: 5px;
+      top: 0;
+      height: 100%;
+      text-align: center;
+      .material-icons {
+        line-height: $input-height;
+        color: color('grey-400');
+      }
+    }
+  }
+  @include when('suffix') {
+    .c-input-input {
+      padding-right: 32px;
+    }
+    .c-input-suffix {
+      position: absolute;
+      right: 5px;
+      top: 0;
+      height: 100%;
+      text-align: center;
+      .material-icons {
+        line-height: $input-height;
+        color: color('grey-400');
+      }
+    }
+  }
+}
+
+.input-group {
+  display: inline-table;
+
+  @each $c, $v in $variations {
+    @include when($c) {
+      @include make-colored-input-group($v);
+    }
+  }
+
+  .c-input-prepend {
+    position: relative;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0 10px;
+    border: 1px solid color('grey-400');
+    border-right: 0;
+    border-radius: $basic-border-radius 0 0 $basic-border-radius;
+    background-color: color('grey-100');
+    color: color('grey-600');
+  }
+  .c-input-append {
+    position: relative;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0 10px;
+    border: 1px solid color('grey-400');
+    border-left: 0;
+    border-radius: 0 $basic-border-radius $basic-border-radius 0;
+    background-color: color('grey-100');
+    color: color('grey-600');
+  }
+  @at-root .prepend {
+    .c-input-input {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
+  @at-root .append {
+    .c-input-input {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+}

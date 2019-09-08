@@ -29,7 +29,7 @@
 </template>
 
 <script>
-  import {  cuiDefaultColors, getParentInstance, findParentComponent, appendColorClass } from '@/utilities/utilities'
+  import {  cuiDefaultColors, getParentInstance, findParentComponent, appendColorClass, appendSizeClass } from '@/utilities/utilities'
   import Messenger from '@/utilities/messenger'
 
   export default {
@@ -57,22 +57,7 @@
           appendColorClass(this.color, classList);
         }
 
-        switch(this._checkboxGroup.size) {
-          case 'small':
-            classList.push('sm');
-            break;
-
-          case 'large':
-            classList.push('lg');
-            break;
-
-          case 'mini':
-            classList.push('mini');
-            break;
-
-          default:
-            break;
-        }
+        this._checkboxGroup && appendSizeClass(this._checkboxGroup.size, classList);
 
         return classList;
       },

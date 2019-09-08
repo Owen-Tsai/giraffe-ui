@@ -23,7 +23,7 @@
 </template>
 
 <script>
-  import { appendColorClass } from '@/utilities/utilities';
+  import { appendColorClass, appendSizeClass } from '@/utilities/utilities';
 
   export default {
     name: 'CButton',
@@ -55,24 +55,8 @@
           classList.push('btn-icon');
         }
 
-        switch (this.size) {
-          case 'small':
-            classList.push('btn-sm');
-            break;
-
-          case 'large':
-            classList.push('btn-lg');
-            break;
-
-          case 'mini':
-            classList.push('btn-mini');
-            break;
-
-          default:
-            break;
-        }
-
         appendColorClass(this.color, classList);
+        appendSizeClass(this.size, classList);
 
         return classList;
       }

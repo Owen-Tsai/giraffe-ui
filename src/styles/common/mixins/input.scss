@@ -1,0 +1,39 @@
+@import 'mixins';
+/* Mixins for Inputs
+----------------------------------- */
+@mixin make-colored-input($color) {
+  .c-input-input {
+    border-color: mix($color, #ffffff, 60%);
+
+    &:hover {
+      border-color: $color;
+    }
+    &:focus {
+      border-color: $color;
+    }
+  }
+
+  @include when('prefix') {
+    .c-input-prefix > .material-icons {
+      color: mix($color, #ffffff, 60%)
+    }
+  }
+  @include when('suffix') {
+    .c-input-prefix > .material-icons {
+      color: mix($color, #ffffff, 60%)
+    }
+  }
+}
+
+@mixin make-colored-input-group($color) {
+  .c-input-prepend {
+    border-color: mix($color, #ffffff, 60%);
+    background-color: mix($color, #ffffff, 20%);
+    color: $color;
+  }
+  .c-input-append {
+    border-color: mix($color, #ffffff, 60%);
+    background-color: mix($color, #ffffff, 20%);
+    color: $color;
+  }
+}

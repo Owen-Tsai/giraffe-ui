@@ -33,13 +33,13 @@
 
   /* Size variations
   --------------------------------- */
-  &.btn-lg {
+  &.lg {
     padding: $button-lg-padding
   }
-  &.btn-sm {
+  &.sm {
     padding: $button-sm-padding
   }
-  &.btn-mini {
+  &.mini {
     padding: $button-mini-padding;
   }
 
@@ -73,13 +73,13 @@
   @include when('circle') {
     border-radius: 50%;
     padding: $button-round-padding;
-    &.btn-lg {
+    &.lg {
       padding: $button-lg-round-padding;
     }
-    &.btn-sm {
+    &.sm {
       padding: $button-sm-round-padding;
     }
-    &.btn-mini {
+    &.mini {
       padding: $button-mini-round-padding;
     }
   }

@@ -137,6 +137,27 @@
         </c-checkbox-group>
         <p>selected is {{checkboxGroup}}</p>
       </div>
+      <div class="inputs">
+        <c-input width="200" type="text" placeholder="normal input box"></c-input>
+        <c-input width="200" color="danger" prefix-icon="face"></c-input>
+        <c-input width="200" suffix-icon="face"></c-input>
+        <br>
+        <c-input width="200" color="primary" hint="show something what if it's too long"></c-input>
+        <c-input width="300" color="info" round>
+          <span slot="hint">using named slot is so cool!</span>
+        </c-input>
+        <br>
+        <c-input width="200" color="success">
+          <div slot="prepend">http://</div>
+        </c-input>
+        <c-input width="200">
+          <div slot="append">hello!</div>
+        </c-input>
+        <br>
+        <c-input width="200" type="text" simplified placeholder="normal input box"></c-input>
+        <c-input width="200" color="danger" round prefix-icon="face"></c-input>
+        <c-input width="200" simplified suffix-icon="face"></c-input>
+      </div>
       
 <!-- 
       <div style="margin: 20px; padding: 20px; height: 300px; border: 1px solid black">
@@ -173,6 +194,7 @@
   import CCheckbox from './components/CCheckbox/CCheckbox'
   import CCheckboxGroup from './components/CCheckbox/CCheckboxGroup'
   import CCheckboxBtn from './components/CCheckbox/CCheckboxButton'
+  import CInput from './components/CInput/CInput'
   // import CDropdownMenu from './components/CDropdownMenu'
   // import CDropdownItem from './components/CDropdownItem'
   // import CDropdown from './components/CDropdown'
@@ -200,6 +222,7 @@
       CCheckbox,
       CCheckboxGroup,
       CCheckboxBtn,
+      CInput
       // CDropdownItem,
       // CDropdownMenu,
       // CDropdown,
@@ -250,6 +273,12 @@
   .quote {
     blockquote {
       width: 500px;
+    }
+  }
+  .inputs {
+    .c-input {
+      margin-top: 10px;
+      margin-right: 20px;
     }
   }
   
