@@ -9,6 +9,20 @@
   display: inline-block;
   width: 100%;
 
+  @include when('is-disabled') {
+    .c-input-input {
+      cursor: not-allowed;
+      background-color: color('grey-200');
+      color: color('grey-500');
+    }
+  }
+
+  @include when('is-readonly') {
+    .c-input-input {
+      color: color('grey-500');
+    }
+  }
+
   .c-input-input {
     width: 100%;
     box-sizing: border-box;
@@ -76,6 +90,7 @@
       top: 0;
       height: 100%;
       text-align: center;
+
       .material-icons {
         line-height: $input-height;
         color: color('grey-400');
@@ -92,10 +107,48 @@
       top: 0;
       height: 100%;
       text-align: center;
+
       .material-icons {
         line-height: $input-height;
         color: color('grey-400');
       }
+    }
+  }
+
+  @include when('lg') {
+    .c-input-input {
+      height: $input-lg-height;
+      line-height: $input-lg-height;
+      font-size: $font-size-medium;
+    }
+    .c-input-prefix > .material-icons,
+    .c-input-suffix > .material-icons {
+      line-height: $input-lg-height;
+    }
+  }
+
+  @include when('sm') {
+    .c-input-input {
+      height: $input-sm-height;
+      line-height: $input-sm-height;
+      font-size: $font-size-base;
+    }
+    .c-input-prefix > .material-icons,
+    .c-input-suffix > .material-icons {
+      line-height: $input-sm-height;
+    }
+  }
+
+  @include when('mini') {
+    .c-input-input {
+      height: $input-mini-height;
+      line-height: $input-mini-height;
+      font-size: $font-size-small;
+    }
+    .c-input-prefix > .material-icons,
+    .c-input-suffix > .material-icons {
+      line-height: $input-mini-height;
+      font-size: 18px;
     }
   }
 }
@@ -109,27 +162,28 @@
     }
   }
 
-  .c-input-prepend {
-    position: relative;
-    display: table-cell;
-    vertical-align: middle;
-    padding: 0 10px;
-    border: 1px solid color('grey-400');
-    border-right: 0;
-    border-radius: $basic-border-radius 0 0 $basic-border-radius;
-    background-color: color('grey-100');
-    color: color('grey-600');
-  }
+  .c-input-prepend,
   .c-input-append {
     position: relative;
     display: table-cell;
     vertical-align: middle;
     padding: 0 10px;
     border: 1px solid color('grey-400');
-    border-left: 0;
-    border-radius: 0 $basic-border-radius $basic-border-radius 0;
     background-color: color('grey-100');
     color: color('grey-600');
+  }
+
+  .clickable {
+    cursor: pointer;
+  }
+
+  .c-input-prepend {
+    border-right: 0;
+    border-radius: $basic-border-radius 0 0 $basic-border-radius;
+  }
+  .c-input-append {
+    border-left: 0;
+    border-radius: 0 $basic-border-radius $basic-border-radius 0;
   }
   @at-root .prepend {
     .c-input-input {

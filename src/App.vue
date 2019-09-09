@@ -138,25 +138,29 @@
         <p>selected is {{checkboxGroup}}</p>
       </div>
       <div class="inputs">
-        <c-input width="200" type="text" placeholder="normal input box"></c-input>
-        <c-input width="200" color="danger" prefix-icon="face"></c-input>
-        <c-input width="200" suffix-icon="face"></c-input>
+        <c-input v-model="str" disabled width="200" type="text" placeholder="normal input box"></c-input>
+        <c-input v-model="str" width="200" color="danger" prefix-icon="face"></c-input>
+        <c-input v-model="str" width="200" suffix-icon="face"></c-input>
         <br>
-        <c-input width="200" color="primary" hint="show something what if it's too long"></c-input>
-        <c-input width="300" color="info" round>
+        <c-input v-model="str" width="200" color="primary" hint="show something what if it's too long"></c-input>
+        <c-input v-model="str" width="300" color="info" round>
           <span slot="hint">using named slot is so cool!</span>
         </c-input>
         <br>
-        <c-input width="200" color="success">
-          <div slot="prepend">http://</div>
-        </c-input>
-        <c-input width="200">
-          <div slot="append">hello!</div>
+        <c-input v-model="str" width="200" color="success" prepend-caption="http://"></c-input>
+        <c-input v-model="str" width="200" group-clickable>
+          <div slot="append">Go!</div>
         </c-input>
         <br>
-        <c-input width="200" type="text" simplified placeholder="normal input box"></c-input>
-        <c-input width="200" color="danger" round prefix-icon="face"></c-input>
-        <c-input width="200" simplified suffix-icon="face"></c-input>
+        <c-input v-model="str" readonly width="200" type="text" simplified placeholder="normal input box"></c-input>
+        <c-input v-model="str" disabled width="200" color="danger" round prefix-icon="face"></c-input>
+        <c-input v-model="str" disabled width="200" simplified suffix-icon="face"></c-input>
+        <br>
+        <c-input v-model="str" suffix-icon="clear" show-icon-on-focus="suffix" size="large" width="250"></c-input>
+        <c-input v-model="str" prefix-icon="face" show-icon-on-focus="prefix" size="small" width="250"></c-input>
+        <c-input v-model="str" prefix-icon="face" size="mini" width="250"></c-input>
+        <c-input v-model="str" prefix-icon="face" width="250"></c-input>
+        <br>
       </div>
       
 <!-- 
@@ -208,7 +212,8 @@
         e: [],
         radioGroup: '',
         checkboxGroup: [],
-        dialog: false
+        dialog: false,
+        str: 'text'
       }
     },
     components: {
