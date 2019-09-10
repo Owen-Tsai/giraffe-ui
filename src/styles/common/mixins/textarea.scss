@@ -1,0 +1,12 @@
+@mixin make-colored-textarea($color) {
+  .c-textarea-input {
+    border-color: mix($color, #ffffff, 60%);
+
+    &:hover {
+      border-color: $color;
+    }
+    &:focus {
+      border-color: $color;
+    }
+  }
+}

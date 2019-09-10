@@ -65,7 +65,7 @@
 
   export default {
     name: 'CInput',
-    inheritAttrs: false,
+
     props: {
       disabled: Boolean,
       readonly: Boolean,
@@ -77,14 +77,14 @@
         type: String,
         default: 'text'
       },
-      width: String || Number,
+      width: [String, Number],
       size: String,
       prefixIcon: String,
       suffixIcon: String,
       appendCaption: String,
       prependCaption: String,
       hint: String,
-      showIconOnFocus: Boolean || String,
+      showIconOnFocus: [Boolean, String],
       groupClickable: Boolean
     },
     data: () => ({
@@ -136,12 +136,10 @@
         this.$emit('change', ev.target.value);
       }
     },
-    created() {
-      this.$nextTick(() => {
-        if(this.width) {
-          this.$el.style.width = `${parseInt(this.width)}px`;
-        }
-      })
+    mounted() {
+      if(this.width) {
+        this.$el.style.width = `${parseInt(this.width)}px`;
+      }
     }
   }
 </script>

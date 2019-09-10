@@ -162,6 +162,15 @@
         <c-input v-model="str" prefix-icon="face" width="250"></c-input>
         <br>
       </div>
+      <div class="textareas">
+        <c-textarea v-model="str" rows="1" color="danger"></c-textarea>
+        <c-textarea v-model="str" :rows="2"></c-textarea>
+        <c-textarea v-model="str" :rows="3" color="primary"></c-textarea>
+        <br>
+        <c-textarea v-model="str" :min-rows="4" no-resize placeholder="this is a placeholder"></c-textarea>
+        <c-textarea v-model="str" no-resize color="cyan"></c-textarea>
+        <c-textarea v-model="str" :min-rows="2" no-resize></c-textarea>
+      </div>
       
 <!-- 
       <div style="margin: 20px; padding: 20px; height: 300px; border: 1px solid black">
@@ -199,6 +208,7 @@
   import CCheckboxGroup from './components/CCheckbox/CCheckboxGroup'
   import CCheckboxBtn from './components/CCheckbox/CCheckboxButton'
   import CInput from './components/CInput/CInput'
+  import CTextarea from './components/CTextarea/CTextarea'
   // import CDropdownMenu from './components/CDropdownMenu'
   // import CDropdownItem from './components/CDropdownItem'
   // import CDropdown from './components/CDropdown'
@@ -227,7 +237,8 @@
       CCheckbox,
       CCheckboxGroup,
       CCheckboxBtn,
-      CInput
+      CInput,
+      CTextarea
       // CDropdownItem,
       // CDropdownMenu,
       // CDropdown,
@@ -250,13 +261,11 @@
       margin: 0 10px;
     }
   }
-
   .btn-group {
     .c-btn-group {
       margin: 0 10px;
     }
   }
-
   .cards {
     vertical-align: middle;
     align-items: center;
@@ -268,7 +277,6 @@
       width: 300px;
     }
   }
-
   .alerts {
     .c-alert {
       width: 500px;
@@ -284,6 +292,14 @@
     .c-input {
       margin-top: 10px;
       margin-right: 20px;
+    }
+  }
+  .textareas {
+    margin-bottom: 100px;
+    .c-textarea {
+      margin-top: 10px;
+      margin-right: 20px;
+      width: 300px;
     }
   }
   

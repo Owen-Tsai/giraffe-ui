@@ -1,0 +1,65 @@
+@import '../common/var.scss';
+@import '../common/mixins/mixins.scss';
+@import '../common/mixins/textarea.scss';
+@import '../common/functions.scss';
+
+.c-textarea {
+  position: relative;
+  font-size: $font-size-base;
+  display: inline-block;
+  width: 100%;
+
+  @include when('is-disabled') {
+    .c-textarea-input {
+      cursor: not-allowed;
+      background-color: color('grey-200');
+      color: color('grey-500');
+    }
+  }
+
+  @include when('is-readonly') {
+    .c-textarea-input {
+      color: color('grey-500');
+    }
+  }
+
+  .c-textarea-input {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    border-radius: $basic-border-radius;
+    border: 1px solid color('grey-400');
+    display: inline-block;
+    font-size: $font-size-base;
+    line-height: inherit;
+    font-family: inherit;
+    padding: 8px 10px;
+    outline: none;
+    transition: border .3s;
+    resize: vertical;
+
+    &:hover {
+      border: 1px solid color('grey-500');
+    }
+
+    &:focus {
+      outline: none;
+      border: 1px solid $primary-color;
+    }
+
+    .c-textarea-hint {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: color('grey-600');
+      padding: 2px 5px;
+      font-size: $font-size-small;
+    }
+  }
+
+  @each $c, $v in $variations {
+    @include when($c) {
+      @include make-colored-textarea($v)
+    }
+  }
+}

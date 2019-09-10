@@ -1,3 +1,4 @@
+@import '../common/functions.scss';
 /* font-family
 ----------------------------------- */
 $font-list: "Noto Sans", "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB", "Noto Sans CJK SC", "Source Han Sans SC", "Source Han Sans CN", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
@@ -18,8 +19,8 @@ $font-weight-secondary: 100 !default;
 
 /* line-height
 ----------------------------------- */
-$font-line-height-primary: 24px !default;
-$font-line-height-secondary: 16px !default;
+$font-line-height-primary: 20px !default;
+$font-line-height-secondary: 14px !default;
 
 /* colors-list
 ----------------------------------- */
