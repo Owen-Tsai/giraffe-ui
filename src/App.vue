@@ -139,7 +139,7 @@
       </div>
       <div class="inputs">
         <c-input v-model="str" disabled width="200" type="text" placeholder="normal input box"></c-input>
-        <c-input v-model="str" width="200" color="danger" prefix-icon="face"></c-input>
+        <c-input v-model="str" width="200" type="number" color="danger" prefix-icon="face"></c-input>
         <c-input v-model="str" width="200" suffix-icon="face"></c-input>
         <br>
         <c-input v-model="str" width="200" color="primary" hint="show something what if it's too long"></c-input>
@@ -153,8 +153,8 @@
         </c-input>
         <br>
         <c-input v-model="str" readonly width="200" type="text" simplified placeholder="normal input box"></c-input>
-        <c-input v-model="str" disabled width="200" color="danger" round prefix-icon="face"></c-input>
-        <c-input v-model="str" disabled width="200" simplified suffix-icon="face"></c-input>
+        <c-input v-model="str" width="200" color="danger" round prefix-icon="face"></c-input>
+        <c-input v-model="str" disabled width="200" type="password" simplified suffix-icon="face"></c-input>
         <br>
         <c-input v-model="str" suffix-icon="clear" show-icon-on-focus="suffix" size="large" width="250"></c-input>
         <c-input v-model="str" prefix-icon="face" show-icon-on-focus="prefix" size="small" width="250"></c-input>
@@ -165,12 +165,23 @@
       <div class="textareas">
         <c-textarea v-model="str" rows="1" color="danger"></c-textarea>
         <c-textarea v-model="str" :rows="2"></c-textarea>
-        <c-textarea v-model="str" :rows="3" color="primary"></c-textarea>
+        <c-textarea v-model="str" disabled :rows="3" color="primary"></c-textarea>
         <br>
         <c-textarea v-model="str" :min-rows="4" no-resize placeholder="this is a placeholder"></c-textarea>
-        <c-textarea v-model="str" no-resize color="cyan"></c-textarea>
+        <c-textarea v-model="str" readonly no-resize color="cyan"></c-textarea>
         <c-textarea v-model="str" :min-rows="2" no-resize></c-textarea>
       </div>
+      <div class="dropdowns">
+        <c-dropdown trigger="hover" placement="bottom-start">
+          <c-button slot="activator">下拉菜单</c-button>
+          <c-dropdown-menu :max-width="100">
+            <c-dropdown-item>第一个选项</c-dropdown-item>
+            <c-dropdown-item>第二个选项</c-dropdown-item>
+            <c-dropdown-item>第三个选项稍微长一点</c-dropdown-item>
+          </c-dropdown-menu>
+        </c-dropdown>
+      </div>
+      
       
 <!-- 
       <div style="margin: 20px; padding: 20px; height: 300px; border: 1px solid black">
@@ -197,22 +208,22 @@
 </template>
 
 <script>
-  import CButton from './components/CButton/Button'
-  import CButtonGroup from './components/CButton/ButtonGroup'
-  import CCard from './components/CCard/CCard'
-  import CAlert from './components/CAlert/CAlert'
-  import CRadio from './components/CRadio/CRadio'
-  import CRadioGroup from './components/CRadio/CRadioGroup'
-  import CRadioBtn from './components/CRadio/CRadioButton'
-  import CCheckbox from './components/CCheckbox/CCheckbox'
-  import CCheckboxGroup from './components/CCheckbox/CCheckboxGroup'
-  import CCheckboxBtn from './components/CCheckbox/CCheckboxButton'
-  import CInput from './components/CInput/CInput'
-  import CTextarea from './components/CTextarea/CTextarea'
-  // import CDropdownMenu from './components/CDropdownMenu'
-  // import CDropdownItem from './components/CDropdownItem'
-  // import CDropdown from './components/CDropdown'
-  // import CDialog from './components/CDialog'
+  import CButton from './packages/CButton/Button'
+  import CButtonGroup from './packages/CButton/ButtonGroup'
+  import CCard from './packages/CCard/CCard'
+  import CAlert from './packages/CAlert/CAlert'
+  import CRadio from './packages/CRadio/CRadio'
+  import CRadioGroup from './packages/CRadio/CRadioGroup'
+  import CRadioBtn from './packages/CRadio/CRadioButton'
+  import CCheckbox from './packages/CCheckbox/CCheckbox'
+  import CCheckboxGroup from './packages/CCheckbox/CCheckboxGroup'
+  import CCheckboxBtn from './packages/CCheckbox/CCheckboxButton'
+  import CInput from './packages/CInput/CInput'
+  import CTextarea from './packages/CTextarea/CTextarea'
+  import CDropdownMenu from './packages/CDropdown/CDropdownMenu'
+  import CDropdownItem from './packages/CDropdown/CDropdownItem'
+  import CDropdown from './packages/CDropdown/CDropdown'
+  // import CDialog from './packages/CDialog'
 
   export default {
     name: 'app',
@@ -238,10 +249,10 @@
       CCheckboxGroup,
       CCheckboxBtn,
       CInput,
-      CTextarea
-      // CDropdownItem,
-      // CDropdownMenu,
-      // CDropdown,
+      CTextarea,
+      CDropdownItem,
+      CDropdownMenu,
+      CDropdown,
       // CDialog
     },
     methods: {
@@ -301,6 +312,9 @@
       margin-right: 20px;
       width: 300px;
     }
+  }
+  .dropdowns {
+    margin-bottom: 200px;
   }
   
 </style>

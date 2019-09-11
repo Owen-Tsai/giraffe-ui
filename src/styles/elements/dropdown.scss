@@ -1,10 +1,10 @@
-
 /* dropdown-item
 ----------------------------------- */
 .c-dropdown-item {
   list-style: none;
-  padding: 10px;
+  padding: 8px 16px;
   cursor: pointer;
+  text-align: left;
 
   &:hover {
     color: $primary-color;
@@ -21,6 +21,14 @@
   text-align: center;
   z-index: 9;
   background-color: #ffffff;
+
+  @include when('constrain-length') {
+    .c-dropdown-item {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
 }
 
 .c-dropdown {
