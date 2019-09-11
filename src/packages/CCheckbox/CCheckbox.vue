@@ -1,77 +1,73 @@
 <template>
-  <label
-    :class="[...c, ...[
-      {
-        'is-disabled': isDisabled
-      },
-      {
-        'is-checked': isChecked
-      },
-    ]]"
-    role="checkbox"
-    :aria-checked="isChecked"
-    :aria-disabled="isDisabled"
-  >
-    <input
-      class="c-checkbox-btn-input"
-      type="checkbox"
-      :name="name"
-      :disabled="isDisabled"
-      :value="label"
-      v-model="model"
-      @change="handleChange">
-
-    <span class="c-checkbox-btn-inner" v-if="$slots.default || label">
-      <slot>{{label}}</slot>
+  <label :class="[...c, ...[
+    {
+      'is-disabled': isDisabled
+    },
+    {
+      'is-checked': isChecked
+    }
+  ]]" role="checkbox">
+    <span class="c-checkbox-input">
+      <span :class="['c-checkbox-inner', ...[
+        {
+          'is-checked': isChecked
+        }
+      ]]"></span>
+      <input 
+        ref="checkbox"
+        type="checkbox"
+        :disabled="isDisabled"
+        :value="label"
+        :name="name"
+        v-model="model"
+        @change="handleChange"
+      >
     </span>
-
+    <span class="c-checkbox-label" @keydown.stop>
+      <slot></slot>
+      <template v-if="!$slots.default">{{ label }}</template>
+    </span>
   </label>
 </template>
 
 <script>
-  import {  cuiDefaultColors, getParentInstance, findParentComponent, appendColorClass, appendSizeClass } from '@/utilities/utilities'
-  import Messenger from '@/utilities/messenger'
+  import { appendColorClass, findParentComponent, getParentInstance } from "../../utilities/utilities";
+  import Messenger from '../../utilities/messenger';
 
   export default {
-    name: 'CCheckboxButton',
-    componentNAme: 'CCheckboxButton',
+    name: 'CCheckbox',
+    componentName: 'CCheckbox',
+    data:() => ({
+      selfModel: false,
+    }),
+    mixins: [
+      Messenger
+    ],
     props: {
       disabled: Boolean,
       label: {},
       value: {},
       checked: Boolean,
       name: String, 
-      color: String,
+      color: String
     },
-    mixins: [
-      Messenger
-    ],
+
     computed: {
       c() {
-        let classList = Array.of('c-checkbox-btn');
-
-        if(this._checkboxGroup && this._checkboxGroup.btnColor) {
-          if(cuiDefaultColors.includes(this._checkboxGroup.btnColor))
-          classList.push(this._checkboxGroup.btnColor)
-        } else {
-          appendColorClass(this.color, classList);
-        }
-
-        this._checkboxGroup && appendSizeClass(this._checkboxGroup.size, classList);
-
+        let classList = Array.of('c-checkbox');
+        appendColorClass(this.color, classList);
         return classList;
       },
       isDisabled() {
         return this.isGroup ? 
           this._checkboxGroup.disabled || this.disabled : this.disabled;
       },
-      _checkboxGroup() {
-        return getParentInstance(this, 'CCheckboxGroup');
-      },
       isGroup() {
         if(findParentComponent(this, 'CCheckboxGroup')) {
+          this._checkboxGroup = getParentInstance(this, 'CCheckboxGroup');
           return true;
         } else {
+          this._checkboxGroup = null;
           return false;
         }
       },

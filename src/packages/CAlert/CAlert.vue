@@ -19,7 +19,7 @@
 </template>
 
 <script>
-  import { appendColorClass } from '@/utilities/utilities';
+  import { appendColorClass } from '../../utilities/utilities';
 
   export default {
     name: 'CAlert',

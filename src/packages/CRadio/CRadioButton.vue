@@ -30,8 +30,8 @@
 </template>
 
 <script>
-  import { cuiDefaultColors, getParentInstance, appendColorClass, appendSizeClass } from '@/utilities/utilities'
-  import Messenger from '@/utilities/messenger'
+  import { cuiDefaultColors, getParentInstance, appendColorClass, appendSizeClass } from '../../utilities/utilities'
+  import Messenger from '../../utilities/messenger'
 
   export default {
     name: 'CRadioButton',

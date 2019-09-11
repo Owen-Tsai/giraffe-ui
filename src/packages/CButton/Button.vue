@@ -23,7 +23,7 @@
 </template>
 
 <script>
-  import { appendColorClass, appendSizeClass } from '@/utilities/utilities';
+  import { appendColorClass, appendSizeClass } from '../../utilities/utilities';
 
   export default {
     name: 'CButton',

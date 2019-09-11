@@ -35,8 +35,8 @@
 </template>
 
 <script>
-  import { appendColorClass, getParentInstance, findParentComponent } from '@/utilities/utilities';
-  import Messenger from '@/utilities/messenger';
+  import { appendColorClass, getParentInstance, findParentComponent } from '../../utilities/utilities';
+  import Messenger from '../../utilities/messenger';
 
   export default {
     name: 'CRadio',
