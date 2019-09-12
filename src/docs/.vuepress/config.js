@@ -1,6 +1,7 @@
 module.exports = {
   title: 'Giraffe UI',
   description: 'Easy to use UI component library for Vue.js',
+  plugins: ['@vuepress/active-header-links', '@vuepress/back-to-top'],
   themeConfig: {
     nav: [
       { text: '首页', link: '/' },
@@ -9,11 +10,31 @@ module.exports = {
       { text: '大角落', link: 'http://www.aait-suse.cn/cai/' },
       { text: 'Github', link: 'https://github.com/Owen-Tsai/giraffe-ui/' },
     ],
-    sidebar: [
-      '/guide/',
-      '/guide/installation.md',
-      '/guide/getting-started.md',
-    ],
+    sidebar: {
+      '/guide/': getGuideSidebar('指南', '组件')
+    },
     sidebarDepth: 2
   }
+}
+
+function getGuideSidebar (groupA, groupB) {
+  return [
+    {
+      title: groupA,
+      collapsable: false,
+      children: [
+        '',
+        'installation',
+        'getting-started',
+      ]
+    },
+    {
+      title: groupB,
+      collapsable: false,
+      children: [
+        'alert',
+        'button'
+      ]
+    }
+  ]
 }

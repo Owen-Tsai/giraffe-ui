@@ -27,6 +27,12 @@
     line-height: 18px;
   }
 
+  &:not(.circle) {
+    .material-icons {
+      margin-right: 6px;
+    }
+  }
+
   &:not([disabled]):hover, &:not([disabled]):focus {
     transition: all .3s;
     background-color: color('grey-300');
