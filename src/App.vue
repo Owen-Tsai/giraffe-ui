@@ -78,9 +78,10 @@
       </div>
       <div class="alerts">
         <p>警告组件用来显示提示或警告 Alert components are used to display hints and alerts</p>
-        <c-alert color="info" icon="info" outlined description="This is a warning, please read it carefully."></c-alert>
-        <c-alert color="success" description="没有图标，不突出边框"></c-alert>
-        <c-alert title="注意！" color="danger" icon="error_outline" outlined description="当警告信息包含标题时，图标会自动变大."></c-alert>
+        <c-alert :visible="v1" color="info" icon="info" outlined description="This is a warning, please read it carefully."></c-alert>
+        <c-alert :visible="v2" color="success" description="没有图标，不突出边框"></c-alert>
+        <c-alert :visible="v3" close-icon="done" title="注意！" color="danger" icon="error_outline" outlined description="当警告信息包含标题时，图标会自动变大."></c-alert>
+        <c-alert :visible="v1" close-text="ok">text</c-alert>
       </div>
       <div class="quote">
         <p>块级引用不是一个单独的组件，但是可以通过class属性附加基本样式 Blockquote is not a component, but can be applied with basic style using class attr</p>
@@ -229,6 +230,9 @@
     name: 'app',
     data() {
       return {
+        v1: true,
+        v2: true, 
+        v3: true,
         radio: '',
         e: [],
         radioGroup: '',

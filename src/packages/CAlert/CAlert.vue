@@ -1,8 +1,13 @@
 <template>
   <transition name="c-fade-in-linear">
     <div :class="[...c, ...[
-      { 'outlined': outlined }
-    ]]" v-show="visible">
+      {
+        'outlined': outlined
+      },
+      {
+        'no-icon': !icon
+      }
+    ]]" v-if="value">
       <i :class="['material-icons', ...iconClass, 'c-alert-icon']" v-if="icon">{{ icon }}</i>
       <div class="c-alert-content">
         <span class="c-alert-title" v-if="$slots.title || title">
@@ -13,7 +18,12 @@
         </p>
         <p class="c-alert-description" v-if="!$slots.default && description">{{ description }}</p>
       </div>
-      <i class="material-icons c-alert-close-icon" v-if="!persistent" @click="handleClose">clear</i>
+      <span class="c-alert-close" v-if="!persistent">
+        <span class="c-alert-close-text" v-if="closeText" @click="visible = false">{{ closeText }}</span>
+        <i class="material-icons c-alert-close-icon" v-else @click="visible = false">
+          {{ closeIcon ? closeIcon : 'clear' }}
+        </i>
+      </span>
     </div>
   </transition>
 </template>
@@ -32,17 +42,23 @@
       },
       outlined: Boolean,
       icon: String,
-      persistent: Boolean
+      persistent: Boolean,
+      visible: Boolean,
+      closeText: String,
+      closeIcon: String
     },
-    data() {
-      return {
-        visible: true,
-      }
-    },
-    methods: {
-      handleClose() {
-        this.visible = false;
-        this.$emit('close');
+    data: () => ({
+      value: true,
+    }),
+    watch: {
+      visible(val) {
+        if(val) {
+          this.value = true;
+          this.$emit('open');
+        } else {
+          this.value = false;
+          this.$emit('close');
+        }
       }
     },
     computed: {
