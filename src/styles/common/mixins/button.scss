@@ -19,7 +19,7 @@
   }
 }
 
-@mixin make-simplified-button($color) {
+@mixin make-flat-button($color) {
   color: $color;
   background-color: transparent;
   border: 0;

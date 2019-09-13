@@ -75,24 +75,24 @@
 
 ## 简化按钮
 
-可以为按钮组件添加`simplified`属性，让按钮的样式“简化”。简化按钮在默认状态下不显示边框和填充色，只用指定的颜色标识按钮的文本。当鼠标指针悬浮其上时，显示一个比文字颜色略浅的填充色。
+可以为按钮组件添加`flat`属性，让按钮的样式“简化”。简化按钮在默认状态下不显示边框和填充色，只用指定的颜色标识按钮的文本。当鼠标指针悬浮其上时，显示一个比文字颜色略浅的填充色。
 
 :::warning 注意
-试图在未指明`color`属性的按钮上使用`simplified`属性时，`simplified`将不会起作用。
+试图在未指明`color`属性的按钮上使用`flat`属性时，`flat`将不会起作用。
 :::
 
-<c-button style="margin: 10px;" simplified color="primary">简化按钮</c-button>
-<c-button style="margin: 10px;" simplified color="danger">简化按钮</c-button>
-<c-button style="margin: 10px;" simplified color="info">简化按钮</c-button>
-<c-button style="margin: 10px;" simplified color="success">简化按钮</c-button>
-<c-button style="margin: 10px;" simplified color="pink">简化按钮</c-button>
+<c-button style="margin: 10px;" flat color="primary">简化按钮</c-button>
+<c-button style="margin: 10px;" flat color="danger">简化按钮</c-button>
+<c-button style="margin: 10px;" flat color="info">简化按钮</c-button>
+<c-button style="margin: 10px;" flat color="success">简化按钮</c-button>
+<c-button style="margin: 10px;" flat color="pink">简化按钮</c-button>
 
 ```html
-<c-button simplified color="primary">简化按钮</c-button>
-<c-button simplified color="danger">简化按钮</c-button>
-<c-button simplified color="info">简化按钮</c-button>
-<c-button simplified color="success">简化按钮</c-button>
-<c-button simplified color="pink">简化按钮</c-button>
+<c-button flat color="primary">简化按钮</c-button>
+<c-button flat color="danger">简化按钮</c-button>
+<c-button flat color="info">简化按钮</c-button>
+<c-button flat color="success">简化按钮</c-button>
+<c-button flat color="pink">简化按钮</c-button>
 ```
 
 ## 凸起按钮
@@ -123,23 +123,23 @@
 
 <c-button style="margin: 10px;" round color="primary">圆角按钮</c-button>
 <c-button style="margin: 10px;" round outlined color="danger">圆角按钮</c-button>
-<c-button style="margin: 10px;" round simplified color="info">圆角按钮</c-button>
+<c-button style="margin: 10px;" round flat color="info">圆角按钮</c-button>
 <c-button style="margin: 10px;" round raised color="info">圆角按钮</c-button>
 <br>
 <c-button style="margin: 10px;" sharp color="success">尖锐按钮</c-button>
 <c-button style="margin: 10px;" sharp outlined color="pink">尖锐按钮</c-button>
-<c-button style="margin: 10px;" sharp simplified color="pink">尖锐按钮</c-button>
+<c-button style="margin: 10px;" sharp flat color="pink">尖锐按钮</c-button>
 <c-button style="margin: 10px;" sharp raised color="pink">尖锐按钮</c-button>
 
 ```html
 <c-button round color="primary">圆角按钮</c-button>
 <c-button round outlined color="danger">圆角按钮</c-button>
-<c-button round simplified color="info">圆角按钮</c-button>
+<c-button round flat color="info">圆角按钮</c-button>
 <c-button round raised color="info">圆角按钮</c-button>
 <br>
 <c-button sharp color="success">尖锐按钮</c-button>
 <c-button sharp outlined color="pink">尖锐按钮</c-button>
-<c-button sharp simplified color="pink">尖锐按钮</c-button>
+<c-button sharp flat color="pink">尖锐按钮</c-button>
 <c-button sharp raised color="pink">尖锐按钮</c-button>
 ```
 
@@ -153,13 +153,13 @@
 
 <c-button style="margin: 10px;" circle color="success" icon="thumb_up"></c-button>
 <c-button style="margin: 10px;" circle outlined color="danger" icon="done"></c-button>
-<c-button style="margin: 10px;" circle simplified color="pink" icon="face"></c-button>
+<c-button style="margin: 10px;" circle flat color="pink" icon="face"></c-button>
 <c-button style="margin: 10px;" circle raised color="info" icon="settings"></c-button>
 
 ```html
 <c-button circle color="success" icon="thumb_up"></c-button>
 <c-button circle outlined color="danger" icon="done"></c-button>
-<c-button circle simplified color="pink" icon="face"></c-button>
+<c-button circle flat color="pink" icon="face"></c-button>
 <c-button circle raised color="info" icon="settings"></c-button>
 ```
 
@@ -188,7 +188,7 @@
 | size | 按钮的尺寸 | string | large/—/small/mini | — |
 | color | 按钮的颜色 | string | [查看受支持的颜色列表](color.md) | — |
 | outlined | 突出按钮的边框（边框按钮） | boolean | — | false |
-| simplified | 简化按钮 | boolean | — | false |
+| flat | 简化按钮 | boolean | — | false |
 | raised | 凸起按钮 | boolean | — | false |
 | round | 圆角按钮 | boolean | — | false |
 | circle | 圆形按钮 | boolean | — | false |

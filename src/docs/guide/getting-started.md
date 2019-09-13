@@ -6,7 +6,7 @@
 在[安装](installation.md)中使用“通过 Github 克隆”获取 Giraffe UI 时，**无需进行全局引入**。在 Giraffe UI 未发布成为 npm 包时，本节中“全局引入 Giraffe UI ”的内容暂不可用。
 :::
 
-## 全局引入 Giraffe UI [暂不可用]
+## 全局引入 Giraffe UI <Badge text="暂不可用" type="error"/>
 
 在项目的 `main.js` 中引入如下内容：
 
@@ -26,7 +26,7 @@ new Vue({
 
 以上代码便完成了 Giraffe UI 的引入。需要注意的是，第 3 行单独引入了样式文件，这一步是不可缺少的。
 
-## 使用 Bootstrap-Template [暂不可用]
+## 使用 Bootstrap-Template <Badge text="暂不可用" type="error"/>
 
 Bootstrap-Template 是 Giraffe UI 为快速原型开发（Rapid Prototyping）准备的模板。
 

@@ -2,7 +2,7 @@
   <div :class="[...c, ...[
     {
       'raised': raised,
-      'simplified': simplified,
+      'flat': flat,
       'outlined': outlined
     }
   ]]">
@@ -32,7 +32,7 @@
         default: 'default'
       },
       raised: Boolean,
-      simplified: Boolean,
+      flat: Boolean,
       outlined: Boolean
     },
     computed: {

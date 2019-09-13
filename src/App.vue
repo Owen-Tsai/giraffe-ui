@@ -14,7 +14,7 @@
         <c-button sharp color="info">尖锐按钮</c-button>
         <c-button outlined color="success" size="large">边框按钮</c-button>
         <c-button raised color="primary">凸起按钮</c-button>
-        <c-button simplified size="small" color="primary">扁平按钮</c-button>
+        <c-button flat size="small" color="primary">扁平按钮</c-button>
         <c-button pure-text color="primary">纯文字</c-button>
         <c-button size="mini">无颜色</c-button>
         <c-button size="small" icon="thumb_up">带图标</c-button>
@@ -50,7 +50,7 @@
             <c-button size="small" color="danger">按钮</c-button>
           </div>
         </c-card>
-        <c-card color="pink">
+        <c-card color="pink" flat>
           <div slot="header">
             <h4 style="margin: 0">带颜色的卡片</h4>
           </div>
@@ -183,7 +183,7 @@
         </c-dropdown>
       </div>
       <div class="tooltips">
-        <c-tooltip placement="top-end" color="info">
+        <c-tooltip placement="top-end" color="info" :max-width="70">
           <p slot="activator">这是一段文字，上面有一个 tooltip</p>
           <span>hello, I'm a tooltip</span>
         </c-tooltip>

@@ -6,7 +6,7 @@
 Giraffe UI 目前仍在开发中，并没有发布成为一个 npm 包。这意味着下面的“通过包管理工具安装”暂时不可用。不过你依然可以通过“从 Github 克隆”来下载和在项目中使用 Giraffe UI。
 :::
 
-## 通过包管理工具安装
+## 通过包管理工具安装 <Badge text="暂不可用" type="error"/>
 
 想要通过包管理工具安装 Giraffe UI，你必须已经安装了[node.js](https://nodejs.org/en/)。node.js 的包管理工具有很多，例如 [NPM](https://www.npmjs.com/) 和 [yarn](https://www.yarnpkg.com/lang/en/)。如果你已经安装了 node.js，那么 NPM 将随之一同被安装在你的系统中；如果你想使用 yarn 作为包管理工具，可以在[这个页面](https://www.yarnpkg.com/en/docs/install)下载和安装。
 

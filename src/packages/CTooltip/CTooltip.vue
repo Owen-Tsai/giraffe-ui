@@ -141,6 +141,9 @@
       if(this.persistent) {
         this.update();
       }
+      if(this.maxWidth && this.maxWidth >= 1) {
+        this.$refs.popper.style.maxWidth = `${this.maxWidth}px`;
+      }
     },
     beforeDestroy () {
       if (this.popper) {

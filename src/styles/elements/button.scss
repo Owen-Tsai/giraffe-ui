@@ -59,8 +59,8 @@
       @include when('outlined') {
         @include make-outlined-button($v);
       }
-      @include when('simplified') {
-        @include make-simplified-button($v);
+      @include when('flat') {
+        @include make-flat-button($v);
       }
       @include when('pure-text') {
         @include make-text-only-button($v);

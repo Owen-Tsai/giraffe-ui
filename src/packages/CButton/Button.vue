@@ -10,7 +10,7 @@
       },
       {
         'outlined': outlined,
-        'simplified': simplified,
+        'flat': flat,
         'raised': raised,
         'pure-text': pureText
       }
@@ -36,7 +36,7 @@
       },
       outlined: Boolean,
       raised: Boolean,
-      simplified: Boolean,
+      flat: Boolean,
       pureText: Boolean,
       round: Boolean,
       circle: Boolean, 

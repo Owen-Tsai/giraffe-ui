@@ -23,8 +23,8 @@
     padding: 8px 16px 8px 16px;
   }
 
-  &:not(.simplified):not(.raised):hover {
-    box-shadow: $box-shadow-light;
+  &:not(.flat):not(.raised):hover {
+    box-shadow: $box-shadow-medium;
     transition: box-shadow .3s;
   }
 
@@ -38,6 +38,6 @@
   }
   
   @include when(raised) {
-    box-shadow: $box-shadow-light;
+    box-shadow: $box-shadow-medium;
   }
 }
