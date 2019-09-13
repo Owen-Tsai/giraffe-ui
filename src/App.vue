@@ -173,7 +173,7 @@
         <c-textarea v-model="str" :min-rows="2" no-resize></c-textarea>
       </div>
       <div class="dropdowns">
-        <c-dropdown trigger="hover" placement="bottom-start">
+        <c-dropdown trigger="click" placement="bottom-start">
           <c-button slot="activator">下拉菜单</c-button>
           <c-dropdown-menu :max-width="100">
             <c-dropdown-item>第一个选项</c-dropdown-item>
@@ -181,6 +181,12 @@
             <c-dropdown-item>第三个选项稍微长一点</c-dropdown-item>
           </c-dropdown-menu>
         </c-dropdown>
+      </div>
+      <div class="tooltips">
+        <c-tooltip placement="top-end" color="info">
+          <p slot="activator">这是一段文字，上面有一个 tooltip</p>
+          <span>hello, I'm a tooltip</span>
+        </c-tooltip>
       </div>
       
       
@@ -224,6 +230,7 @@
   import CDropdownMenu from './packages/CDropdown/CDropdownMenu'
   import CDropdownItem from './packages/CDropdown/CDropdownItem'
   import CDropdown from './packages/CDropdown/CDropdown'
+  import CTooltip from './packages/CTooltip/CTooltip'
   // import CDialog from './packages/CDialog'
 
   export default {
@@ -257,6 +264,7 @@
       CDropdownItem,
       CDropdownMenu,
       CDropdown,
+      CTooltip
       // CDialog
     },
     methods: {
@@ -318,7 +326,11 @@
     }
   }
   .dropdowns {
+    margin-bottom: 20px;
+  }
+  .tooltips {
     margin-bottom: 200px;
+    margin-left: 200px;
   }
   
 </style>

@@ -36,7 +36,7 @@
 
 <script>
   import { appendColorClass, getParentInstance, findParentComponent } from '../../utilities/utilities';
-  import Messenger from '../../utilities/messenger';
+  import Messenger from '../../utilities/mixin.messenger';
 
   export default {
     name: 'CRadio',

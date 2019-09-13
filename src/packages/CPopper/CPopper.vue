@@ -11,21 +11,22 @@
     name: 'CPopper',
     props: {
       placement: {
-        type: String,
+        validator(val) {
+          return ['top', 'top-start', 'top-end', 'bottom', 'bottom-start', 'bottom-end', 'left', 'left-start', 'left-end', 'right', 'right-start', 'right-end'].includes(val)
+        },
         default: 'bottom-start'
       },
     },
     data: () => ({
       popper: null,
-      width: '',
-      popperState: false,
+      popperStatus: false,
     }),
     methods: {
       update() {
         if(this.popper) {
           this.$nextTick(() => {
             this.popper.update();
-            this.popperState = true;
+            this.popperStatus = true;
           })
         } else {
           // instantiate new popper instance
@@ -59,6 +60,7 @@
         }
       },
       resetTransformOrigin() {
+        // flip transform origin of popper animation
         let x_placement = this.popper.popper.getAttribute('x-placement');
         let placementStart = x_placement.split('-')[0];
         let placementEnd = x_placement.split('-')[1];

@@ -11,7 +11,7 @@
 </template>
 
 <script>
-  import Messenger from "../../utilities/messenger";
+  import Messenger from "../../utilities/mixin.messenger";
 
   export default {
     name: 'CDropdownItem',

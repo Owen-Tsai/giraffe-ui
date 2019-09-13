@@ -31,7 +31,7 @@
 
 <script>
   import { cuiDefaultColors, getParentInstance, appendColorClass, appendSizeClass } from '../../utilities/utilities'
-  import Messenger from '../../utilities/messenger'
+  import Messenger from '../../utilities/mixin.messenger'
 
   export default {
     name: 'CRadioButton',
