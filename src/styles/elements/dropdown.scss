@@ -1,10 +1,13 @@
+@import '../common/var.scss';
+@import '../common/functions.scss';
+@import '../common/mixins/mixins.scss';
+
 /* dropdown-item
 ----------------------------------- */
 .c-dropdown-item {
   list-style: none;
   padding: 8px 16px;
   cursor: pointer;
-  text-align: left;
 
   &:hover {
     color: $primary-color;
@@ -18,7 +21,6 @@
   box-shadow: $box-shadow-light;
   padding: 5px 0;
   margin: 5px 0;
-  text-align: center;
   z-index: 9;
   background-color: #ffffff;
 

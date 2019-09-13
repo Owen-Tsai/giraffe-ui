@@ -1,0 +1,14 @@
+@mixin make-colored-tooltip($color) {
+  .c-tooltip-popper {
+    background-color: $color;
+    color: get-font-color-by-background($color);
+  
+    @each $dir in ('left', 'right', 'bottom', 'top') {
+      &[x-placement^=#{$dir}] {
+        .c-tooltip-arrow {
+          border-#{$dir}-color: $color;
+        }
+      }
+    }
+  }
+}

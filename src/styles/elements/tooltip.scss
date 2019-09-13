@@ -1,0 +1,82 @@
+@import '../common/var.scss';
+@import '../common/functions.scss';
+@import '../common/mixins/mixins.scss';
+@import '../common/mixins/tooltip.scss';
+
+.c-tooltip {
+  display: inline-block;
+
+  .c-tooltip-popper {
+    box-shadow: $box-shadow-lighter;
+    padding: 5px 10px;
+    margin: 6px 0;
+    z-index: 9;
+    background-color: color('grey-700');
+    color: #ffffff;
+    border-radius: $basic-border-radius;
+  
+    &[x-placement=bottom], &[x-placement=top] {
+      .c-tooltip-arrow {
+        left: 50%;
+        margin-left: -6px;
+      }
+    }
+  
+    &[x-placement=left], &[x-placement=right] {
+      .c-tooltip-arrow {
+        top: 50%;
+        margin-top: -6px;
+      }
+    }
+  
+    &[x-placement^=left] {
+      margin-right: 10px;
+      .c-tooltip-arrow {
+        right: -6px;
+        border-width: 6px 0 6px 6px;
+        border-left-color: color('grey-700');
+      }
+    }
+  
+    &[x-placement^=right] {
+      margin-left: 10px;
+      .c-tooltip-arrow {
+        left: -6px;
+        border-width: 6px 6px 6px 0;
+        border-right-color: color('grey-700');
+      }
+    }
+  
+    &[x-placement^=bottom] {
+      margin-top: 10px;
+      .c-tooltip-arrow {
+        top: -6px;
+        border-width: 0 6px 6px;
+        border-bottom-color: color('grey-700');
+      }
+    }
+  
+    &[x-placement^=top] {
+      margin-bottom: 10px;
+      .c-tooltip-arrow {
+        bottom: -6px;
+        border-width: 6px 6px 0;
+        border-top-color: color('grey-700');
+      }
+    }
+  }
+
+  @each $c, $v in $variations {
+    @include when($c) {
+      @include make-colored-tooltip($v);
+    }
+  }
+}
+
+.c-tooltip-arrow {
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  position: absolute;
+}
