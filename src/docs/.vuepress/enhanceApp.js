@@ -30,4 +30,8 @@ export default ({
   Vue.component('c-button', CButton);
   Vue.component('c-button-group', CButtonGroup);
   Vue.component('c-card', CCard);
+  Vue.component('c-checkbox', CCheckbox);
+  Vue.component('c-checkbox-button', CCheckboxBtn);
+  Vue.component('c-checkbox-group', CCheckboxGroup);
+  Vue.component('c-input', CInput);
 }

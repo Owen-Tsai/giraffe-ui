@@ -3,11 +3,8 @@
 ----------------------------------- */
 @mixin make-colored-input($color) {
   .c-input-input {
-    border-color: mix($color, #ffffff, 60%);
+    border-color: mix($color, #ffffff, 50%);
 
-    &:hover {
-      border-color: $color;
-    }
     &:focus {
       border-color: $color;
     }
@@ -19,7 +16,7 @@
     }
   }
   @include when('suffix') {
-    .c-input-prefix > .material-icons {
+    .c-input-suffix > .material-icons {
       color: mix($color, #ffffff, 60%);
     }
   }

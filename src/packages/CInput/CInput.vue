@@ -55,13 +55,14 @@
     </div>
     <div class="c-input-hint" v-if="$slots.hint || hint">
       <slot name="hint"></slot>
-      <span class="hint">{{ hint }}</span>
+      <span class="hint" v-if="!$slots.hint">{{ hint }}</span>
     </div>
   </div>
 </template>
 
 <script>
   import { appendColorClass, appendSizeClass } from '../../utilities/utilities';
+import { type } from 'os';
 
   export default {
     name: 'CInput',
@@ -138,7 +139,11 @@
     },
     mounted() {
       if(this.width) {
-        this.$el.style.width = `${parseInt(this.width)}px`;
+        if(typeof(this.width) === 'string') {
+          this.$el.style.width = this.width;
+        } else {
+          this.$el.style.width = `${parseInt(this.width)}px`;
+        }
       }
     }
   }

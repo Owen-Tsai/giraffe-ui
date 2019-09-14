@@ -94,6 +94,7 @@
       .material-icons {
         line-height: $input-height;
         color: color('grey-400');
+        cursor: pointer;
       }
     }
   }
@@ -111,6 +112,7 @@
       .material-icons {
         line-height: $input-height;
         color: color('grey-400');
+        cursor: pointer;
       }
     }
   }
@@ -171,10 +173,9 @@
     border: 1px solid color('grey-400');
     background-color: color('grey-100');
     color: color('grey-600');
-  }
-
-  .clickable {
     cursor: pointer;
+    width: 1px;
+    white-space: nowrap;
   }
 
   .c-input-prepend {

@@ -1,18 +1,5 @@
 <template>
   <div id="app">
-    <div class="btn-group">
-      <p>按钮组是一组类似的操作的集合 A button group can be used to group a series of similar operations</p>
-      <c-button-group>
-        <c-button color="primary" round>左按钮</c-button>
-        <c-button color="primary" round>中间按钮</c-button>
-        <c-button color="primary" round>右按钮</c-button>
-      </c-button-group>
-      <c-button-group>
-        <c-button color="info" size="small" icon="play_arrow">播放</c-button>
-        <c-button color="info" size="small" icon="pause">暂停</c-button>
-        <c-button color="info" size="small" icon="stop">停止</c-button>
-      </c-button-group>
-    </div>
     <div class="radios">
       <p>单选框</p>
       <c-radio @change="logParam" label="男性" v-model="radio" color="info"></c-radio>
@@ -37,48 +24,27 @@
       </c-radio-group>
       <p>selected is {{ radioGroup }}</p>
     </div>
-    <div class="checkboxes">
-      <p>复选框</p>
-      <c-checkbox label="男性" v-model="e" color="info"></c-checkbox>
-      <c-checkbox label="保密" v-model="e" color="primary" disabled></c-checkbox>
-      <c-checkbox label="double" v-model="e">双性</c-checkbox>
-      <c-checkbox label="女性" v-model="e"></c-checkbox>
-      <p>selected is {{e}}</p>
-      <p>复选框组</p>
-      <c-checkbox-group v-model="checkboxGroup">
-        <c-checkbox label="男性" color="info"></c-checkbox>
-        <c-checkbox label="保密" color="primary" disabled></c-checkbox>
-        <c-checkbox label="double">双性</c-checkbox>
-        <c-checkbox label="女性"></c-checkbox>
-      </c-checkbox-group>
-      <p>selected is {{checkboxGroup}}</p>
-      <p>按钮样式的复选框组</p>
-      <c-checkbox-group v-model="checkboxGroup" btn-color="warning">
-        <c-checkbox-btn label="男性" color="info"></c-checkbox-btn>
-        <c-checkbox-btn label="保密" disabled></c-checkbox-btn>
-        <c-checkbox-btn label="double" color="primary">双性</c-checkbox-btn>
-        <c-checkbox-btn label="女性"></c-checkbox-btn>
-      </c-checkbox-group>
-      <p>selected is {{checkboxGroup}}</p>
-    </div>
     <div class="inputs">
-      <c-input v-model="str" disabled width="200" type="text" placeholder="normal input box"></c-input>
-      <c-input v-model="str" width="200" type="number" color="danger" prefix-icon="face"></c-input>
-      <c-input v-model="str" width="200" suffix-icon="face"></c-input>
-      <br>
-      <c-input v-model="str" width="200" color="primary" hint="show something what if it's too long"></c-input>
-      <c-input v-model="str" width="300" color="info" round>
-        <span slot="hint">using named slot is so cool!</span>
+      <c-input v-model="str" disabled width="200px" type="text" placeholder="normal input box"></c-input>
+      <c-input v-model="str" width="200px" type="number" color="danger" prefix-icon="face"></c-input>
+      <c-input v-model="str" width="200px">
+        <i slot="suffix" class="material-icons" @click="logStatic">mail</i>
       </c-input>
       <br>
-      <c-input v-model="str" width="200" color="success" prepend-caption="http://"></c-input>
-      <c-input v-model="str" width="200" group-clickable>
+      <c-input v-model="str" width="200px" color="primary" hint="show something what if it's too long"></c-input>
+      <c-input v-model="str" width="300px" color="info">
+        <span slot="hint">using named slot is so cool!</span>
         <div slot="append">Go!</div>
       </c-input>
       <br>
-      <c-input v-model="str" readonly width="200" type="text" simplified placeholder="normal input box"></c-input>
-      <c-input v-model="str" width="200" color="danger" round prefix-icon="face"></c-input>
-      <c-input v-model="str" disabled width="200" type="password" simplified suffix-icon="face"></c-input>
+      <c-input v-model="str" width="200px" color="success" prepend-caption="http://"></c-input>
+      <c-input v-model="str" width="200px" group-clickable>
+        <div slot="append">Go!</div>
+      </c-input>
+      <br>
+      <c-input v-model="str" readonly width="200px" type="text" simplified placeholder="normal input box"></c-input>
+      <c-input v-model="str" width="200px" color="danger" round prefix-icon="face"></c-input>
+      <c-input v-model="str" disabled width="200px" type="password" simplified suffix-icon="face"></c-input>
       <br>
       <c-input v-model="str" suffix-icon="clear" show-icon-on-focus="suffix" size="large" width="250"></c-input>
       <c-input v-model="str" prefix-icon="face" show-icon-on-focus="prefix" size="small" width="250"></c-input>

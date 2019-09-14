@@ -50,9 +50,10 @@
       c() {
         let classList = Array.of('c-checkbox-btn');
 
-        if(this._checkboxGroup && this._checkboxGroup.btnColor) {
-          if(cuiDefaultColors.includes(this._checkboxGroup.btnColor))
-          classList.push(this._checkboxGroup.btnColor)
+        if(this._checkboxGroup && this._checkboxGroup.color) {
+          if(cuiDefaultColors.includes(this._checkboxGroup.color)) {
+            classList.push(this._checkboxGroup.color)
+          }
         } else {
           appendColorClass(this.color, classList);
         }

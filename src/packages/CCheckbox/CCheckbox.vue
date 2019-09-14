@@ -45,7 +45,9 @@
     ],
     props: {
       disabled: Boolean,
-      label: {},
+      label: {
+        required: true
+      },
       value: {},
       checked: Boolean,
       name: String, 

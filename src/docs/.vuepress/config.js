@@ -13,7 +13,7 @@ module.exports = {
     sidebar: {
       '/guide/': getGuideSidebar('指南', '组件')
     },
-    sidebarDepth: 2
+    sidebarDepth: 1
   }
 }
 
@@ -34,8 +34,12 @@ function getGuideSidebar (groupA, groupB) {
       children: [
         'alert',
         'button',
+        'button-group',
         'card',
-        'color'
+        'color',
+        'checkbox',
+        'dropdown',
+        'input',
       ]
     }
   ]

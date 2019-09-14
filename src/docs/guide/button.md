@@ -55,7 +55,9 @@
 <c-button color="teal" size="mini">迷你尺寸</c-button>
 ```
 
-## 边框按钮
+## 按钮的风格
+
+### 突出边框
 
 通过为按钮组件添加`outlined`属性，可以突出按钮的边框，同时只在鼠标指针悬浮在按钮之上时才显示填充色。
 
@@ -73,29 +75,29 @@
 <c-button outlined color="success">边框按钮</c-button>
 ```
 
-## 简化按钮
+### 扁平化
 
-可以为按钮组件添加`flat`属性，让按钮的样式“简化”。简化按钮在默认状态下不显示边框和填充色，只用指定的颜色标识按钮的文本。当鼠标指针悬浮其上时，显示一个比文字颜色略浅的填充色。
+可以为按钮组件添加`flat`属性，让按钮的样式“简化”。扁平化按钮在默认状态下不显示边框和填充色，只用指定的颜色标识按钮的文本。当鼠标指针悬浮其上时，显示一个比文字颜色略浅的填充色。
 
 :::warning 注意
 试图在未指明`color`属性的按钮上使用`flat`属性时，`flat`将不会起作用。
 :::
 
-<c-button style="margin: 10px;" flat color="primary">简化按钮</c-button>
-<c-button style="margin: 10px;" flat color="danger">简化按钮</c-button>
-<c-button style="margin: 10px;" flat color="info">简化按钮</c-button>
-<c-button style="margin: 10px;" flat color="success">简化按钮</c-button>
-<c-button style="margin: 10px;" flat color="pink">简化按钮</c-button>
+<c-button style="margin: 10px;" flat color="primary">扁平按钮</c-button>
+<c-button style="margin: 10px;" flat color="danger">扁平按钮</c-button>
+<c-button style="margin: 10px;" flat color="info">扁平按钮</c-button>
+<c-button style="margin: 10px;" flat color="success">扁平按钮</c-button>
+<c-button style="margin: 10px;" flat color="pink">扁平按钮</c-button>
 
 ```html
-<c-button flat color="primary">简化按钮</c-button>
-<c-button flat color="danger">简化按钮</c-button>
-<c-button flat color="info">简化按钮</c-button>
-<c-button flat color="success">简化按钮</c-button>
-<c-button flat color="pink">简化按钮</c-button>
+<c-button flat color="primary">扁平按钮</c-button>
+<c-button flat color="danger">扁平按钮</c-button>
+<c-button flat color="info">扁平按钮</c-button>
+<c-button flat color="success">扁平按钮</c-button>
+<c-button flat color="pink">扁平按钮</c-button>
 ```
 
-## 凸起按钮
+### 凸起
 
 凸起按钮通过添加`raised`属性实现。凸起按钮默认包含一个立体阴影效果。当鼠标指针悬浮在按钮组件上的时候，立体阴影效果加剧。这个样式的灵感来源于 Google 的 [Material Design](https://www.material.io/)。
 
@@ -113,13 +115,11 @@
 <c-button raised color="pink">凸起按钮</c-button>
 ```
 
-## 圆角按钮与尖锐按钮
+## 边框弧度
+
+### 圆角或尖锐
 
 默认的按钮带有`4px`的边框弧度。如果你想要这个弧度变的更大，可以为按钮添加`round`属性使之变成圆角按钮。反之，如果你不想使用边框弧度这个设计，可以为按钮组件添加`sharp`属性使之变成尖锐按钮。
-
-:::warning 注意
-显而易见地，一个按钮的`round`和`sharp`相互冲突。你最多只能同时在一个按钮上使用`round`或`sharp`中的一个属性。
-:::
 
 <c-button style="margin: 10px;" round color="primary">圆角按钮</c-button>
 <c-button style="margin: 10px;" round outlined color="danger">圆角按钮</c-button>
@@ -143,7 +143,7 @@
 <c-button sharp raised color="pink">尖锐按钮</c-button>
 ```
 
-## 圆形按钮
+### 圆形按钮
 
 圆形按钮完全是圆形的，可以通过`circle`属性指定。
 
