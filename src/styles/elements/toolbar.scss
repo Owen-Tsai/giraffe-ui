@@ -1,0 +1,36 @@
+@import '../common/var.scss';
+@import '../common/functions.scss';
+@import '../common/mixins/mixins.scss';
+
+.c-toolbar {
+  width: 100%;
+  position: relative;
+  height: 64px;
+  box-shadow: $box-shadow-light;
+
+  .c-toolbar-content {
+    margin: 0;
+    box-sizing: border-box;
+    height: 64px;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    font-size: $font-size-base;
+    line-height: $font-size-base;
+  }
+
+  .c-toolbar-item {
+    line-height: 64px;
+    height: 64px;
+    padding: 0 16px;
+    font-size: 1.1em;
+    transition: background-color .3s;
+    text-decoration: none;
+    color: color('grey-800');
+    align-self: stretch;
+  }
+
+  .material-icons {
+    line-height: 64px !important;
+  }
+}

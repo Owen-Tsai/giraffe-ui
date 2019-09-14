@@ -8,6 +8,8 @@
   list-style: none;
   padding: 8px 16px;
   cursor: pointer;
+  font-size: $font-size-base;
+  line-height: $font-line-height-primary;
 
   &:hover {
     color: $primary-color;

@@ -15,12 +15,12 @@
 
   @include when('prefix') {
     .c-input-prefix > .material-icons {
-      color: mix($color, #ffffff, 60%)
+      color: mix($color, #ffffff, 60%);
     }
   }
   @include when('suffix') {
     .c-input-prefix > .material-icons {
-      color: mix($color, #ffffff, 60%)
+      color: mix($color, #ffffff, 60%);
     }
   }
 }

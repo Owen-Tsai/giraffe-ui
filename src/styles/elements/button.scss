@@ -18,6 +18,10 @@
   font-size: $font-size-base;
   line-height: $font-size-base;
 
+  &.btn-icon {
+    padding: $button-icon-padding;
+  }
+
   &[disabled] {
     cursor: not-allowed;
   }
@@ -42,12 +46,21 @@
   /* Size variations
   --------------------------------- */
   &.lg {
+    &.btn-icon {
+      padding: $button-lg-icon-padding
+    }
     padding: $button-lg-padding
   }
   &.sm {
+    &.btn-icon {
+      padding: $button-sm-icon-padding;
+    }
     padding: $button-sm-padding
   }
   &.mini {
+    &.btn-icon {
+      padding: $button-mini-icon-padding;
+    }
     padding: $button-mini-padding;
   }
 
