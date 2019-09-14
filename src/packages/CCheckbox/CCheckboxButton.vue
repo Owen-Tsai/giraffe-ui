@@ -29,7 +29,7 @@
 </template>
 
 <script>
-  import {  cuiDefaultColors, getParentInstance, findParentComponent, appendColorClass, appendSizeClass } from '../../utilities/utilities'
+  import {  cuiDefaultColors, findParentComponent, appendColorClass, appendSizeClass } from '../../utilities/utilities'
   import Messenger from '../../utilities/mixin.messenger'
 
   export default {
@@ -62,18 +62,11 @@
         return classList;
       },
       isDisabled() {
-        return this.isGroup ? 
+        return this._checkboxGroup ? 
           this._checkboxGroup.disabled || this.disabled : this.disabled;
       },
       _checkboxGroup() {
-        return getParentInstance(this, 'CCheckboxGroup');
-      },
-      isGroup() {
-        if(findParentComponent(this, 'CCheckboxGroup')) {
-          return true;
-        } else {
-          return false;
-        }
+        return findParentComponent(this, 'CCheckboxGroup');
       },
       isChecked() {
         return this.model.includes(this.label);
@@ -85,12 +78,12 @@
 
       model: {
         get() {
-          return this.isGroup ? 
+          return this._checkboxGroup ? 
             this.store : 
               this.value !== undefined ? this.value : this.selfModel;
         },
         set(val) {
-          if(this.isGroup) {
+          if(this._checkboxGroup) {
             this.dispatch('CCheckboxGroup', 'input', val);
           } else {
             this.$emit('input', val);
@@ -106,7 +99,7 @@
       },
       handleChange(event) {
         this.$nextTick(() => {
-          if(this.isGroup) {
+          if(this._checkboxGroup) {
             this.dispatch('CCheckboxGroup', 'change', this._checkboxGroup.value)
           }
           this.$emit('change', event)

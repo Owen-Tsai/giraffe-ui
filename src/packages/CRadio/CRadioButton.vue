@@ -30,7 +30,7 @@
 </template>
 
 <script>
-  import { cuiDefaultColors, getParentInstance, appendColorClass, appendSizeClass } from '../../utilities/utilities'
+  import { cuiDefaultColors, appendColorClass, appendSizeClass, findParentComponent } from '../../utilities/utilities'
   import Messenger from '../../utilities/mixin.messenger'
 
   export default {
@@ -60,7 +60,7 @@
         return classList;
       },
       _radioGroup() {
-        return getParentInstance(this, 'CRadioGroup');
+        return findParentComponent(this, 'CRadioGroup');
       },
       value: {
         get() {

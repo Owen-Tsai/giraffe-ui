@@ -23,17 +23,14 @@
 </template>
 
 <script>
-  import { appendColorClass, appendSizeClass } from '../../utilities/utilities';
+  import { appendColorClass, appendSizeClass, findParentComponent, cuiDefaultColors } from '../../utilities/utilities';
 
   export default {
     name: 'CButton',
     props: {
       icon: String,
       size: String,
-      color: {
-        type: String,
-        default: 'default'
-      },
+      color: String,
       outlined: Boolean,
       raised: Boolean,
       flat: Boolean,
@@ -58,8 +55,30 @@
         appendColorClass(this.color, classList);
         appendSizeClass(this.size, classList);
 
+        if(this._buttonGroup && !this.color) {
+          const groupColor = this._buttonGroup.color;
+          if(cuiDefaultColors.includes(groupColor)) {
+            classList.push(groupColor);
+          }
+        }
+
+        if(this._buttonGroup) {
+          if(this._buttonGroup.round) {
+            classList.push('round');
+          }
+          if(this._buttonGroup.sharp) {
+            classList.push('sharp');
+          }
+          if(this._buttonGroup.size) {
+            appendSizeClass(this._buttonGroup.size, classList);
+          }
+        }
+
         return classList;
+      },
+      _buttonGroup() {
+        return findParentComponent(this, 'CButtonGroup');
       }
-    },
+    }
   }
 </script>

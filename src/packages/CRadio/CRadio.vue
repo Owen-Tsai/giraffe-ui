@@ -35,7 +35,7 @@
 </template>
 
 <script>
-  import { appendColorClass, getParentInstance, findParentComponent } from '../../utilities/utilities';
+  import { appendColorClass, findParentComponent } from '../../utilities/utilities';
   import Messenger from '../../utilities/mixin.messenger';
 
   export default {
@@ -53,26 +53,20 @@
       Messenger
     ],
     computed: {
-      isGroup() {
-        if(findParentComponent(this, 'CRadioGroup')) {
-          this._radioGroup = getParentInstance(this, 'CRadioGroup');
-          return true;
-        } else {
-          this._radioGroup = null;
-          return false;
-        }
-      },
       c() {
         let classList = Array.of('c-radio');
         appendColorClass(this.color, classList);
         return classList;
       },
+      _radioGroup() {
+        return findParentComponent(this, 'CRadioGroup');
+      },
       model: {
         get() {
-          return this.isGroup ? this._radioGroup.value : this.value;
+          return this._radioGroup ? this._radioGroup.value : this.value;
         },
         set(val) {
-          if(this.isGroup) {
+          if(this._radioGroup) {
             this.dispatch('CRadioGroup', 'input', val);
           } else {
             this.$emit('input', val);
@@ -82,13 +76,13 @@
         }
       },
       isDisabled() {
-        return this.isGroup ? this._radioGroup.disabled || this.disabled : this.disabled;
+        return this._radioGroup ? this._radioGroup.disabled || this.disabled : this.disabled;
       }
     },
     methods: {
       handleChange() {
         this.$nextTick(() => {
-          if(this.isGroup) {
+          if(this._radioGroup) {
             this.dispatch('CRadioGroup', 'handleChange', this.model);
           }
           this.$emit('change', this.model);

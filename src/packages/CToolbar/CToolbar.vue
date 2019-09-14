@@ -1,14 +1,18 @@
 <template>
-  <div :class="[...c]">
-    <ul class="c-toolbar-list">
+  <div :class="c">
+    <div class="c-toolbar-content">
       <slot></slot>
-    </ul>
+    </div>
   </div>
 </template>
 
 <script>
   export default {
     name: 'CToolbar',
-
+    computed: {
+      c() {
+        return 'c-toolbar';
+      }
+    }
   }
 </script>

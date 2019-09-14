@@ -5,7 +5,16 @@
 </template>
 
 <script>
+  import { cuiDefaultColors } from '../../utilities/utilities';
+
   export default {
-    name: 'CButtonGroup'
+    name: 'CButtonGroup',
+    componentName: 'CButtonGroup',
+    props: {
+      color: String,
+      round: Boolean,
+      sharp: Boolean,
+      size: String,
+    }
   }
 </script>
