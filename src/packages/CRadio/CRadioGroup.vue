@@ -5,14 +5,12 @@
 </template>
 
 <script>
-  import { appendColorClass } from "../../utilities/utilities";
-
   export default {
     name: 'CRadioGroup',
     componentName: 'CRadioGroup',
     props: {
       value: {},
-      btnColor: String,
+      color: String,
       size: String
     },
     created() {

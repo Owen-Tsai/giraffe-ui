@@ -23,7 +23,7 @@
 </template>
 
 <script>
-  import { appendColorClass, appendSizeClass, findParentComponent, cuiDefaultColors } from '../../utilities/utilities';
+  import { appendColorClass, appendSizeClass, findParentComponent } from '../../utilities/utilities';
 
   export default {
     name: 'CButton',
@@ -56,10 +56,7 @@
         appendSizeClass(this.size, classList);
 
         if(this._buttonGroup && !this.color) {
-          const groupColor = this._buttonGroup.color;
-          if(cuiDefaultColors.includes(groupColor)) {
-            classList.push(groupColor);
-          }
+          appendColorClass(this._buttonGroup.color, classList);
         }
 
         if(this._buttonGroup) {

@@ -5,8 +5,6 @@
 </template>
 
 <script>
-  import { cuiDefaultColors } from '../../utilities/utilities';
-
   export default {
     name: 'CButtonGroup',
     componentName: 'CButtonGroup',

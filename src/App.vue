@@ -26,7 +26,7 @@
     </div>
     <div class="inputs">
       <c-input v-model="str" disabled width="200px" type="text" placeholder="normal input box"></c-input>
-      <c-input v-model="str" width="200px" type="number" color="danger" prefix-icon="face"></c-input>
+      <c-input width="200px" type="number" color="danger" prefix-icon="face"></c-input>
       <c-input v-model="str" width="200px">
         <i slot="suffix" class="material-icons" @click="logStatic">mail</i>
       </c-input>
@@ -46,10 +46,10 @@
       <c-input v-model="str" width="200px" color="danger" round prefix-icon="face"></c-input>
       <c-input v-model="str" disabled width="200px" type="password" simplified suffix-icon="face"></c-input>
       <br>
-      <c-input v-model="str" suffix-icon="clear" show-icon-on-focus="suffix" size="large" width="250"></c-input>
-      <c-input v-model="str" prefix-icon="face" show-icon-on-focus="prefix" size="small" width="250"></c-input>
-      <c-input v-model="str" prefix-icon="face" size="mini" width="250"></c-input>
-      <c-input v-model="str" prefix-icon="face" width="250"></c-input>
+      <c-input v-model="str" suffix-icon="clear" show-icon-on-focus="suffix" size="large" width="250px"></c-input>
+      <c-input v-model="str" prefix-icon="face" show-icon-on-focus="prefix" size="small" width="250px"></c-input>
+      <c-input v-model="str" prefix-icon="face" size="mini" width="250px"></c-input>
+      <c-input v-model="str" prefix-icon="face" width="250px"></c-input>
       <br>
     </div>
     <div class="textareas">

@@ -29,7 +29,7 @@
 </template>
 
 <script>
-  import {  cuiDefaultColors, findParentComponent, appendColorClass, appendSizeClass } from '../../utilities/utilities'
+  import { findParentComponent, appendColorClass, appendSizeClass } from '../../utilities/utilities'
   import Messenger from '../../utilities/mixin.messenger'
 
   export default {
@@ -51,9 +51,7 @@
         let classList = Array.of('c-checkbox-btn');
 
         if(this._checkboxGroup && this._checkboxGroup.color) {
-          if(cuiDefaultColors.includes(this._checkboxGroup.color)) {
-            classList.push(this._checkboxGroup.color)
-          }
+          appendColorClass(this._checkboxGroup.color, classList, 'color');
         } else {
           appendColorClass(this.color, classList);
         }
