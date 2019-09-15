@@ -27,8 +27,8 @@
 
     @include when('is-active') {
       .c-radio-btn-inner {
-        border-color: color('grey-600');
-        background: color('grey-600');
+        border-color: $border-color-dark;
+        background-color: $bg-color-default-dark;
         color: #ffffff;
       }
     }
@@ -36,8 +36,8 @@
     @include when('is-disabled') {
       .c-radio-btn-inner {
         cursor: not-allowed;
-        color: color('grey-500');
-        background-color: color('grey-200');
+        color: $font-color-mute;
+        background-color: $bg-color-default-base;
         border: 1px solid $border-color-base;
       }
     }
@@ -75,7 +75,7 @@
     .c-radio-btn-inner {
       display: inline-block;
       vertical-align: middle;
-      background-color: color('grey-100');
+      background-color: $bg-color-default-light;
       border: 1px solid $border-color-base;
       text-align: center;
       outline: none;

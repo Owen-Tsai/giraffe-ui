@@ -9,7 +9,7 @@
 
   .c-card-header {
     padding: 16px;
-    background-color: color('grey-100');
+    background-color: $bg-color-default-light;
     border-radius: $border-radius-base $border-radius-base 0px 0px;
     border-bottom: 1px solid $border-color-light;
   }
@@ -32,7 +32,7 @@
     @include when('#{$color-prefix}-#{$c}') {
       @include set-colors($v);
       .c-card-header {
-        background-color: mix($v, color('grey-500'), 90%);
+        background-color: darken($v, 10%);
       }
     }
   }

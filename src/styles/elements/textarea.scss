@@ -12,14 +12,14 @@
   @include when('is-disabled') {
     .c-textarea-input {
       cursor: not-allowed;
-      background-color: color('grey-200');
-      color: color('grey-500');
+      background-color: $bg-color-default-base;
+      color: $font-color-mute;
     }
   }
 
   @include when('is-readonly') {
     .c-textarea-input {
-      color: color('grey-500');
+      color: $font-color-mute;
     }
   }
 
@@ -51,7 +51,7 @@
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
-      color: color('grey-600');
+      color: $font-color-secondary;
       padding: 2px 5px;
       font-size: $font-size-small;
     }

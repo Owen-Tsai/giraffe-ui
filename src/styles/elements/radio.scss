@@ -19,7 +19,7 @@
   }
 
   @include when('is-disabled') {
-    color: color('grey-400');
+    color: $font-color-mute;
     cursor: not-allowed;
 
     .c-radio-inner {
@@ -48,7 +48,7 @@
     box-sizing: border-box;
     
     @include when('is-checked') {
-      background-color: color('grey-600');
+      background-color: $bg-color-default-dark;
 
       &::after {
         transform: translate(-50%, -50%) scale(1.2);

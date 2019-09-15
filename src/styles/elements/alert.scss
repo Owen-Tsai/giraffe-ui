@@ -5,7 +5,7 @@
 .c-alert {
   padding: 10px 20px;
   border: 1px solid $border-color-base;
-  background-color: color('grey-100');
+  background-color: $bg-color-default-light;
   border-radius: $border-radius-base;
   position: relative;
   display: flex;

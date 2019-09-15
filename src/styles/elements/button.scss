@@ -11,7 +11,7 @@
   vertical-align: middle;
   cursor: pointer;
   padding: $button-padding;
-  background-color: color('grey-100');
+  background-color: $bg-color-default-light;
   border: 1px solid $border-color-base;
   border-radius: $border-radius-base;
   transition: all .3s;
@@ -39,7 +39,7 @@
 
   &:not([disabled]):hover, &:not([disabled]):focus {
     transition: all .3s;
-    background-color: color('grey-300');
+    background-color: $bg-color-default-medium;
     outline: 0;
   }
 

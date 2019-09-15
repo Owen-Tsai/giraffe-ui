@@ -37,14 +37,14 @@ code {
 
 .blockquote{
   padding: 1.2em 40px 1.2em 40px;
-  border-left: 8px solid color('purple');
+  border-left: 8px solid $primary-color;
   line-height: 1.6;
   position: relative;
-  background-color: color('grey-200');
+  background-color: $bg-color-default-base;
 
   &::before {
     content: "\“";
-    color: color('purple');;
+    color: $primary-color;
     font-size: 4em;
     position: absolute;
     left: 10px;

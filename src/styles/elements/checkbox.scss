@@ -19,7 +19,7 @@
   }
 
   @include when('is-disabled') {
-    color: color('grey-400');
+    color: $font-color-mute;
     cursor: not-allowed;
 
     .c-checkbox-inner {
@@ -48,7 +48,7 @@
     cursor: pointer;
 
     @include when('is-checked') {
-      background-color: color('grey-600');
+      background-color: $bg-color-default-dark;
 
       &::after {
         transform: rotate(45deg) scaleY(1);
