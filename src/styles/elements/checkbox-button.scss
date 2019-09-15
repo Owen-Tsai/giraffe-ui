@@ -14,14 +14,14 @@
 
     &:first-child {
       .c-checkbox-btn-inner {
-        border-top-left-radius: $basic-border-radius;
-        border-bottom-left-radius: $basic-border-radius;
+        border-top-left-radius: $border-radius-base;
+        border-bottom-left-radius: $border-radius-base;
       }
     }
     &:last-child {
       .c-checkbox-btn-inner {
-        border-top-right-radius: $basic-border-radius;
-        border-bottom-right-radius: $basic-border-radius;
+        border-top-right-radius: $border-radius-base;
+        border-bottom-right-radius: $border-radius-base;
       }
     }
 
@@ -38,12 +38,12 @@
         cursor: not-allowed;
         color: color('grey-500');
         background-color: color('grey-200');
-        border: 1px solid color('grey-400');
+        border: 1px solid $border-color-base;
       }
     }
 
-    @each $c, $v in $variations {
-      @include when($c) {
+    @each $c, $v in $colors {
+      @include when('#{$color-prefix}-#{$c}') {
         @include make-colored-checkbox-button($v);
       }
     }
@@ -76,7 +76,7 @@
       display: inline-block;
       vertical-align: middle;
       background-color: color('grey-100');
-      border: 1px solid color('grey-400');
+      border: 1px solid $border-color-base;
       text-align: center;
       outline: none;
       box-sizing: border-box;

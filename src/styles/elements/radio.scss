@@ -12,8 +12,8 @@
   margin-right: 12px;
   vertical-align: middle;
   
-  @each $c, $v in $variations {
-    @include when($c) {
+  @each $c, $v in $colors {
+    @include when('#{$color-prefix}-#{$c}') {
       @include make-colored-radio($v);
     }
   }
@@ -23,7 +23,7 @@
     cursor: not-allowed;
 
     .c-radio-inner {
-      border: 1px solid color('grey-400');
+      border: 1px solid $border-color-base;
       cursor: not-allowed;
     }
   }
@@ -39,7 +39,7 @@
   .c-radio-inner {
     width: $font-size-base;
     height: $font-size-base;
-    border: 1px solid color('grey-600');
+    border: 1px solid $border-color-medium;
     border-radius: 100%;
     background-color: #ffffff;
     position: relative;

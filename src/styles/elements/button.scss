@@ -12,8 +12,8 @@
   cursor: pointer;
   padding: $button-padding;
   background-color: color('grey-100');
-  border: 1px solid color('grey-400');
-  border-radius: $basic-border-radius;
+  border: 1px solid $border-color-base;
+  border-radius: $border-radius-base;
   transition: all .3s;
   font-size: $font-size-base;
   line-height: $font-size-base;
@@ -31,11 +31,11 @@
     line-height: 18px;
   }
 
-  &:not(.circle) {
-    .material-icons {
-      margin-right: 6px;
-    }
-  }
+  // &:not(.circle) {
+  //   .material-icons {
+  //     margin-right: 6px;
+  //   }
+  // }
 
   &:not([disabled]):hover, &:not([disabled]):focus {
     transition: all .3s;
@@ -66,8 +66,8 @@
 
   /* Color variations
   --------------------------------- */
-  @each $c, $v in $variations {
-    @include when($c) {
+  @each $c, $v in $colors {
+    @include when('#{$color-prefix}-#{$c}') {
       @include make-colored-button($v);
       @include when('outlined') {
         @include make-outlined-button($v);
@@ -88,7 +88,7 @@
   }
 
   @include when('round') {
-    border-radius: $round-border-radius;
+    border-radius: $border-radius-round;
   }
 
   @include when('circle') {

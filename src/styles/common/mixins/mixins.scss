@@ -15,3 +15,9 @@
     }
   }
 }
+
+@mixin set-colors($color) {
+  background-color: $color;
+  color: get-font-color-by-background($color);
+  border: 1px solid $color;
+}

@@ -27,8 +27,8 @@
     width: 100%;
     box-sizing: border-box;
     background-color: #ffffff;
-    border-radius: $basic-border-radius;
-    border: 1px solid color('grey-400');
+    border-radius: $border-radius-base;
+    border: 1px solid $border-color-base;
     display: inline-block;
     font-size: $font-size-base;
     height: $input-height;
@@ -38,7 +38,7 @@
     transition: all .3s;
 
     &:hover {
-      border: 1px solid color('grey-500');
+      border: 1px solid $border-color-medium;
     }
 
     &:focus {
@@ -58,7 +58,7 @@
 
   @include when('round') {
     .c-input-input {
-      border-radius: $round-border-radius;
+      border-radius: $border-radius-round;
     }
   }
 
@@ -74,8 +74,8 @@
     }
   }
 
-  @each $c, $v in $variations {
-    @include when($c) {
+  @each $c, $v in $colors {
+    @include when('#{$color-prefix}-#{$c}') {
       @include make-colored-input($v)
     }
   }
@@ -158,8 +158,8 @@
 .input-group {
   display: inline-table;
 
-  @each $c, $v in $variations {
-    @include when($c) {
+  @each $c, $v in $colors {
+    @include when('#{$color-prefix}-#{$c}') {
       @include make-colored-input-group($v);
     }
   }
@@ -170,7 +170,7 @@
     display: table-cell;
     vertical-align: middle;
     padding: 0 10px;
-    border: 1px solid color('grey-400');
+    border: 1px solid $border-color-base;
     background-color: color('grey-100');
     color: color('grey-600');
     cursor: pointer;
@@ -180,11 +180,11 @@
 
   .c-input-prepend {
     border-right: 0;
-    border-radius: $basic-border-radius 0 0 $basic-border-radius;
+    border-radius: $border-radius-base 0 0 $border-radius-base;
   }
   .c-input-append {
     border-left: 0;
-    border-radius: 0 $basic-border-radius $basic-border-radius 0;
+    border-radius: 0 $border-radius-base $border-radius-base 0;
   }
   @at-root .prepend {
     .c-input-input {

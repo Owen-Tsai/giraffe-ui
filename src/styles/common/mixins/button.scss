@@ -1,16 +1,10 @@
 /* Mixins for Buttons
 ----------------------------------- */
-@mixin set-colors($color) {
-  background-color: $color;
-  color: get-font-color-by-background($color);
-  border: 1px solid $color;
-}
-
 @mixin make-colored-button($color) {
   @include set-colors($color);
   @include when-attr(disabled) {
     background-color: mix($color, #ffffff);
-    border: 1px solid color('grey-300');
+    border: 1px solid $border-color-base;
   }
 
   &:not([disabled]):hover, &:not([disabled]):focus, &:not([disabled]):active {

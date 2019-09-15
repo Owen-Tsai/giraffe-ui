@@ -13,7 +13,7 @@
     z-index: 9;
     background-color: color('grey-700');
     color: #ffffff;
-    border-radius: $basic-border-radius;
+    border-radius: $border-radius-base;
   
     &[x-placement=bottom], &[x-placement=top] {
       .c-tooltip-arrow {
@@ -66,8 +66,8 @@
     }
   }
 
-  @each $c, $v in $variations {
-    @include when($c) {
+  @each $c, $v in $colors {
+    @include when('#{$color-prefix}-#{$c}') {
       @include make-colored-tooltip($v);
     }
   }

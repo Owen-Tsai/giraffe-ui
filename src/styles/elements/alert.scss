@@ -4,9 +4,9 @@
 
 .c-alert {
   padding: 10px 20px;
-  border: 1px solid color('grey-400');
+  border: 1px solid $border-color-base;
   background-color: color('grey-100');
-  border-radius: $basic-border-radius;
+  border-radius: $border-radius-base;
   position: relative;
   display: flex;
   align-items: center;
@@ -62,8 +62,8 @@
 
   /* Color variations
   --------------------------------- */
-  @each $c, $v in $variations {
-    @include when($c) {
+  @each $c, $v in $colors {
+    @include when('#{$color-prefix}-#{$c}') {
       @include make-colored-alert($v);
       
       @include when(outlined) {

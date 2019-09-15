@@ -27,8 +27,8 @@
     width: 100%;
     box-sizing: border-box;
     background-color: #ffffff;
-    border-radius: $basic-border-radius;
-    border: 1px solid color('grey-400');
+    border-radius: $border-radius-base;
+    border: 1px solid $border-color-base;
     display: inline-block;
     font-size: $font-size-base;
     line-height: inherit;
@@ -39,7 +39,7 @@
     resize: vertical;
 
     &:hover {
-      border: 1px solid color('grey-500');
+      border: 1px solid $border-color-medium;
     }
 
     &:focus {
@@ -57,8 +57,8 @@
     }
   }
 
-  @each $c, $v in $variations {
-    @include when($c) {
+  @each $c, $v in $colors {
+    @include when('#{$color-prefix}-#{$c}') {
       @include make-colored-textarea($v)
     }
   }

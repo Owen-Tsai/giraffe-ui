@@ -22,8 +22,8 @@
       margin-right: -1px;
     }
 
-    @each $variant in map-keys($variations) {
-      @include when(#{$variant}) {
+    @each $variant in map-keys($colors) {
+      @include when('#{$color-prefix}-#{$variant}') {
         &:first-child {
           border-right-color: rgba(#ffffff, 0.5);
         }

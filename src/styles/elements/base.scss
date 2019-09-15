@@ -5,8 +5,8 @@
 html {
   font-family: $font-list;
   font-size: $font-size-base;
-  color: $font-color;
-  line-height: $font-line-height-primary;
+  color: $font-color-common;
+  line-height: $line-height-base;
 }
 
 * {
