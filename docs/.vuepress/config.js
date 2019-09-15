@@ -39,6 +39,7 @@ function getGuideSidebar (groupA, groupB) {
         'color',
         'checkbox',
         'dropdown',
+        'icon',
         'input',
       ]
     }

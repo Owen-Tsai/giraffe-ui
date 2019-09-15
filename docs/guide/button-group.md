@@ -18,14 +18,14 @@
 </c-button-group>
 ```
 
-每个按钮可以像按钮组件里那样单独通过`color`属性指定颜色。如果想把按钮组中的所有按钮设置成相同的颜色，可以通过按钮组的`btn-color`属性实现。
+每个按钮可以像按钮组件里那样单独通过`color`属性指定颜色。如果想把按钮组中的所有按钮设置成相同的颜色，可以通过按钮组的`color`属性实现。
 
 <c-button-group style="margin-top: 20px;">
   <c-button color="warning">左按钮</c-button>
   <c-button color="success">中间按钮</c-button>
   <c-button color="danger">右按钮</c-button>
 </c-button-group>
-<c-button-group style="margin-top: 20px; margin-left: 10px;" color="info">
+<c-button-group style="margin-top: 20px; margin-left: 10px;" color="blue">
   <c-button icon="play_arrow">播放</c-button>
   <c-button icon="pause">暂停</c-button>
   <c-button icon="stop">停止</c-button>
@@ -37,7 +37,7 @@
   <c-button color="success">中间按钮</c-button>
   <c-button color="danger">右按钮</c-button>
 </c-button-group>
-<c-button-group color="info">
+<c-button-group color="blue">
   <c-button icon="play_arrow">播放</c-button>
   <c-button icon="pause">暂停</c-button>
   <c-button icon="stop">停止</c-button>
@@ -53,7 +53,7 @@
   <c-button color="success" round>中间按钮</c-button>
   <c-button color="danger" sharp>右按钮</c-button>
 </c-button-group>
-<c-button-group style="margin-top: 20px; margin-left: 10px;" color="info" round>
+<c-button-group style="margin-top: 20px; margin-left: 10px;" color="blue" round>
   <c-button icon="play_arrow">播放</c-button>
   <c-button icon="pause">暂停</c-button>
   <c-button icon="stop">停止</c-button>
@@ -65,7 +65,7 @@
   <c-button color="success" round>中间按钮</c-button>
   <c-button color="danger" sharp>右按钮</c-button>
 </c-button-group>
-<c-button-group color="info" round>
+<c-button-group color="blue" round>
   <c-button icon="play_arrow">播放</c-button>
   <c-button icon="pause">暂停</c-button>
   <c-button icon="stop">停止</c-button>
@@ -85,7 +85,7 @@
   <c-button color="success">中间按钮</c-button>
   <c-button color="danger">右按钮</c-button>
 </c-button-group>
-<c-button-group style="margin-top: 20px; margin-left: 10px;" color="info" size="small" round>
+<c-button-group style="margin-top: 20px; margin-left: 10px;" color="blue" size="small" round>
   <c-button icon="play_arrow">播放</c-button>
   <c-button icon="pause">暂停</c-button>
   <c-button icon="stop">停止</c-button>
@@ -97,7 +97,7 @@
   <c-button color="success">中间按钮</c-button>
   <c-button color="danger">右按钮</c-button>
 </c-button-group>
-<c-button-group color="info" size="small" round>
+<c-button-group color="blue" size="small" round>
   <c-button icon="play_arrow">播放</c-button>
   <c-button icon="pause">暂停</c-button>
   <c-button icon="stop">停止</c-button>
