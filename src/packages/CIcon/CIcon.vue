@@ -18,7 +18,7 @@
       iconSet: {
         type: String,
         validator(val) {
-          return ['fa', 'mdi'].includes(val)
+          return ['fa', 'mdi', 'giraffe'].includes(val)
         },
         default: 'fa'
       },
@@ -29,22 +29,24 @@
       innerClasses() {
         let classList = Array.of('c-icon-inner');
 
-        if(this.iconSet === 'mdi') {
+        if(this.iconSet === 'mdi' || this.iconSet === 'giraffe') {
           classList.push(this.iconSet);
         }
 
         if(this.name) {
-          this.iconSet === 'fa' ?
-            classList.push(`${this.name}`) : classList.push(`mdi-${this.name}`) 
+          if(this.iconSet === 'fa') {
+            classList.push(this.name);
+          } else {
+            classList.push(`${this.iconSet}-${this.name}`)
+          }
         }
+
         if(this.helper) {
           if(typeof(this.helper) === 'string') {
-            this.iconSet === 'fa' ?
-              classList.push(`fa-${this.helper}`) : classList.push(`mdi-${this.helper}`) 
+            classList.push(`${this.iconSet}-${this.helper}`)
           } else {
             this.helper.forEach(h => {
-              this.iconSet === 'fa' ?
-                classList.push(`fa-${h}`) : classList.push(`mdi-${h}`) 
+              classList.push(`${this.iconSet}-${h}`)
             });
           }
         }

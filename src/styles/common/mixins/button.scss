@@ -15,7 +15,7 @@
 
 @mixin make-flat-button($color) {
   color: $color;
-  background-color: transparent;
+  background-color: #ffffff;
   border: 0;
 
   @include when-attr(disabled) {
@@ -29,7 +29,7 @@
 
 @mixin make-text-only-button($color) {
   color: $color;
-  background-color: transparent;
+  background-color: #ffffff;
   border: none;
 
   @include when-attr(disabled) {
@@ -38,7 +38,7 @@
 
   &:not([disabled]):hover, &:not([disabled]):focus, &:not([disabled]):active {
     color: darken($color, 10%);
-    background-color: transparent;
+    background-color: #ffffff;
   }
 }
 

@@ -1,5 +1,6 @@
 import '../../src/styles/cui.scss';
 import '../../src/styles/custom-colors.scss';
+import '../../src/assets/cicons/iconfont.css';
 import '@mdi/font/css/materialdesignicons.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import '@fortawesome/fontawesome-free/js/all.min.js';

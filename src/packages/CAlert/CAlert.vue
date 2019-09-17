@@ -21,8 +21,11 @@
       </div>
       <span class="c-alert-close" v-if="!persistent">
         <span class="c-alert-close-text" v-if="closeText" @click="visible = false">{{ closeText }}</span>
-        <c-icon class="c-alert-close-icon" v-else @click="visible = false">
-          {{ closeIcon ? closeIcon : 'fas fa-times' }}
+        <c-icon class="c-alert-close-text" v-else-if="closeIcon" @click="visible = false">
+          {{ closeIcon }}
+        </c-icon>
+        <c-icon class="c-alert-close-icon" icon-set="giraffe" v-else @click="visible = false">
+          close
         </c-icon>
         <!-- <i class="material-icons c-alert-close-icon" v-else @click="visible = false">
           {{ closeIcon ? closeIcon : 'clear' }}

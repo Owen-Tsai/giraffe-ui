@@ -29,37 +29,33 @@
 输入框的内部可以添加前缀和后缀图标，对应的属性名称分别称为`prefix-icon`和`suffix-icon`。图标既可以直接通过属性名称设置，也可以通过具名插槽传入。
 
 <div style="display: flex; justify-content: space-between; margin-top: 20px;">
-  <c-input width="48%" color="danger" prefix-icon="face"></c-input>
-  <c-input width="48%" suffix-icon="done"></c-input>
+  <c-input width="48%" color="danger" prefix-icon="far fa-smile"></c-input>
+  <c-input width="48%" suffix-icon="fas fa-check"></c-input>
 </div>
 <div style="display: flex; justify-content: space-between; margin-top: 10px;">
   <c-input width="48%">
-    <i slot="prefix" class="material-icons">search</i>
+    <c-icon slot="prefix">far fa-smile</c-icon>
   </c-input>
   <c-input width="48%" color="info">
-    <i slot="suffix" class="material-icons">mail</i>
+    <c-icon slot="suffix">fas fa-check</c-icon>
   </c-input>
 </div>
 
 ```html
-<c-input width="48%" color="danger" prefix-icon="face"></c-input>
-<c-input width="48%" suffix-icon="done"></c-input>
+<c-input width="48%" color="danger" prefix-icon="far fa-smile"></c-input>
+<c-input width="48%" suffix-icon="fas fa-check"></c-input>
 
 <c-input width="48%">
-  <i slot="prefix" class="material-icons">search</i>
+  <c-icon slot="prefix">far fa-smile</c-icon>
 </c-input>
 <c-input width="48%" color="info">
-  <i slot="suffix" class="material-icons">mail</i>
+  <c-icon slot="suffix">fas fa-check</c-icon>
 </c-input>
 ```
 
 ## 输入框组
 
-输入框的外部可以添加前缀和后缀，表现为与输入框相连接的一组元素。和图标类似，前缀和后缀可以通过`prepend-caption`和`append-caption`属性添加，或者通过具名插槽传入。
-
-:::warning 注意
-目前通过具名插槽传入的输入框组的前缀或后缀元素只能是普通的`<div>`或`<span>`。这是因为 Giraffe UI 仍在开发阶段，样式并未调整完毕。试图传入其他的组件（例如按钮组件、下拉列表组件）等将不会达到理想的效果。
-:::
+输入框的外部可以添加前缀和后缀，表现为与输入框相连接的一组元素。前缀和后缀可以通过具名插槽传入。
 
 <div style="display: flex; justify-content: space-between; margin-top: 20px;">
   <c-input width="48%" color="danger" prepend-caption="https://" placeholder="example.com"></c-input>
@@ -67,11 +63,11 @@
 </div>
 <div style="display: flex; justify-content: space-between; margin-top: 10px;">
   <c-input width="48%">
-    <i slot="prefix" class="material-icons">search</i>
-    <span slot="append">谷歌搜索</span>
+    <c-icon slot="prefix">fas fa-search</c-icon>
+    <c-button slot="append">谷歌搜索</c-button>
   </c-input>
   <c-input width="48%" color="info">
-    <i slot="suffix" class="material-icons">mail</i>
+    <c-icon slot="suffix">fas fa-envelope</c-icon>
     <span slot="prepend">Gmail</span>
   </c-input>
 </div>
@@ -81,11 +77,11 @@
 <c-input width="48%" append-caption="done" placeholder="请输入待办事项"></c-input>
 
 <c-input width="48%">
-  <i slot="prefix" class="material-icons">search</i>
-  <span slot="append">谷歌搜索</span>
+  <c-icon slot="prefix">fas fa-search</c-icon>
+  <c-button slot="append">谷歌搜索</c-button>
 </c-input>
 <c-input width="48%" color="info">
-  <i slot="suffix" class="material-icons">mail</i>
+  <c-icon slot="suffix">fas fa-envelope</c-icon>
   <span slot="prepend">Gmail</span>
 </c-input>
 ```
@@ -101,13 +97,13 @@
 默认的输入框带有`4px`的边框弧度。使用`round`属性可以使输入框带有圆角样式。
 
 <div style="display: flex; justify-content: space-between; margin-top: 20px;">
-  <c-input width="48%" suffix-icon="search" round></c-input>
-  <c-input width="48%" prefix-icon="mail" round></c-input>
+  <c-input width="48%" suffix-icon="giraffe giraffe-close" round></c-input>
+  <c-input width="48%" prefix-icon="fas fa-envelope" round></c-input>
 </div>
 
 ```html
-<c-input width="48%" suffix-icon="search" round></c-input>
-<c-input width="48%" prefix-icon="mail" round></c-input>
+<c-input width="48%" suffix-icon="fas fa-search" round></c-input>
+<c-input width="48%" prefix-icon="fas fa-envelope" round></c-input>
 ```
 
 ### 简化输入框
@@ -116,12 +112,12 @@
 
 <div style="display: flex; justify-content: space-between; margin-top: 20px;">
   <c-input width="48%" simplified color="primary"></c-input>
-  <c-input width="48%" prefix-icon="mail" simplified color="danger"></c-input>
+  <c-input width="48%" prefix-icon="fas fa-envelope" simplified color="danger"></c-input>
 </div>
 
 ```html
 <c-input width="48%" simplified color="primary"></c-input>
-<c-input width="48%" prefix-icon="mail" simplified color="danger"></c-input>
+<c-input width="48%" prefix-icon="fas fa-envelope" simplified color="danger"></c-input>
 ```
 
 ## 输入框尺寸

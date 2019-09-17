@@ -20,10 +20,9 @@
   >
     <div
       class="c-input-prepend"
-      v-if="$slots.prepend || prependCaption"
+      v-if="$slots.prepend"
     >
       <slot name="prepend"></slot>
-      <div v-if="!$slots.prepend">{{ prependCaption }}</div>
     </div>
     <input
       class="c-input-input"
@@ -48,14 +47,13 @@
     </span>
     <div
       class="c-input-append"
-      v-if="$slots.append || appendCaption"
+      v-if="$slots.append"
     >
       <slot name="append"></slot>
-      <div v-if="!$slots.append">{{ appendCaption }}</div>
     </div>
     <div class="c-input-hint" v-if="$slots.hint || hint">
       <slot name="hint"></slot>
-      <span class="hint" v-if="!$slots.hint">{{ hint }}</span>
+
     </div>
   </div>
 </template>
@@ -85,18 +83,8 @@
       size: String,
       prefixIcon: String,
       suffixIcon: String,
-      appendCaption: String,
-      prependCaption: String,
       hint: String,
       showIconOnFocus: [Boolean, String],
-      handlePrefixIconClick: {
-        type: Function,
-        default: () => ({})
-      },
-      handleSuffixIconClick: {
-        type: Function,
-        default: () => ({})
-      }
     },
     data: () => ({
       hovering: false,

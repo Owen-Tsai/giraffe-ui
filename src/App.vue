@@ -37,8 +37,11 @@
       <c-input v-model="str" width="200px" color="primary">
         <span slot="hint">show something what if it's too long</span>
       </c-input>
-      <c-input v-model="str" width="300px" color="info" round>
-        <c-button slot="append" color="info" round outlined>Go!</c-button>
+      <c-input v-model="str" width="300px" color="info">
+        <c-button slot="append" color="info">Go!123</c-button>
+      </c-input>
+      <c-input v-model="str" width="200px">
+        <c-button slot="prepend">Go</c-button>
       </c-input>
       <br>
       <c-input v-model="str" width="200px" color="success" prepend-caption="http://"></c-input>
@@ -55,7 +58,7 @@
       </c-input>
       <c-input v-model="str" prefix-icon="fas fa-smile" show-icon-on-focus="prefix" size="small" width="250px"></c-input>
       <c-input v-model="str" prefix-icon="fas fa-smile" size="mini" width="250px"></c-input>
-      <c-input v-model="str" prefix-icon="fas fa-smile" width="250px"></c-input>
+      <c-input v-model="str" prefix-icon="fas fa-smile" width="250px" hint="this will go wrong"></c-input>
       <br>
     </div>
     <div class="textareas">

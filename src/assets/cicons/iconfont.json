@@ -1,0 +1,93 @@
+{
+  "id": "1419337",
+  "name": "giraffeui",
+  "font_family": "giraffe",
+  "css_prefix_text": "c-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "6986760",
+      "name": "done",
+      "font_class": "done",
+      "unicode": "e88f",
+      "unicode_decimal": 59535
+    },
+    {
+      "icon_id": "6987595",
+      "name": "close",
+      "font_class": "close",
+      "unicode": "eb1f",
+      "unicode_decimal": 60191
+    },
+    {
+      "icon_id": "6988344",
+      "name": "arrow-back",
+      "font_class": "arrow-back",
+      "unicode": "ec0e",
+      "unicode_decimal": 60430
+    },
+    {
+      "icon_id": "6988346",
+      "name": "arrow-drop-down",
+      "font_class": "arrow-drop-down",
+      "unicode": "ec0f",
+      "unicode_decimal": 60431
+    },
+    {
+      "icon_id": "6988349",
+      "name": "arrow-forward",
+      "font_class": "arrow-forward",
+      "unicode": "ec11",
+      "unicode_decimal": 60433
+    },
+    {
+      "icon_id": "6988351",
+      "name": "arrow-drop-up",
+      "font_class": "arrow-drop-up",
+      "unicode": "ec12",
+      "unicode_decimal": 60434
+    },
+    {
+      "icon_id": "6988354",
+      "name": "chevron-left",
+      "font_class": "chevron-left",
+      "unicode": "ec13",
+      "unicode_decimal": 60435
+    },
+    {
+      "icon_id": "6988355",
+      "name": "chevron-right",
+      "font_class": "chevron-right",
+      "unicode": "ec14",
+      "unicode_decimal": 60436
+    },
+    {
+      "icon_id": "6988357",
+      "name": "expand-more",
+      "font_class": "expand-more",
+      "unicode": "ec15",
+      "unicode_decimal": 60437
+    },
+    {
+      "icon_id": "6988358",
+      "name": "first-page",
+      "font_class": "first-page",
+      "unicode": "ec16",
+      "unicode_decimal": 60438
+    },
+    {
+      "icon_id": "6988360",
+      "name": "last-page",
+      "font_class": "last-page",
+      "unicode": "ec17",
+      "unicode_decimal": 60439
+    },
+    {
+      "icon_id": "6988367",
+      "name": "expand-less",
+      "font_class": "expand-less",
+      "unicode": "ec1c",
+      "unicode_decimal": 60444
+    }
+  ]
+}

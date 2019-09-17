@@ -1,0 +1,65 @@
+@font-face {font-family: "giraffe";
+  src: url('iconfont.eot?t=1568711425907'); /* IE9 */
+  src: url('iconfont.eot?t=1568711425907#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAQEAAsAAAAACVQAAAO3AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCEKgqDbIMiATYCJAM0CxwABCAFhEkHgUkbIwgjETZzMGok+y+QjeGg9A+QoMHBpZil11EbAAKMpT7+J9ClCiQZphzRFCxAAAXMUxgBCQAAAAAQD9Rc79vs5iAHv0CkGBUgClPHoJGFqm11HaArZ6YB0ICSy8waQKD+f/+zDwwvzWQGYzDpVoc3Cy+e+c1vfjqXhT8muvjW5VTHTjZgAsQThk5qb9hT5JfiKd1bGRvilpa1uKxdE6n67+JQNdOCsTkfALLHxhAFg0n3oF6pWoEFVHHuQzYH6iOZFfEyAYUBxgkLFy9ZoyahswLCkYP7d6p5IpJ0y9cElYgbk3BNrpadb1w1fj/8Mz7UyOQRXbhi36I95v6+WvbbsbNFQ5BW58LtNiLGIREuRHpOiVZmnKj4vCXZgKaaTPp99d/AOsqe9cODb5edFeQJmtzT1gf/wctESa6iqqau0NAkVOC2JrgL1t9XFSDwbyCQUbaBSNkBJMrOQE7ZBahQdgWqlN2AGmV3oE7ZAygoewINyn6yjqFbN/RBG+twk4DbY33gyIwaKs16VFVAlaA1HEu8WASnIDL2Rn4ah8lpkAYZsMcMRZyWXjy4G5EvRBrvgihBU6ZR79KG0lOSBtO8+9T5kExJ39KUJVx0+zufxup296sZhFz1FD2xFfhbSIuI/5sU+u/G6dGuC7fcaUQKTmuh5D7QTROCyOvG79hSe2QRnJH/BFebK5gmOGrqUy/R1NoNSerI3e0z0IPjsYQ4thcQ12XvQdsQ3nuPyUB2I5j2hUGIsi6GLiAH3dhr429cmuf2P3O1RgKfHr8JoEoVWzjAWpmlV4I041L6ysnaSu/5Kb0CWpp6sQuFAldDoIvvzei6Z3YRUNfdYWWq+rCi3GBkwo6I5hqG7aLy1U1GVmGsGbc3dLVPFFIdYxxlrKDwgJVpe8WKCq+RCfuWlevhHaui8INVWOf/AxtGhEXFL1MEqiEjqwPJmWy47NYdZlUGIDYVRZSoyQSwzSFCHNP25pfQABa7pN0KV2tOOMqaLEp4HVSVJAplAUyba63VxLJ41AeZTNZ3HVMEqiEjqwPJmWy4VtAdLPj1AMSmoohDVmkC2H7FuJ04pp2EXGqa5LFNPrbdCldrTjjKGnWLTqgAKytJVPRxBTBtrguk1MTi63hWjdmsrl5d4tsU9Bn9kGRF1XTDtGzH9eJpj2zgmVWyhQ5FlDtjRVk5tIMZSqVG5a7pe3dyiTuKWT+Be6N6bA3b+saogOv+772Yi7Xuwl7RJjNqidDhObbaUFTAe0UteWxZBW17dwc=') format('woff2'),
+  url('iconfont.woff?t=1568711425907') format('woff'),
+  url('iconfont.ttf?t=1568711425907') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('iconfont.svg?t=1568711425907#cicon') format('svg'); /* iOS 4.1- */
+}
+
+.giraffe {
+  font-family: "giraffe" !important;
+  font-size: 24px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.giraffe-done:before {
+  content: "\e88f";
+}
+
+.giraffe-close:before {
+  content: "\eb1f";
+}
+
+.giraffe-arrow-back:before {
+  content: "\ec0e";
+}
+
+.giraffe-arrow-drop-down:before {
+  content: "\ec0f";
+}
+
+.giraffe-arrow-forward:before {
+  content: "\ec11";
+}
+
+.giraffe-arrow-drop-up:before {
+  content: "\ec12";
+}
+
+.giraffe-chevron-left:before {
+  content: "\ec13";
+}
+
+.giraffe-chevron-right:before {
+  content: "\ec14";
+}
+
+.giraffe-expand-more:before {
+  content: "\ec15";
+}
+
+.giraffe-first-page:before {
+  content: "\ec16";
+}
+
+.giraffe-last-page:before {
+  content: "\ec17";
+}
+
+.giraffe-expand-less:before {
+  content: "\ec1c";
+}
+
