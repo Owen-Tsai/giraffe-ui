@@ -6,7 +6,7 @@
   height: 24px;
 
   .c-icon-text {
-    display: none;
+    display: none !important;
   }
 
   @each $c, $v in $colors {

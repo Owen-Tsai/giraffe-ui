@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div class="icons">
-      <c-icon>camera</c-icon>
+      <c-icon @click="logStatic">fas fa-camera</c-icon>
     </div>
     <div class="radios">
       <p>单选框</p>
@@ -29,15 +29,16 @@
     </div>
     <div class="inputs">
       <c-input v-model="str" disabled width="200px" type="text" placeholder="normal input box"></c-input>
-      <c-input width="200px" type="number" color="danger" prefix-icon="face"></c-input>
+      <c-input width="200px" type="number" color="danger" prefix-icon="fas fa-smile"></c-input>
       <c-input v-model="str" width="200px">
-        <i slot="suffix" class="material-icons" @click="logStatic">mail</i>
+        <span slot="suffix" class="c-input-counter">10/10</span>
       </c-input>
       <br>
-      <c-input v-model="str" width="200px" color="primary" hint="show something what if it's too long"></c-input>
-      <c-input v-model="str" width="300px" color="info">
-        <span slot="hint">using named slot is so cool!</span>
-        <div slot="append">Go!</div>
+      <c-input v-model="str" width="200px" color="primary">
+        <span slot="hint">show something what if it's too long</span>
+      </c-input>
+      <c-input v-model="str" width="300px" color="info" round>
+        <c-button slot="append" color="info" round outlined>Go!</c-button>
       </c-input>
       <br>
       <c-input v-model="str" width="200px" color="success" prepend-caption="http://"></c-input>
@@ -46,13 +47,15 @@
       </c-input>
       <br>
       <c-input v-model="str" readonly width="200px" type="text" simplified placeholder="normal input box"></c-input>
-      <c-input v-model="str" width="200px" color="danger" round prefix-icon="face"></c-input>
-      <c-input v-model="str" disabled width="200px" type="password" simplified suffix-icon="face"></c-input>
+      <c-input v-model="str" width="200px" color="danger" round prefix-icon="fas fa-smile"></c-input>
+      <c-input v-model="str" disabled width="200px" type="password" simplified suffix-icon="fas fa-smile"></c-input>
       <br>
-      <c-input v-model="str" suffix-icon="clear" show-icon-on-focus="suffix" size="large" width="250px"></c-input>
-      <c-input v-model="str" prefix-icon="face" show-icon-on-focus="prefix" size="small" width="250px"></c-input>
-      <c-input v-model="str" prefix-icon="face" size="mini" width="250px"></c-input>
-      <c-input v-model="str" prefix-icon="face" width="250px"></c-input>
+      <c-input v-model="str" show-icon-on-focus="suffix" size="large" width="250px">
+        <c-icon slot="suffix" @click="logStatic">fas fa-times</c-icon>
+      </c-input>
+      <c-input v-model="str" prefix-icon="fas fa-smile" show-icon-on-focus="prefix" size="small" width="250px"></c-input>
+      <c-input v-model="str" prefix-icon="fas fa-smile" size="mini" width="250px"></c-input>
+      <c-input v-model="str" prefix-icon="fas fa-smile" width="250px"></c-input>
       <br>
     </div>
     <div class="textareas">

@@ -25,13 +25,7 @@
 }
 
 @mixin make-colored-input-group($color) {
-  .c-input-prepend {
-    border-color: mix($color, #ffffff, 60%);
-    background-color: mix($color, #ffffff, 20%);
-    color: $color;
-  }
-
-  .c-input-append {
+  .c-input-prepend, .c-input-append {
     border-color: mix($color, #ffffff, 60%);
     background-color: mix($color, #ffffff, 20%);
     color: $color;

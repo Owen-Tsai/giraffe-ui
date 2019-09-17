@@ -19,7 +19,7 @@
     @mouseleave="hovering = false"
   >
     <div
-      :class="['c-input-prepend', {'clickable' : groupClickable}]"
+      class="c-input-prepend"
       v-if="$slots.prepend || prependCaption"
     >
       <slot name="prepend"></slot>
@@ -38,18 +38,16 @@
       @change="handleChange"
       :disabled="isDisabled"
     >
-    <span class="c-input-prefix" v-if="($slots.prefix || prefixIcon) && showPrefixIcon">
+    <span class="c-input-prefix" v-if="$slots.prefix || prefixIcon" v-show="showPrefixIcon">
       <slot name="prefix"></slot>
       <c-icon v-if="!$slots.prefix">{{ prefixIcon }}</c-icon>
-      <!-- <i class="material-icons prefix-icons" v-if="!$slots.prefix">{{ prefixIcon }}</i> -->
     </span>
-    <span class="c-input-suffix" v-if="($slots.suffix || suffixIcon) && showSuffixIcon">
+    <span class="c-input-suffix" v-if="$slots.suffix || suffixIcon" v-show="showSuffixIcon">
       <slot name="suffix"></slot>
       <c-icon v-if="!$slots.suffix">{{ suffixIcon }}</c-icon>
-      <!-- <i class="material-icons suffix-icons" v-if="!$slots.suffix">{{ suffixIcon }}</i> -->
     </span>
     <div
-      :class="['c-input-append', { 'clickable': groupClickable }]"
+      class="c-input-append"
       v-if="$slots.append || appendCaption"
     >
       <slot name="append"></slot>
@@ -91,7 +89,14 @@
       prependCaption: String,
       hint: String,
       showIconOnFocus: [Boolean, String],
-      groupClickable: Boolean
+      handlePrefixIconClick: {
+        type: Function,
+        default: () => ({})
+      },
+      handleSuffixIconClick: {
+        type: Function,
+        default: () => ({})
+      }
     },
     data: () => ({
       hovering: false,
@@ -109,14 +114,14 @@
       },
       showPrefixIcon() {
         if(this.showIconOnFocus === true || this.showIconOnFocus === 'prefix') {
-          return this.focused;
+          return this.focused || this.hovering;
         } else {
           return true;
         }
       },
       showSuffixIcon() {
         if(this.showIconOnFocus === true || this.showIconOnFocus === 'suffix') {
-          return this.focused;
+          return this.focused || this.hovering;
         } else {
           return true;
         }
@@ -140,7 +145,7 @@
       },
       handleChange(ev) {
         this.$emit('change', ev.target.value);
-      }
+      },
     },
     mounted() {
       if(this.width) {
