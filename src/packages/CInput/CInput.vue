@@ -40,11 +40,13 @@
     >
     <span class="c-input-prefix" v-if="($slots.prefix || prefixIcon) && showPrefixIcon">
       <slot name="prefix"></slot>
-      <i class="material-icons prefix-icons" v-if="!$slots.prefix">{{ prefixIcon }}</i>
+      <c-icon v-if="!$slots.prefix">{{ prefixIcon }}</c-icon>
+      <!-- <i class="material-icons prefix-icons" v-if="!$slots.prefix">{{ prefixIcon }}</i> -->
     </span>
     <span class="c-input-suffix" v-if="($slots.suffix || suffixIcon) && showSuffixIcon">
       <slot name="suffix"></slot>
-      <i class="material-icons suffix-icons" v-if="!$slots.suffix">{{ suffixIcon }}</i>
+      <c-icon v-if="!$slots.suffix">{{ suffixIcon }}</c-icon>
+      <!-- <i class="material-icons suffix-icons" v-if="!$slots.suffix">{{ suffixIcon }}</i> -->
     </span>
     <div
       :class="['c-input-append', { 'clickable': groupClickable }]"
@@ -62,10 +64,13 @@
 
 <script>
   import { appendColorClass, appendSizeClass } from '../../utilities/utilities';
-import { type } from 'os';
+  import CIcon from '../CIcon/CIcon';
 
   export default {
     name: 'CInput',
+    components: {
+      CIcon
+    },
 
     props: {
       disabled: Boolean,

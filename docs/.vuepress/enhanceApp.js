@@ -1,6 +1,8 @@
 import '../../src/styles/cui.scss';
 import '../../src/styles/custom-colors.scss';
-import 'material-design-icons/iconfont/material-icons.css';
+import '@mdi/font/css/materialdesignicons.min.css';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import '@fortawesome/fontawesome-free/js/all.min.js';
 import '../../src/styles/common/transtion.scss';
 import './styles/override.scss';
 
@@ -16,6 +18,7 @@ import CCheckboxGroup from '../../src/packages/CCheckbox/CCheckboxGroup';
 import CCheckboxBtn from '../../src/packages/CCheckbox/CCheckboxButton';
 import CInput from '../../src/packages/CInput/CInput';
 import CTextarea from '../../src/packages/CTextarea/CTextarea';
+import CIcon from '../../src/packages/CIcon/CIcon';
 import CDropdownMenu from '../../src/packages/CDropdown/CDropdownMenu';
 import CDropdownItem from '../../src/packages/CDropdown/CDropdownItem';
 import CDropdown from '../../src/packages/CDropdown/CDropdown';
@@ -39,4 +42,5 @@ export default ({
   Vue.component('c-radio-group', CRadioGroup);
   Vue.component('c-radio-button', CRadioBtn);
   Vue.component('c-textarea', CTextarea);
+  Vue.component('c-icon', CIcon);
 }

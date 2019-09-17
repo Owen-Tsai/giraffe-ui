@@ -32,11 +32,14 @@
 
 为按钮添加图标可以增强按钮的可读性。使用`icon`属性指定一个图标。
 
-<c-button style="margin: 10px;" icon="face" color="primary">你好</c-button>
-<c-button style="margin: 10px;" icon="thumb_up" color="success">赞同</c-button>
+<c-button style="margin: 10px;" icon="fas fa-smile-wink" color="primary" size="large">你好</c-button>
+<c-button style="margin: 10px;" icon="fas fa-thumbs-up" color="success">赞同</c-button>
+<c-button style="margin: 10px;" icon="fas fa-smile-wink" color="primary" size="small">你好</c-button>
+<c-button style="margin: 10px;" icon="fas fa-thumbs-up" color="success" size="mini">赞同</c-button>
 
 ```html
-<c-button icon="face" color="primary">你好</c-button>
+<c-button icon="fas fa-smile-wink" color="primary">你好</c-button>
+<c-button icon="far fa-thumbs-up" color="success">赞同</c-button>
 ```
 
 ## 不同尺寸的按钮
@@ -151,16 +154,16 @@
 圆形按钮不能包含任何的文本，它的内容只能通过`icon`属性指定一个图标。
 :::
 
-<c-button style="margin: 10px;" circle color="success" icon="thumb_up"></c-button>
-<c-button style="margin: 10px;" circle outlined color="danger" icon="done"></c-button>
-<c-button style="margin: 10px;" circle flat color="pink" icon="face"></c-button>
-<c-button style="margin: 10px;" circle raised color="info" icon="settings"></c-button>
+<c-button style="margin: 10px;" circle color="success" icon="fas fa-thumbs-up"></c-button>
+<c-button style="margin: 10px;" circle outlined color="danger" icon="fas fa-check"></c-button>
+<c-button style="margin: 10px;" circle flat color="pink" icon="far fa-smile"></c-button>
+<c-button style="margin: 10px;" circle raised color="info" icon="fas fa-cog"></c-button>
 
 ```html
-<c-button circle color="success" icon="thumb_up"></c-button>
-<c-button circle outlined color="danger" icon="done"></c-button>
-<c-button circle flat color="pink" icon="face"></c-button>
-<c-button circle raised color="info" icon="settings"></c-button>
+<c-button circle color="success" icon="fas fa-thumbs-up"></c-button>
+<c-button circle outlined color="danger" icon="fas fa-check"></c-button>
+<c-button circle flat color="pink" icon="far fa-smile"></c-button>
+<c-button circle raised color="info" icon="fas fa-cog"></c-button>
 ```
 
 ## 纯文本按钮
@@ -172,11 +175,11 @@
 :::
 
 <c-button style="margin: 10px;" pure-text color="primary">纯文本按钮</c-button>
-<c-button style="margin: 10px;" pure-text color="info" icon="cached">刷新</c-button>
+<c-button style="margin: 10px;" pure-text color="info" icon="fas fa-sync fa-spin">刷新</c-button>
 
 ```html
-<c-button style="margin: 10px;" pure-text color="primary">纯文本按钮</c-button>
-<c-button style="margin: 10px;" pure-text color="info" icon="cached">刷新</c-button>
+<c-button pure-text color="primary">纯文本按钮</c-button>
+<c-button pure-text color="info" icon="fas fa-sync fa-spin">刷新</c-button>
 ```
 
 ## API 列表

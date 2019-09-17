@@ -17,16 +17,20 @@
     ]]"
     @click="HandleClick"
   >
-    <i v-if="icon" class="material-icons">{{ icon }}</i>
+    <c-icon v-if="icon">{{ icon }}</c-icon>
     <span v-if="$slots.default"><slot></slot></span>
   </button>
 </template>
 
 <script>
   import { appendColorClass, appendSizeClass, findParentComponent } from '../../utilities/utilities';
+  import CIcon from '../CIcon/CIcon';
 
   export default {
     name: 'CButton',
+    components: {
+      CIcon
+    },
     props: {
       icon: String,
       size: String,

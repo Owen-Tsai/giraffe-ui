@@ -89,16 +89,16 @@
 
 可以通过组件的`icon`属性为当前的警告指定一个图标。图标将会显示在警告文字的最前。
 
-<c-alert :visible="a11" style="margin-top: 20px" color="primary" outlined icon="face">感谢您使用 Giraffe UI 组件库</c-alert>
-<c-alert :visible="a12" style="margin-top: 10px" color="danger" icon="error">遇到了不可预知的错误，请刷新页面继续</c-alert>
+<c-alert :visible="a11" style="margin-top: 20px" color="primary" outlined icon="far fa-laugh-wink">感谢您使用 Giraffe UI 组件库</c-alert>
+<c-alert :visible="a12" style="margin-top: 10px" color="danger" icon="fas fa-exclamation-circle">遇到了不可预知的错误，请刷新页面继续</c-alert>
 
 
 ```vue
-<c-alert :visible="alert1" color="primary" outlined icon="face">
+<c-alert :visible="alert1" color="primary" outlined icon="far fa-laugh-wink">
   感谢您使用 Giraffe UI 组件库
 </c-alert>
 
-<c-alert :visible="alert2" color="danger" icon="error">
+<c-alert :visible="alert2" color="danger" icon="fas fa-exclamation-circle">
   遇到了不可预知的错误，请刷新页面继续
 </c-alert>
 
@@ -117,13 +117,13 @@
 带有标题的警告组件使用粗体突出标题，同时辅以详细的文字介绍，使之更加易读。同时，如果一个警告组件同时带有图标和标题，那么图标将会自动放大以匹配两行文字的高度。如果警告组件的文字大于两行，那么图标将会居中对齐，不再放大。
 
 <c-alert :visible="a13" style="margin-top: 20px" color="primary" title="你好！">感谢您使用 Giraffe UI 组件库</c-alert>
-<c-alert :visible="a14" style="margin-top: 10px" outlined color="info" title="渲染完成！" icon="alarm_on">页面加载于 {{ new Date().toLocaleString() }}</c-alert>
+<c-alert :visible="a14" style="margin-top: 10px" outlined color="info" title="渲染完成！" icon="fas fa-clock">页面加载于 {{ new Date().toLocaleString() }}</c-alert>
 
 ```vue
 <c-alert :visible="alert1" color="primary" title="你好！">
   感谢您使用 Giraffe UI 组件库
 </c-alert>
-<c-alert :visible="alert2" outlined color="info" title="渲染完成!" icon="alarm_on">
+<c-alert :visible="alert2" outlined color="info" title="渲染完成!" icon="fas fa-clock">
   页面加载于 {{ new Date().toLocaleString() }}
 </c-alert>
 
@@ -174,13 +174,13 @@
 
 需要注意的是，当`persistent`属性生效时，无论是自定义的关闭符号还是默认的，都不会显示。
 
-<c-alert style="margin-top: 20px" :visible="a16" outlined color="success" icon="info" close-icon="done">操作成功！
+<c-alert style="margin-top: 20px" :visible="a16" outlined color="success" icon="info" close-icon="fas fa-check">操作成功！
 </c-alert>
 <c-alert style="margin-top: 10px" :visible="a17" outlined color="teal" close-text="我知道了">您今日有 <b>99</b> 个日程安排</c-alert>
 
 ```vue
 <template>
-  <c-alert :visible="alert1" outlined color="success" icon="info" close-icon="done">
+  <c-alert :visible="alert1" outlined color="success" icon="info" close-icon="fas fa-check">
     操作成功！
   </c-alert>
   <c-alert :visible="alert2" outlined color="teal" close-text="我知道了">

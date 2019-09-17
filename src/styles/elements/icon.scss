@@ -1,0 +1,17 @@
+@import '../common/var.scss';
+@import '../common/mixins/mixins.scss';
+
+.c-icon {
+  font-size: 24px;
+  height: 24px;
+
+  .c-icon-text {
+    display: none;
+  }
+
+  @each $c, $v in $colors {
+    @include when('#{$color-prefix}-#{$c}') {
+      color: $v;
+    }
+  }
+}

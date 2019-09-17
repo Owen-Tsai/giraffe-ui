@@ -10,6 +10,10 @@ export function appendSizeClass(size, classes, classPrefix = '') {
   }
 
   switch(size) {
+    case 'huge':
+      classes.push(`${classPrefix}huge`);
+      break;
+
     case 'large':
       classes.push(`${classPrefix}lg`);
       break;

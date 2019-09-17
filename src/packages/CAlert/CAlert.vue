@@ -8,7 +8,8 @@
         'no-icon': !icon
       }
     ]]" v-if="value">
-      <i :class="['material-icons', ...iconClass, 'c-alert-icon']" v-if="icon">{{ icon }}</i>
+      <c-icon :class="[...iconClass, 'c-alert-icon']" v-if="icon">{{ icon }}</c-icon>
+      <!-- <i :class="['material-icons', ...iconClass, 'c-alert-icon']" v-if="icon">{{ icon }}</i> -->
       <div class="c-alert-content">
         <span class="c-alert-title" v-if="$slots.title || title">
           <slot name="title">{{ title }}</slot>
@@ -20,9 +21,12 @@
       </div>
       <span class="c-alert-close" v-if="!persistent">
         <span class="c-alert-close-text" v-if="closeText" @click="visible = false">{{ closeText }}</span>
-        <i class="material-icons c-alert-close-icon" v-else @click="visible = false">
+        <c-icon class="c-alert-close-icon" v-else @click="visible = false">
+          {{ closeIcon ? closeIcon : 'fas fa-times' }}
+        </c-icon>
+        <!-- <i class="material-icons c-alert-close-icon" v-else @click="visible = false">
           {{ closeIcon ? closeIcon : 'clear' }}
-        </i>
+        </i> -->
       </span>
     </div>
   </transition>
@@ -30,9 +34,13 @@
 
 <script>
   import { appendColorClass } from '../../utilities/utilities';
+  import CIcon from '../CIcon/CIcon';
 
   export default {
     name: 'CAlert',
+    components: {
+      CIcon
+    },
     props: {
       title: String,
       description: String,

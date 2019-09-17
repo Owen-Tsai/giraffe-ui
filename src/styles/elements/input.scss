@@ -91,7 +91,7 @@
       height: 100%;
       text-align: center;
 
-      .material-icons {
+      .c-icon {
         line-height: $input-height;
         color: $font-color-mute;
         cursor: pointer;
@@ -109,7 +109,7 @@
       height: 100%;
       text-align: center;
 
-      .material-icons {
+      .c-icon {
         line-height: $input-height;
         color: $font-color-mute;
         cursor: pointer;
@@ -123,8 +123,8 @@
       line-height: $input-lg-height;
       font-size: $font-size-medium;
     }
-    .c-input-prefix > .material-icons,
-    .c-input-suffix > .material-icons {
+    .c-input-prefix > .c-icon,
+    .c-input-suffix > .c-icon {
       line-height: $input-lg-height;
     }
   }
@@ -135,8 +135,8 @@
       line-height: $input-sm-height;
       font-size: $font-size-base;
     }
-    .c-input-prefix > .material-icons,
-    .c-input-suffix > .material-icons {
+    .c-input-prefix > .c-icon,
+    .c-input-suffix > .c-icon {
       line-height: $input-sm-height;
     }
   }
@@ -147,8 +147,8 @@
       line-height: $input-mini-height;
       font-size: $font-size-small;
     }
-    .c-input-prefix > .material-icons,
-    .c-input-suffix > .material-icons {
+    .c-input-prefix > .c-icon,
+    .c-input-suffix > .c-icon {
       line-height: $input-mini-height;
       font-size: 18px;
     }

@@ -149,7 +149,7 @@
   <div style="margin-top: 20px;">
     <c-checkbox-group v-model="major" size="large">
       <c-checkbox-button label="自动化"></c-checkbox-button>
-      <c-checkbox-button label="通信工程"></c-checkbox-button>
+      <c-checkbox-button style="margin-left: -5px"label="通信工程"></c-checkbox-button>
       <c-checkbox-button style="margin-left: -5px" label="医工">生物医学工程</c-checkbox-button>
     </c-checkbox-group>
     <p>你喜欢的专业有：{{ major }}</p>

@@ -1,5 +1,8 @@
 <template>
   <div id="app">
+    <div class="icons">
+      <c-icon>camera</c-icon>
+    </div>
     <div class="radios">
       <p>单选框</p>
       <c-radio @change="logParam" label="男性" v-model="radio" color="info"></c-radio>
@@ -122,6 +125,7 @@
   import CTooltip from './packages/CTooltip/CTooltip'
   import CToolbar from './packages/CToolbar/CToolbar'
   import CToolbarItem from './packages/CToolbar/CToolbarItem'
+  import CIcon from './packages/CIcon/CIcon'
   // import CDialog from './packages/CDialog'
 
   export default {
@@ -158,6 +162,7 @@
       CTooltip,
       CToolbarItem,
       CToolbar,
+      CIcon
     },
     methods: {
       logStatic() {
@@ -171,6 +176,9 @@
 </script>
 
 <style lang="scss" scoped>
+  .icons {
+    margin: 20px;
+  }
   .btn-group {
     .c-btn-group {
       margin: 0 10px;

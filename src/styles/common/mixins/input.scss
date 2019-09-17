@@ -1,4 +1,5 @@
 @import 'mixins';
+
 /* Mixins for Inputs
 ----------------------------------- */
 @mixin make-colored-input($color) {
@@ -11,12 +12,13 @@
   }
 
   @include when('prefix') {
-    .c-input-prefix > .material-icons {
+    .c-input-prefix>.c-icon {
       color: mix($color, #ffffff, 60%);
     }
   }
+
   @include when('suffix') {
-    .c-input-suffix > .material-icons {
+    .c-input-suffix>.c-icon {
       color: mix($color, #ffffff, 60%);
     }
   }
@@ -28,6 +30,7 @@
     background-color: mix($color, #ffffff, 20%);
     color: $color;
   }
+
   .c-input-append {
     border-color: mix($color, #ffffff, 60%);
     background-color: mix($color, #ffffff, 20%);

@@ -10,7 +10,7 @@ $font-size-large: 18px !default;
 $font-size-medium: 16px !default;
 $font-size-base: 14px !default;
 $font-size-small: 13px !default;
-$font-size-extra-small: 12px !default;
+$font-size-mini: 12px !default;
 
 /* font-weight
 ----------------------------------- */
@@ -46,20 +46,24 @@ $font-color-mute: color('grey-400');
 
 /* buttons
 ----------------------------------- */
-$button-lg-padding: 12px 15px;
-$button-padding: 8px 12px;
-$button-sm-padding: 5px 8px;
-$button-mini-padding: 2px 5px;
+$button-lg-padding: 11px 15px;
+$button-padding: 7px 12px;
+$button-sm-padding: 4px 7px;
+$button-mini-padding: 1px 4px;
 
-$button-lg-icon-padding: 9px 12px;
-$button-icon-padding: 5px 9px;
-$button-sm-icon-padding: 2px 5px;
-$button-mini-icon-padding: 0 2px;
+$button-lg-icon-padding: 10px 14px;
+$button-icon-padding: 7px 11px;
+$button-sm-icon-padding: 4px 7px;
+$button-mini-icon-padding: 1px 4px;
 
-$button-lg-round-padding: 12px;
-$button-round-padding: 10px;
-$button-sm-round-padding: 8px;
-$button-mini-round-padding: 5px;
+$button-lg-icon-size: 22px;
+$button-icon-size: 20px;
+$button-mini-icon-size: 18px;
+
+$button-lg-circle-padding: 12px;
+$button-circle-padding: 10px;
+$button-sm-circle-padding: 8px;
+$button-mini-circle-padding: 5px;
 
 /* borders
 ----------------------------------- */
@@ -80,10 +84,10 @@ $bg-color-default-dark: color('grey-600');
 
 /* input
 ----------------------------------- */
-$input-lg-height: 43px;
-$input-height: 36px;
-$input-sm-height: 30px;
-$input-mini-height: 24px;
+$input-lg-height: 43.6px;
+$input-height: 35.6px;
+$input-sm-height: 29.6px;
+$input-mini-height: 23.6px;
 
 /* elevation levels
 ----------------------------------- */

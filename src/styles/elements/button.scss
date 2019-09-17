@@ -16,7 +16,7 @@
   border-radius: $border-radius-base;
   transition: all .3s;
   font-size: $font-size-base;
-  line-height: $font-size-base;
+  line-height: $line-height-base;
 
   &.btn-icon {
     padding: $button-icon-padding;
@@ -26,40 +26,46 @@
     cursor: not-allowed;
   }
 
-  span {
-    font-size: $font-size-base;
-    line-height: 18px;
-  }
-
-  // &:not(.circle) {
-  //   .material-icons {
-  //     margin-right: 6px;
-  //   }
-  // }
-
   &:not([disabled]):hover, &:not([disabled]):focus {
     transition: all .3s;
     background-color: $bg-color-default-medium;
     outline: 0;
   }
 
+  .c-icon {
+    margin-right: 6px;
+    font-size: $button-icon-size;
+    height: $button-icon-size;
+  }
+
   /* Size variations
   --------------------------------- */
   &.lg {
+    font-size: $font-size-medium;
     &.btn-icon {
       padding: $button-lg-icon-padding
+    }
+    .c-icon {
+      font-size:$button-lg-icon-size;
+      height:$button-lg-icon-size;
     }
     padding: $button-lg-padding
   }
   &.sm {
+    font-size: $font-size-small;
     &.btn-icon {
       padding: $button-sm-icon-padding;
     }
     padding: $button-sm-padding
   }
   &.mini {
+    font-size: $font-size-mini;
     &.btn-icon {
       padding: $button-mini-icon-padding;
+    }
+    .c-icon {
+      font-size:$button-mini-icon-size;
+      height:$button-mini-icon-size;
     }
     padding: $button-mini-padding;
   }
@@ -93,15 +99,18 @@
 
   @include when('circle') {
     border-radius: 50%;
-    padding: $button-round-padding;
+    padding: $button-circle-padding;
     &.lg {
-      padding: $button-lg-round-padding;
+      padding: $button-lg-circle-padding;
     }
     &.sm {
-      padding: $button-sm-round-padding;
+      padding: $button-sm-circle-padding;
     }
     &.mini {
-      padding: $button-mini-round-padding;
+      padding: $button-mini-circle-padding;
+    }
+    .c-icon {
+      margin-right: 0;
     }
   }
 

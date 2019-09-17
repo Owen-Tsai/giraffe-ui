@@ -47,18 +47,12 @@
   .c-alert-close-icon {
     position: absolute;
     font-size: $font-size-large;
+    line-height: $font-size-large;
+    top: 12px;
     right: 20px;
-    top: 14px;
+    font-weight: 300;
     cursor: pointer;
   }
-
-  
-  @include when('no-icon') {
-    .c-alert-close-icon {
-      top: 12px;
-    }
-  }
-
 
   /* Color variations
   --------------------------------- */
