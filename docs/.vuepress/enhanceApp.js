@@ -44,4 +44,5 @@ export default ({
   Vue.component('c-radio-button', CRadioBtn);
   Vue.component('c-textarea', CTextarea);
   Vue.component('c-icon', CIcon);
+  Vue.component('c-tooltip', CTooltip);
 }

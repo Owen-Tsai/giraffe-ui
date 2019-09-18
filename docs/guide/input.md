@@ -205,6 +205,8 @@
 | append-caption | 输入框组后缀 | string | — | — |
 | size | 输入框的尺寸 | string | large/—/small/mini | — |
 
+**你可以在`<c-input>`组件上使用`<input>`标签的原生属性，例如`placeholder`等。**
+
 ### Slot
 
 | 名称 | 说明                |

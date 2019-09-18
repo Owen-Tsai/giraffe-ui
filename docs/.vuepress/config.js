@@ -41,6 +41,9 @@ function getGuideSidebar (groupA, groupB) {
         'dropdown',
         'icon',
         'input',
+        'radio',
+        'textarea',
+        'tooltip'
       ]
     }
   ]

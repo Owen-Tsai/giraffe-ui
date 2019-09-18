@@ -7,6 +7,7 @@
   display: inline-block;
 
   .c-tooltip-popper {
+    font-size: $font-size-base;
     box-shadow: $box-shadow-lighter;
     padding: 5px 10px;
     margin: 6px 0;
@@ -26,6 +27,18 @@
       .c-tooltip-arrow {
         top: 50%;
         margin-top: -6px;
+      }
+    }
+
+    &[x-placement=bottom-end], &[x-placement=top-end] {
+      .c-tooltip-arrow {
+        right: 16px;
+      }
+    }
+
+    &[x-placement=left-end], &[x-placement=right-end] {
+      .c-tooltip-arrow {
+        bottom: 8px;
       }
     }
   
