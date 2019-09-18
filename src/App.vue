@@ -1,90 +1,14 @@
 <template>
   <div id="app">
-    <div class="icons">
-      <c-icon @click="logStatic">fas fa-camera</c-icon>
-    </div>
-    <div class="radios">
-      <p>单选框</p>
-      <c-radio @change="logParam" label="男性" v-model="radio" color="info"></c-radio>
-      <c-radio label="保密" v-model="radio" disabled></c-radio>
-      <c-radio label="double" v-model="radio" color="primary">双性</c-radio>
-      <c-radio label="女性" v-model="radio"></c-radio>
-      <p>selected is {{ radio }}</p>
-      <p>单选框组</p>
-      <c-radio-group v-model="radioGroup">
-        <c-radio label="男性" color="info"></c-radio>
-        <c-radio label="保密" disabled></c-radio>
-        <c-radio label="double" color="primary">双性</c-radio>
-        <c-radio label="女性"></c-radio>
-        <p>selected is {{ radioGroup }}</p>
-      </c-radio-group>
-      <p>按钮形状的单选框组</p>
-      <c-radio-group v-model="radioGroup" btn-color="primary" size="small">
-        <c-radio-btn label="男性" color="info"></c-radio-btn>
-        <c-radio-btn label="保密" disabled></c-radio-btn>
-        <c-radio-btn label="double" color="primary">双性</c-radio-btn>
-        <c-radio-btn label="女性"></c-radio-btn>
-      </c-radio-group>
-      <p>selected is {{ radioGroup }}</p>
-    </div>
-    <div class="inputs">
-      <c-input v-model="str" disabled width="200px" type="text" placeholder="normal input box"></c-input>
-      <c-input width="200px" type="number" color="danger" prefix-icon="fas fa-smile"></c-input>
-      <c-input v-model="str" width="200px">
-        <span slot="suffix" class="c-input-counter">10/10</span>
-      </c-input>
-      <br>
-      <c-input v-model="str" width="200px" color="primary">
-        <span slot="hint">show something what if it's too long</span>
-      </c-input>
-      <c-input v-model="str" width="300px" color="info">
-        <c-button slot="append" color="info">Go!123</c-button>
-      </c-input>
-      <c-input v-model="str" width="200px">
-        <c-button slot="prepend">Go</c-button>
-      </c-input>
-      <br>
-      <c-input v-model="str" width="200px" color="success" prepend-caption="http://"></c-input>
-      <c-input v-model="str" width="200px" group-clickable>
-        <div slot="append">Go!</div>
-      </c-input>
-      <br>
-      <c-input v-model="str" readonly width="200px" type="text" simplified placeholder="normal input box"></c-input>
-      <c-input v-model="str" width="200px" color="danger" round prefix-icon="fas fa-smile"></c-input>
-      <c-input v-model="str" disabled width="200px" type="password" simplified suffix-icon="fas fa-smile"></c-input>
-      <br>
-      <c-input v-model="str" show-icon-on-focus="suffix" size="large" width="250px">
-        <c-icon slot="suffix" @click="logStatic">fas fa-times</c-icon>
-      </c-input>
-      <c-input v-model="str" prefix-icon="fas fa-smile" show-icon-on-focus="prefix" size="small" width="250px"></c-input>
-      <c-input v-model="str" prefix-icon="fas fa-smile" size="mini" width="250px"></c-input>
-      <c-input v-model="str" prefix-icon="fas fa-smile" width="250px" hint="this will go wrong"></c-input>
-      <br>
-    </div>
-    <div class="textareas">
-      <c-textarea v-model="str" rows="1" color="danger"></c-textarea>
-      <c-textarea v-model="str" :rows="2"></c-textarea>
-      <c-textarea v-model="str" disabled :rows="3" color="primary"></c-textarea>
-      <br>
-      <c-textarea v-model="str" :min-rows="4" no-resize placeholder="this is a placeholder"></c-textarea>
-      <c-textarea v-model="str" readonly no-resize color="cyan"></c-textarea>
-      <c-textarea v-model="str" :min-rows="2" no-resize></c-textarea>
-    </div>
     <div class="dropdowns">
-      <c-dropdown trigger="click" placement="bottom-start">
+      <c-dropdown trigger="click" placement="bottom" @item-click="logParam">
         <c-button slot="activator">下拉菜单</c-button>
         <c-dropdown-menu :max-width="100">
-          <c-dropdown-item>第一个选项</c-dropdown-item>
+          <c-dropdown-item icon="fas fa-camera">第一个选项</c-dropdown-item>
           <c-dropdown-item>第二个选项</c-dropdown-item>
           <c-dropdown-item>第三个选项稍微长一点</c-dropdown-item>
         </c-dropdown-menu>
       </c-dropdown>
-    </div>
-    <div class="tooltips">
-      <c-tooltip placement="top-end" color="info" :max-width="70">
-        <p slot="activator">这是一段文字，上面有一个 tooltip</p>
-        <span>hello, I'm a tooltip</span>
-      </c-tooltip>
     </div>
     <div class="toolbars">
       <c-toolbar>
@@ -172,40 +96,18 @@
     },
     methods: {
       logStatic() {
-        alert(123);
+        console.log(123);
       },
       logParam(param) {
-        alert(param);
+        console.log(param);
       }
     }
   }
 </script>
 
 <style lang="scss" scoped>
-  .icons {
-    margin: 20px;
-  }
-  .btn-group {
-    .c-btn-group {
-      margin: 0 10px;
-    }
-  }
-  .inputs {
-    .c-input {
-      margin-top: 10px;
-      margin-right: 20px;
-    }
-  }
-  .textareas {
-    margin-bottom: 100px;
-    .c-textarea {
-      margin-top: 10px;
-      margin-right: 20px;
-      width: 300px;
-    }
-  }
   .dropdowns {
-    margin-bottom: 20px;
+    margin: 20px;
   }
   .tooltips {
     margin-bottom: 200px;

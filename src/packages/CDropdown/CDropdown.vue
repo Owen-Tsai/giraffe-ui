@@ -31,6 +31,7 @@
 
   export default {
     name: 'CDropdown',
+    componentName: 'CDropdown',
     components: {
       CPopper,
     },

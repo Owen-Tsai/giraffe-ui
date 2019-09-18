@@ -5,17 +5,21 @@
       'is-divided': isDivided
     }
   ]]" @click="handleClick">
-    <i class="material-icons" v-if="icon">{{ icon }}</i>
+    <c-icon v-if="icon">{{ icon }}</c-icon>
     <slot></slot>
   </li>
 </template>
 
 <script>
-  import Messenger from "../../utilities/mixin.messenger";
+  import Messenger from '../../utilities/mixin.messenger';
+  import CIcon from '../CIcon/CIcon';
 
   export default {
     name: 'CDropdownItem',
     componentName: 'CDropdownItem',
+    components: {
+      CIcon
+    },
     props: {
       isDisabled: Boolean,
       isDivided: Boolean,

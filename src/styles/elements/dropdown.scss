@@ -10,6 +10,14 @@
   cursor: pointer;
   font-size: $font-size-base;
   line-height: $line-height-base;
+  background-color: #ffffff;
+  vertical-align: middle;
+
+  .c-icon {    
+    line-height: $line-height-base;
+    font-size: $line-height-base;
+    margin-right: 6px;
+  }
 
   &:hover {
     color: $primary-color;
@@ -19,11 +27,13 @@
 
 /* dropdown-menu
 ----------------------------------- */
+.c-dropdown-list {
+  z-index: 9;
+}
 .c-dropdown-menu {
   box-shadow: $box-shadow-light;
   padding: 5px 0;
   margin: 5px 0;
-  z-index: 9;
   background-color: #ffffff;
 
   @include when('constrain-length') {

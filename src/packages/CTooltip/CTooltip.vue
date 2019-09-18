@@ -43,7 +43,7 @@
         type: Number,
         default: 10
       },
-      maxWidth: Number,
+      maxWidth: [Number, String],
       content: String,
       persistent: Boolean,
       color: String
@@ -141,8 +141,10 @@
       if(this.persistent) {
         this.update();
       }
-      if(this.maxWidth && this.maxWidth >= 1) {
-        this.$refs.popper.style.maxWidth = `${this.maxWidth}px`;
+      if(this.maxWidth) {
+        typeof(this.maxWidth) === 'string' ?
+          this.$refs.popper.style.maxWidth = this.maxWidth :
+          this.$refs.popper.style.maxWidth = `${this.maxWidth}px`;
       }
     },
     beforeDestroy () {

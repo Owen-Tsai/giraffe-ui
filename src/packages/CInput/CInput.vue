@@ -7,9 +7,9 @@
     {
       'prefix': $slots.prefix || prefixIcon,
       'suffix': $slots.suffix || suffixIcon,
-      'input-group': prependCaption || appendCaption || $slots.prepend || $slots.append,
-      'prepend': $slots.prepend || prependCaption,
-      'append': $slots.append || appendCaption
+      'input-group': $slots.prepend || $slots.append,
+      'prepend': $slots.prepend,
+      'append': $slots.append
     },
     {
       'simplified': simplified,
