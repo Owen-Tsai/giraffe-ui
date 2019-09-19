@@ -38,6 +38,6 @@ Giraffe UI 并不完美 —— 尤其是考虑到它的开发过程也即是对 
 
 ## 我正在找工作！
 
-我是 Giraffe UI 的开发者蔡仲晨，大学毕业后待业在家，闲暇时写了 Giraffe UI。我目前正在寻找合适的工作机会，期望工作地点是北京或山东济南，如果您是招聘者并且愿意为我提供一份工作，请通过电子邮箱[owentsai.v@gmail.com](mailto://owentsai.v@gmail.com)联系我，我会尽快寄送简历。
+我是 Giraffe UI 的开发者蔡仲晨，大学毕业后待业在家，闲暇时写了 Giraffe UI。我目前正在寻找合适的工作机会，如果您是招聘者并且愿意为我提供一份工作，请通过电子邮箱[owentsai.v@gmail.com](mailto://owentsai.v@gmail.com)联系我，我会尽快寄送简历。
 
-I am the developer behind Giraffe UI. I created it after graduation from college. Currently I'm looking forward to appropriate working opportunities in Beijing or Jinan. If you are an employer and willing to offer me a job, please contact me at [owentsai.v@gmail.com](mailto://owentsai.v@gmail.com), I'll send you back my resume ASAP.
+I am the developer behind Giraffe UI. I created it after graduation from college. Currently I'm looking forward to appropriate working opportunities. If you are an employer and willing to offer me a job, please contact me at [owentsai.v@gmail.com](mailto://owentsai.v@gmail.com), I'll send you back my resume ASAP.

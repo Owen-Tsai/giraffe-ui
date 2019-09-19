@@ -1,7 +1,8 @@
 <template>
   <ul :class="['c-dropdown-menu', ...[
     {
-      'constrain-length': maxWidth && maxWidth > 0
+      'constrain-length': maxWidth,
+      'constrain-height': maxHeight
     }
   ]]">
     <slot></slot>
@@ -12,15 +13,24 @@
   export default {
     name: 'CDropdownMenu',
     props: {
-      maxWidth: Number
+      maxWidth: [Number, String],
+      maxHeight: [Number, String]
     },
     mounted() {
-      if(this.maxWidth && this.maxWidth > 0) {
+      if(this.maxWidth) {
         this.$children.forEach(child => {
           if(child.$options.componentName === 'CDropdownItem') {
-            child.$el.style.maxWidth = `${this.maxWidth}px`;
+            typeof(this.maxWidth) === 'string' ?
+              child.$el.style.maxWidth = this.maxWidth :
+              child.$el.style.maxWidth = `${this.maxWidth}px`;
           }
         });
+      }
+      
+      if(this.maxHeight) {
+        typeof(this.maxHeight) === 'string' ?
+          this.$el.style.maxHeight = this.maxHeight :
+          this.$el.style.maxHeight = `${this.maxHeight}px`;
       }
     }
   }

@@ -1,13 +1,19 @@
 @function color($color) {
-  @return map-get($colors, $color)
+  @return map-get($colors, $color);
 }
 
-@function get-font-color-by-background($bg-color) {
-  $brightness: lightness($bg-color);
+@function brightness($color) {
+  @return ((red($color) * .299) + (green($color) * .587) + (blue($color) * .114)) / 255 * 100%;
+}
 
-  @if($brightness < 45) {
-    @return #000000;
+@function color-contrast($color, $dark: $font-color-common, $light: #ffffff) {
+  @if $color == null {
+    @return null;
   } @else {
-    @return #ffffff;
+    $color-brightness: brightness($color);  
+    $light-text-brightness: brightness($light);
+    $dark-text-brightness: brightness($dark);
+    
+    @return if(abs($color-brightness - $light-text-brightness) > abs($color-brightness - $dark-text-brightness), $light, $dark);  
   }
 }

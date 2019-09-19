@@ -14,7 +14,7 @@
       background-color: $v;
 
       .c-toolbar-content {
-        color: get-font-color-by-background($v);
+        color: color-contrast($v);
       }
       .c-toolbar-group {
         a.c-toolbar-item:hover {

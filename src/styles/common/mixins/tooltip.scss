@@ -1,7 +1,7 @@
 @mixin make-colored-tooltip($color) {
   .c-tooltip-popper {
     background-color: $color;
-    color: get-font-color-by-background($color);
+    color: color-contrast($color);
   
     @each $dir in ('left', 'right', 'bottom', 'top') {
       &[x-placement^=#{$dir}] {

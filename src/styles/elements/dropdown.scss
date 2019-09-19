@@ -43,6 +43,10 @@
       text-overflow: ellipsis;
     }
   }
+
+  @include when('constrain-height') {
+    overflow-y: scroll;
+  }
 }
 
 .c-dropdown {
@@ -54,6 +58,7 @@
         @include set-colors($v);
       }
       .c-dropdown-item {
+        color: color-contrast($v);
         &:hover {
           color: $v;
           background-color: #ffffff;

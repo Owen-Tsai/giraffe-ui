@@ -54,6 +54,6 @@
 
    &:not([disabled]):hover, &:not([disabled]):focus, &:not([disabled]):active {
     background-color: $color;
-    color: get-font-color-by-background($color);
+    color: color-contrast($color);
   }
 }

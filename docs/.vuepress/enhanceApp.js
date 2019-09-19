@@ -7,6 +7,8 @@ import '@fortawesome/fontawesome-free/js/all.min.js';
 import '../../src/styles/common/transtion.scss';
 import './styles/override.scss';
 
+import { clickOutside as directive } from '../../src/utilities/clickOutside';
+
 import CAlert from '../../src/packages/CAlert/CAlert';
 import CButton from '../../src/packages/CButton/Button';
 import CButtonGroup from '../../src/packages/CButton/ButtonGroup';
@@ -45,4 +47,7 @@ export default ({
   Vue.component('c-textarea', CTextarea);
   Vue.component('c-icon', CIcon);
   Vue.component('c-tooltip', CTooltip);
+  Vue.component('c-dropdown', CDropdown);
+  Vue.component('c-dropdown-menu', CDropdownMenu);
+  Vue.component('c-dropdown-item', CDropdownItem);
 }

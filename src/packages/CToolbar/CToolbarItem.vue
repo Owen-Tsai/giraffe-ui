@@ -28,16 +28,13 @@
         },
         default: '_self'
       },
-      append: Boolean
+      append: Boolean,
     },
     computed: {
       c() {
         let classList = Array.of('c-toolbar-item');
-        if(this.active && !this.flat) {
+        if(this.active) {
           classList.push('active');
-        }
-        if(this.flat) {
-          classList.push('flat');
         }
         return classList;
       },
