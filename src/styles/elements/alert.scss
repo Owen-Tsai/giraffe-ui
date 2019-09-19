@@ -22,7 +22,7 @@
   }
 
   .c-alert-description {
-    font-size: $font-size-small;
+    font-size: $font-size-sm;
     margin: 0;
   }
 
@@ -46,8 +46,8 @@
 
   .c-alert-close-icon {
     position: absolute;
-    font-size: $font-size-large;
-    line-height: $font-size-large;
+    font-size: $font-size-lg;
+    line-height: $font-size-lg;
     top: 12px;
     right: 20px;
     font-weight: 300;

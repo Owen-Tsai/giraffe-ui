@@ -42,7 +42,7 @@
   /* Size variations
   --------------------------------- */
   &.lg {
-    font-size: $font-size-medium;
+    font-size: $font-size-md;
     &.btn-icon {
       padding: $button-lg-icon-padding
     }
@@ -53,7 +53,7 @@
     padding: $button-lg-padding
   }
   &.sm {
-    font-size: $font-size-small;
+    font-size: $font-size-sm;
     &.btn-icon {
       padding: $button-sm-icon-padding;
     }

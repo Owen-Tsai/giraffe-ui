@@ -1,0 +1,64 @@
+@import '../common/var.scss';
+@import '../common/mixins/mixins.scss';
+@import '../common/functions.scss';
+
+.c-tag {
+  box-sizing: border-box;
+  display: inline-block;
+  height: $tag-height;
+  font-size: $font-size-sm;
+  line-height: $tag-height;
+  border-radius: $border-radius-base;
+  border: 1px solid $border-color-base;
+  padding: 0 10px;
+  background-color: $bg-color-default-base;
+
+  @include when('round') {
+    border-radius: $border-radius-round;
+  }
+  @include when('sharp') {
+    border-radius: 0;
+  }
+
+  &.lg {
+    height: $tag-lg-height;
+    font-size: $font-size-base;
+    line-height: $tag-lg-height;
+  }
+  &.sm {
+    height: $tag-sm-height;
+    font-size: $font-size-sm;
+    line-height: $tag-sm-height;
+    padding: 0 8px;
+  }
+  &.mini {
+    height: $tag-mini-height;
+    font-size: $font-size-mini;
+    line-height: $tag-mini-height;
+    padding: 0 6px;
+  }
+
+  @each $c, $v in $colors {
+    @include when('#{$color-prefix}-#{$c}') {
+      border: 1px solid $v;
+      background-color: $v;
+      color: color-contrast($v);
+      @include when('outlined') {
+        background-color: mix($v, #ffffff, 10%);
+        color: $v;
+      }
+      @include when('flat') {
+        color: $v;
+        border-color: $v;
+        background-color: #ffffff;
+      }
+    }
+  }
+
+  .c-icon {
+    margin-left: 4px;
+    font-size: inherit;
+    line-height: inherit;
+    cursor: pointer;
+  }
+}

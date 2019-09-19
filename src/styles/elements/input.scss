@@ -54,7 +54,7 @@
     text-overflow: ellipsis;
     color: $font-color-secondary;
     padding: 2px 5px;
-    font-size: $font-size-small;
+    font-size: $font-size-sm;
   }
 
   @include when('round') {
@@ -140,7 +140,7 @@
     .c-input-input {
       height: $input-lg-height;
       line-height: $input-lg-height;
-      font-size: $font-size-medium;
+      font-size: $font-size-md;
     }
     .c-input-prefix > .c-icon,
     .c-input-suffix > .c-icon {
@@ -166,7 +166,7 @@
     .c-input-input {
       height: $input-mini-height;
       line-height: $input-mini-height;
-      font-size: $font-size-small;
+      font-size: $font-size-sm;
     }
     .c-input-prefix > .c-icon,
     .c-input-suffix > .c-icon {
