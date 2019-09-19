@@ -38,6 +38,13 @@
         
       </c-toolbar>
     </div>
+    <div class="tags">
+      <c-tag color="info" size="large">标签范例 1</c-tag>
+      <c-tag color="primary" outlined>标签范例 1</c-tag>
+      <c-tag color="purple" flat size="small">标签范例 1</c-tag>
+      <c-tag color="danger" round>标签范例 1</c-tag>
+      <c-tag color="yellow" sharp size="mini">标签范例 1</c-tag>
+    </div>
   </div>
 </template>
 
@@ -62,6 +69,7 @@
   import CToolbarGroup from './packages/CToolbar/CToolbarGroup'
   import CToolbarItem from './packages/CToolbar/CToolbarItem'
   import CIcon from './packages/CIcon/CIcon'
+  import CTag from './packages/CTag/CTag'
   // import CDialog from './packages/CDialog'
 
   export default {
@@ -99,7 +107,8 @@
       CToolbarItem,
       CToolbar,
       CToolbarGroup,
-      CIcon
+      CIcon,
+      CTag
     },
     methods: {
       logStatic() {
@@ -122,6 +131,11 @@
   }
   .toolbars {
     margin-bottom: 200px;
+  }
+  .tags {
+    * {
+      margin: 10px;
+    }
   }
   #app {
     padding-top: 64px;

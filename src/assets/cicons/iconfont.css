@@ -9,7 +9,7 @@
 
 .giraffe {
   font-family: "giraffe" !important;
-  font-size: 24px;
+  font-size: inherit;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
