@@ -1,5 +1,11 @@
 <template>
-  <div :class="c">
+  <div :class="[...c, ...[
+    {
+      'dense': dense,
+      'flat': flat,
+      'fixed': fixed,
+    }
+  ]]">
     <div class="c-toolbar-content">
       <slot></slot>
     </div>
@@ -7,11 +13,21 @@
 </template>
 
 <script>
+  import { appendColorClass } from '../../utilities/utilities';
+
   export default {
     name: 'CToolbar',
+    props: {
+      color: String,
+      dense: Boolean,
+      flat: Boolean,
+      fixed: Boolean
+    },
     computed: {
       c() {
-        return 'c-toolbar';
+        let classList = Array.of('c-toolbar');
+        appendColorClass(this.color, classList);
+        return classList;
       }
     }
   }

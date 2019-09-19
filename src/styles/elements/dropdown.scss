@@ -10,8 +10,8 @@
   cursor: pointer;
   font-size: $font-size-base;
   line-height: $line-height-base;
-  background-color: #ffffff;
   vertical-align: middle;
+  color: $font-color-common;
 
   .c-icon {    
     line-height: $line-height-base;
@@ -47,4 +47,18 @@
 
 .c-dropdown {
   display: inline-block;
+
+  @each $c, $v in $colors {
+    @include when('#{$color-prefix}-#{$c}') {
+      .c-dropdown-menu {
+        @include set-colors($v);
+      }
+      .c-dropdown-item {
+        &:hover {
+          color: $v;
+          background-color: #ffffff;
+        }
+      }
+    }
+  }
 }

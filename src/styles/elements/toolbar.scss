@@ -6,30 +6,74 @@
   width: 100%;
   position: relative;
   height: 64px;
+  line-height: 64px;
   box-shadow: $box-shadow-light;
+
+  @each $c, $v in $colors {
+    @include when('#{$color-prefix}-#{$c}') {
+      background-color: $v;
+
+      .c-toolbar-content {
+        color: get-font-color-by-background($v);
+      }
+      .c-toolbar-group {
+        a.c-toolbar-item:hover {
+          background-color: mix($v, #ffffff, 10%);
+          color: $v;
+        }
+      }
+    }
+  }
+
+  @include when('flat') {
+    box-shadow: none;
+  }
+
+  @include when('fixed') {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  @include when('dense') {
+    height: 48px;
+    line-height: 48px;
+  }
 
   .c-toolbar-content {
     margin: 0;
     box-sizing: border-box;
-    height: 64px;
+    height: 100%;
     padding: 0 16px;
     display: flex;
     align-items: center;
     font-size: $font-size-base;
-    line-height: $font-size-base;
   }
 
   .c-toolbar-item {
-    line-height: 64px;
-    height: 64px;
+    //line-height: 64px;
+    height: 100%;
     padding: 0 16px;
     font-size: 1.1em;
-    transition: background-color .3s;
+    transition: all .3s;
     text-decoration: none;
-    align-self: stretch;
+    color: inherit;
+
+    &[title] {
+      font-size: 1.25rem;
+    }
   }
 
-  .material-icons {
-    line-height: 64px !important;
+  .c-toolbar-group {
+    display: flex;
+
+    & a.c-toolbar-item:hover {
+      background-color: $bg-color-default-base;
+    }
   }
+}
+
+.c-flex-grow {
+  flex-grow: 1;
 }

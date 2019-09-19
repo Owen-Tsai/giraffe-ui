@@ -28,6 +28,7 @@
 <script>
   import CPopper from '../CPopper/CPopper';
   import Popper from 'popper.js';
+  import { appendColorClass } from '../../utilities/utilities';
 
   export default {
     name: 'CDropdown',
@@ -49,10 +50,12 @@
         type: String,
         default: 'bottom-start'
       },
+      color: String
     },
     computed: {
       c() {
         let classList = Array.of('c-dropdown');
+        appendColorClass(this.color, classList);
         return classList;
       },
     },
@@ -76,8 +79,8 @@
       },
       handleClickOutside(e) {
         if (this.trigger !== 'click') return;
+        if (this.menuVisible) this.$emit('click:outside', e);
         this.menuVisible = false;
-        if (this.menuVisible) this.$emit('on-clickoutside', e);
       }
     },
     created() {

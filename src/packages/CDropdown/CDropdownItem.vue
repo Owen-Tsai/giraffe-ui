@@ -36,7 +36,7 @@
     },
     methods: {
       handleClick() {
-        this.dispatch('CDropdown', 'item-click', this);
+        this.dispatch('CDropdown', 'click:item', this);
       }
     }
   }
