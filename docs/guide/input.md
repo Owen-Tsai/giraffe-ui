@@ -28,28 +28,32 @@
 
 输入框的内部可以添加前缀和后缀图标，对应的属性名称分别称为`prefix-icon`和`suffix-icon`。图标既可以直接通过属性名称设置，也可以通过具名插槽传入。
 
+:::warning 注意
+由于 Giraffe UI 默认采用 Font Awesome 图标集，因此当使用其他图标集（例如 Giraffe 和 mdi 时），需要将图标集名称和所要使用的图标名称一并作为`prefix-icon`或`suffix-icon`属性的值（请查看下面的例子）。如果使用具名插槽，则按照常规指定`<c-icon>`组件的`icon-set`属性即可。
+:::
+
 <div style="display: flex; justify-content: space-between; margin-top: 20px;">
   <c-input width="48%" color="danger" prefix-icon="far fa-smile"></c-input>
-  <c-input width="48%" suffix-icon="fas fa-check"></c-input>
+  <c-input width="48%" suffix-icon="giraffe giraffe-chevron-right"></c-input>
 </div>
 <div style="display: flex; justify-content: space-between; margin-top: 10px;">
   <c-input width="48%">
     <c-icon slot="prefix">far fa-smile</c-icon>
   </c-input>
   <c-input width="48%" color="info">
-    <c-icon slot="suffix">fas fa-check</c-icon>
+    <c-icon slot="suffix" icon-set="giraffe">chevron-right</c-icon>
   </c-input>
 </div>
 
 ```html
 <c-input width="48%" color="danger" prefix-icon="far fa-smile"></c-input>
-<c-input width="48%" suffix-icon="fas fa-check"></c-input>
+<c-input width="48%" suffix-icon="giraffe giraffe-chevron-right"></c-input>
 
 <c-input width="48%">
   <c-icon slot="prefix">far fa-smile</c-icon>
 </c-input>
 <c-input width="48%" color="info">
-  <c-icon slot="suffix">fas fa-check</c-icon>
+  <c-icon slot="suffix" icon-set="giraffe">chevron-right</c-icon>
 </c-input>
 ```
 

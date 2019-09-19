@@ -32,14 +32,20 @@
 
 为按钮添加图标可以增强按钮的可读性。使用`icon`属性指定一个图标。
 
+:::warning 注意
+由于 Giraffe UI 默认采用 Font Awesome 图标集，因此当使用其他图标集（例如 giraffe 和 mdi 时），需要将图标集名称和所要使用的图标名称一并作为`prefix-icon`或`suffix-icon`属性的值（请查看下面的例子）。
+:::
+
 <c-button style="margin: 10px;" icon="fas fa-smile-wink" color="primary" size="large">你好</c-button>
 <c-button style="margin: 10px;" icon="fas fa-thumbs-up" color="success">赞同</c-button>
-<c-button style="margin: 10px;" icon="fas fa-smile-wink" color="primary" size="small">你好</c-button>
-<c-button style="margin: 10px;" icon="fas fa-thumbs-up" color="success" size="mini">赞同</c-button>
+<c-button style="margin: 10px;" icon="mdi mdi-account-circle" color="primary" size="small">账户</c-button>
+<c-button style="margin: 10px;" icon="giraffe giraffe-expand-more" color="success" size="mini">展开</c-button>
 
 ```html
-<c-button icon="fas fa-smile-wink" color="primary">你好</c-button>
-<c-button icon="far fa-thumbs-up" color="success">赞同</c-button>
+<c-button icon="fas fa-smile-wink" color="primary" size="large">你好</c-button>
+<c-button icon="fas fa-thumbs-up" color="success">赞同</c-button>
+<c-button icon="mdi mdi-account-circle" color="primary" size="small">账户</c-button>
+<c-button icon="giraffe giraffe-expand-more" color="success" size="mini">展开</c-button>
 ```
 
 ## 不同尺寸的按钮
