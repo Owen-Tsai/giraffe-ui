@@ -26,6 +26,7 @@ import CDropdownMenu from '../../src/packages/CDropdown/CDropdownMenu';
 import CDropdownItem from '../../src/packages/CDropdown/CDropdownItem';
 import CDropdown from '../../src/packages/CDropdown/CDropdown';
 import CTooltip from '../../src/packages/CTooltip/CTooltip';
+import CTag from '../../src/packages/CTag/CTag';
 
 export default ({
   Vue,
@@ -50,4 +51,5 @@ export default ({
   Vue.component('c-dropdown', CDropdown);
   Vue.component('c-dropdown-menu', CDropdownMenu);
   Vue.component('c-dropdown-item', CDropdownItem);
+  Vue.component('c-tag', CTag);
 }

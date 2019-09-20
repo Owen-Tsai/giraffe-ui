@@ -304,3 +304,27 @@
     })
   }
 </script>
+
+## API 列表
+
+### Attributes
+| 参数      | 说明          | 类型      | 可选值                           | 默认值  |
+|---------- |-------------- |---------- |-------------------------------- |-------- |
+| delay | 工具提示延迟出现和消失的时间，单位是毫秒 | number | — | 10 |
+| color | 工具提示的颜色 | string | [查看受支持的颜色列表](color.md) | — |
+| placement | 工具提示悬浮层相对于索引元素的位置 | string | top/top-start/top-end/bottom/bottom-start/bottom-end/left/left-start/left-end/right/right-start/right-end | bottom |
+| max-width | 工具提示的最大宽度 | string, number | — | — |
+| persistent | 工具提示不会消失 | boolean | — | false |
+| content | 工具提示的内容，与使用默认插槽效果相同 | string | — | — |
+
+### Slot
+
+| 名称 | 说明                |
+|------|--------------------|
+| — | 默认插槽，工具提示的内容 |
+| activator |索引元素，触发工具提示的元素 |
+
+### Events
+| 事件名称 | 说明 | 回调参数 |
+|---------- |-------- |---------- |
+| change:visible | 当工具提示可见性发生变化时触发 | 工具提示的可见性（`true`/`false`） |

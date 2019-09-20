@@ -17,29 +17,6 @@
   </div>
 </template>
 
-<script>
-  export default {
-    data: () => ({
-      major: [],
-      cities: [],
-    }),
-    methods: {
-      toggle() {
-        if(this.cities.includes('yibin')) {
-          this.cities.pop('yibin')
-        } else {
-          this.cities.push('yibin')
-        }
-      }
-    },
-    computed: {
-      btnText() {
-        return this.cities.includes('yibin') ? '移除宜宾' : '添加宜宾'
-      }
-    }
-  }
-</script>
-
 ```vue
 <template>
   <div>
@@ -100,7 +77,7 @@
     methods: {
       toggle() {
         if(this.cities.includes('yibin')) {
-          this.cities.pop('yibin')
+          this.cities.splice(this.cities.indexOf('yibin'), 1);
         } else {
           this.cities.push('yibin')
         }
@@ -205,3 +182,27 @@
 | 事件名称 | 说明 | 回调参数 |
 |---------- |-------- |---------- |
 | change | 当绑定值变化时触发的事件 | 绑定值更新后的值 |
+
+
+<script>
+  export default {
+    data: () => ({
+      major: [],
+      cities: [],
+    }),
+    methods: {
+      toggle() {
+        if(this.cities.includes('yibin')) {
+          this.cities.splice(this.cities.indexOf('yibin'), 1);
+        } else {
+          this.cities.push('yibin')
+        }
+      }
+    },
+    computed: {
+      btnText() {
+        return this.cities.includes('yibin') ? '移除宜宾' : '添加宜宾'
+      }
+    }
+  }
+</script>

@@ -39,11 +39,23 @@
       </c-toolbar>
     </div>
     <div class="tags">
-      <c-tag color="info" size="large">标签范例 1</c-tag>
+      <!-- <c-tag color="info" size="large">标签范例 1</c-tag>
       <c-tag color="primary" outlined>标签范例 1</c-tag>
       <c-tag color="purple" flat size="small">标签范例 1</c-tag>
       <c-tag color="danger" round>标签范例 1</c-tag>
-      <c-tag color="yellow" sharp size="mini">标签范例 1</c-tag>
+      <c-tag color="yellow" sharp size="mini">标签范例 1</c-tag> -->
+      <c-tag color="green" outlined v-for="tag in dynamicTags" :key="tag" @close="handleClose(tag)">
+        {{ tag }}
+      </c-tag>
+      <c-input 
+        ref="tagInput"
+        size="small"
+        v-model="tagInputVal"
+        v-if="tagInputVisible"
+        @blur="confirmInput"
+        width="90px"
+      ></c-input>
+      <c-button size="small" v-if="!tagInputVisible" @click="showTagInput">+ Add Tag</c-button>
     </div>
   </div>
 </template>
@@ -84,7 +96,10 @@
         radioGroup: '',
         checkboxGroup: [],
         dialog: false,
-        str: 'text'
+        str: 'text',
+        tagInputVal: '',
+        tagInputVisible: false,
+        dynamicTags: ['标签1', '标签2', '标签3', '标签4'],
       }
     },
     components: {
@@ -116,8 +131,24 @@
       },
       logParam(param) {
         console.log(param);
+      },
+      confirmInput() {
+        if(this.tagInputVal !== '') {
+          this.dynamicTags.push(this.tagInputVal);
+        }
+        this.tagInputVisible = false;
+        this.tagInputVal = '';
+      },
+      showTagInput() {
+        this.tagInputVisible = true;
+        this.$nextTick(() => {
+          this.$refs.tagInput.$refs.input.focus();
+        });
+      },
+      handleClose(tag) {
+        this.dynamicTags.splice(this.dynamicTags.indexOf(tag), 1);
       }
-    }
+    },
   }
 </script>
 
@@ -134,7 +165,8 @@
   }
   .tags {
     * {
-      margin: 10px;
+      margin: 5px;
+      vertical-align: middle;
     }
   }
   #app {
