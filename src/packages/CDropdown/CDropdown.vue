@@ -62,7 +62,7 @@
     watch: {
       menuVisible (val) {
         this.$refs.popper.update();
-        this.$emit('visible-change', val);
+        this.$emit('change:visible', val);
       },
     },
     methods: {

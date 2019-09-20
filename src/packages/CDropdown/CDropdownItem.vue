@@ -1,8 +1,8 @@
 <template>
   <li :class="[...c, ...[
     {
-      'is-disabled': isDisabled,
-      'is-divided': isDivided
+      'is-disabled': disabled,
+      'is-divided': divided
     }
   ]]" @click="handleClick">
     <c-icon v-if="icon">{{ icon }}</c-icon>
@@ -21,8 +21,8 @@
       CIcon
     },
     props: {
-      isDisabled: Boolean,
-      isDivided: Boolean,
+      disabled: Boolean,
+      divided: Boolean,
       icon: String
     },
     mixins: [

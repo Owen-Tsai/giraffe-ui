@@ -66,7 +66,7 @@
           if(val) {
             this.popper.update();
           }
-          this.$emit('visible-change', val);
+          this.$emit('change:vibible', val);
         } else {
           this.update();
         }
