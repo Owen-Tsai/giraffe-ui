@@ -1,7 +1,7 @@
 /* Mixins for Buttons
 ----------------------------------- */
 @mixin make-colored-button($color) {
-  @include set-colors($color);
+  @include set-colors-with-border($color);
   @include when-attr(disabled) {
     background-color: mix($color, #ffffff);
     border: 1px solid $border-color-base;

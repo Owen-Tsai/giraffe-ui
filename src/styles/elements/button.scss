@@ -49,6 +49,7 @@
     .c-icon {
       font-size:$button-lg-icon-size;
       height:$button-lg-icon-size;
+      width: $button-lg-icon-size;
     }
     padding: $button-lg-padding
   }
@@ -67,6 +68,7 @@
     .c-icon {
       font-size:$button-mini-icon-size;
       height:$button-mini-icon-size;
+      width: $button-mini-icon-size;
     }
     padding: $button-mini-padding;
   }

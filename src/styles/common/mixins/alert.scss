@@ -1,7 +1,7 @@
 /* Mixins for Alerts
 ----------------------------------- */
 @mixin make-colored-alert($color) {
-  @include set-colors($color);
+  @include set-colors-with-border($color);
 }
 
 @mixin make-outlined-alert($color) {

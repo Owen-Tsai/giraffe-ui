@@ -13,6 +13,21 @@
   vertical-align: middle;
   color: $font-color-common;
 
+  @include when('is-divided') {
+    margin-top: 6px;
+    border-top: 1px solid color('grey-300');
+
+    &::before {
+      content: "";
+      height: 6px;
+      display: block;
+      background-color: #ffffff;
+      margin: 0 -16px;
+      position: relative;
+      top: -8px;
+    }
+  }
+
   .c-icon {    
     line-height: $line-height-base;
     font-size: $line-height-base;
@@ -62,6 +77,21 @@
         &:hover {
           color: $v;
           background-color: #ffffff;
+        }
+
+        @include when('is-divided') {
+          margin-top: 6px;
+          border-top: 1px solid color-contrast($v);
+      
+          &::before {
+            content: "";
+            height: 6px;
+            display: block;
+            background-color: $v;
+            margin: 0 -16px;
+            position: relative;
+            top: -8px;
+          }
         }
       }
     }

@@ -3,11 +3,10 @@
 @import '../common/functions.scss';
 
 .c-tag {
-  box-sizing: border-box;
   display: inline-block;
   height: $tag-height;
   font-size: $font-size-sm;
-  line-height: $tag-height;
+  line-height: $tag-line-height;
   border-radius: $border-radius-base;
   border: 1px solid $border-color-base;
   padding: 0 10px;
@@ -20,21 +19,19 @@
     border-radius: 0;
   }
 
+  @include when('clickable') {
+    cursor: pointer;
+  }
+
   &.lg {
     height: $tag-lg-height;
     font-size: $font-size-base;
-    line-height: $tag-lg-height;
+    line-height: $tag-lg-line-height;
   }
   &.sm {
     height: $tag-sm-height;
     font-size: $font-size-sm;
-    line-height: $tag-sm-height;
-    padding: 0 8px;
-  }
-  &.mini {
-    height: $tag-mini-height;
-    font-size: $font-size-mini;
-    line-height: $tag-mini-height;
+    line-height: $tag-sm-line-height;
     padding: 0 6px;
   }
 

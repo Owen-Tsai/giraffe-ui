@@ -30,7 +30,7 @@
 
   @each $c, $v in $colors {
     @include when('#{$color-prefix}-#{$c}') {
-      @include set-colors($v);
+      @include set-colors-with-border($v);
       .c-card-header {
         background-color: darken($v, 10%);
       }
