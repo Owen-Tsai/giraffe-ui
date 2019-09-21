@@ -172,7 +172,7 @@
 | size | 按钮复选框组中所有按钮的尺寸 | string | large/—/small/mini | — |
 | color | 复选框的颜色 | string | [查看受支持的颜色列表](color.md) | — |
 
-### Slot
+### Slots
 
 | 名称 | 说明                |
 |------|--------------------|

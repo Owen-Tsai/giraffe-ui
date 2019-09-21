@@ -208,14 +208,23 @@
 | prepend-caption | 输入框组前缀 | string | — | — |
 | append-caption | 输入框组后缀 | string | — | — |
 | size | 输入框的尺寸 | string | large/—/small/mini | — |
+| hint | 显示在输入框下方的提示文字 | string | — | — |
 
 **你可以在`<c-input>`组件上使用`<input>`标签的原生属性，例如`placeholder`等。**
 
-### Slot
-
+### Slots
 | 名称 | 说明                |
 |------|--------------------|
 | prefix-icon | 前缀图标 | string | — | — |
 | suffix-icon | 后缀图标 | string | — | — |
 | prepend-caption | 输入框组前缀 | string | — | — |
 | append-caption | 输入框组后缀 | string | — | — |
+
+### Events
+
+| 事件名称 | 说明 | 回调参数 |
+|---------- |-------- |---------- |
+| focus | 输入框成为焦点后触发 | — |
+| blur | 输入框失去焦点后触发 | — |
+| input | 输入框被键入文本时触发 | event.target.value |
+| change | 输入框内容改变时触发 | event.target.value |

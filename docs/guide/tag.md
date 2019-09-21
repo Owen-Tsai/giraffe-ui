@@ -247,7 +247,7 @@
 | closable | 允许标签被关闭 | Boolean | — | false |
 | size | 标签的尺寸 | string | large/—/small | — |
 
-### Slot
+### Slots
 
 | 名称 | 说明                |
 |------|--------------------|

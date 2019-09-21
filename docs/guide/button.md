@@ -204,7 +204,7 @@
 | sharp | 尖锐按钮 | boolean | — | false |
 | pure-text | 纯文本按钮 | boolean | — | false |
 
-### Slot
+### Slots
 
 | 名称 | 说明                |
 |------|--------------------|

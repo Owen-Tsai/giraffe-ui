@@ -77,20 +77,24 @@
 ### Attributes
 | 参数      | 说明          | 类型      | 可选值                           | 默认值  |
 |---------- |-------------- |---------- |-------------------------------- |-------- |
-| disabled | 禁用单选框 | Boolean | — | false |
-| checked | 当前是否勾选 | Boolean | — | false |
-| label | 单选框的选项文字，或者单选框的值 | Any | — | — |
-| name | 原生`<input>`的`name`属性 | String | — | — |
-| size | 按钮单选框组中所有按钮的尺寸 | string | large/—/small/mini | — |
+| disabled | 禁用文本域 | Boolean | — | false |
+| readonly | 设定文本域为只读 | Boolean | — | false |
 | color | 单选框的颜色 | string | [查看受支持的颜色列表](color.md) | — |
+| no-resize | 禁止用户更改文本域尺寸 | Boolean | — | false |
+| hint | 显示在输入区域下方的提示文字 | string | — | — |
 
-### Slot
+**你可以在`<c-textarea>`上使用原生`<textarea>`标签的属性，例如`rows`和`placeholder`等**。
+
+### Slots
 
 | 名称 | 说明                |
 |------|--------------------|
-| — | 默认插槽，选项的文本 |
+| hint | 显示在输入区域下方的提示文字，与使用`hint`属性效果相同 |
 
 ### Events
 | 事件名称 | 说明 | 回调参数 |
 |---------- |-------- |---------- |
-| change | 当绑定值变化时触发的事件 | 绑定值更新后的值 |
+| focus | 输入框成为焦点后触发 | — |
+| blur | 输入框失去焦点后触发 | — |
+| input | 输入框被键入文本时触发 | event.target.value |
+| change | 输入框内容改变时触发 | event.target.value |

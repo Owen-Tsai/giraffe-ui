@@ -48,7 +48,7 @@
     box-sizing: border-box;
     
     @include when('is-checked') {
-      background-color: $bg-color-default-dark;
+      background-color: $bg-color-default-darker;
 
       &::after {
         transform: translate(-50%, -50%) scale(1.2);

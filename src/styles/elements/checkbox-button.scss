@@ -28,7 +28,7 @@
     @include when('is-checked') {
       .c-checkbox-btn-inner {
         border-color: $border-color-dark;
-        background: $bg-color-default-dark;;
+        background: $bg-color-default-darker;;
         color: #ffffff;
       }
     }

@@ -174,7 +174,7 @@
 | flat | 不显示卡片阴影 | boolean | — | false |
 | raised | 总是显示卡片阴影 | boolean | — | false |
 
-### Slot
+### Slots
 
 | 名称 | 说明                |
 |------|--------------------|

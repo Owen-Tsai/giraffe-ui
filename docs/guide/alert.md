@@ -213,7 +213,7 @@
 | close-text | 关闭按钮自定义文本 | string | — | — |
 | outlined | 突出警告的边框，淡化填充色 | boolean | — | false |
 
-### Slot
+### Slots
 
 | 名称 | 说明                |
 |------|--------------------|

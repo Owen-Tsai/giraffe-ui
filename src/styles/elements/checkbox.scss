@@ -48,7 +48,7 @@
     cursor: pointer;
 
     @include when('is-checked') {
-      background-color: $bg-color-default-dark;
+      background-color: $bg-color-default-darker;
 
       &::after {
         transform: rotate(45deg) scaleY(1);

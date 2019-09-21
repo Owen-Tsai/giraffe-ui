@@ -28,7 +28,7 @@
     @include when('is-active') {
       .c-radio-btn-inner {
         border-color: $border-color-dark;
-        background-color: $bg-color-default-dark;
+        background-color: $bg-color-default-darker;
         color: #ffffff;
       }
     }
