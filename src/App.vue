@@ -39,11 +39,6 @@
       </c-toolbar>
     </div>
     <div class="tags">
-      <!-- <c-tag color="info" size="large">标签范例 1</c-tag>
-      <c-tag color="primary" outlined>标签范例 1</c-tag>
-      <c-tag color="purple" flat size="small">标签范例 1</c-tag>
-      <c-tag color="danger" round>标签范例 1</c-tag>
-      <c-tag color="yellow" sharp size="mini">标签范例 1</c-tag> -->
       <c-tag color="green" outlined v-for="tag in dynamicTags" :key="tag" @close="handleClose(tag)">
         {{ tag }}
       </c-tag>
@@ -57,10 +52,20 @@
       ></c-input>
       <c-button size="small" v-if="!tagInputVisible" @click="showTagInput">+ Add Tag</c-button>
     </div>
+
+    <div class="avatars">
+      <c-avatar username="Owen Tsai" color="info" inline></c-avatar>
+      <c-avatar username="Yue Liu Yang" color="teal" inline></c-avatar>
+      <c-avatar icon="fas fa-user" color="info" inline></c-avatar>
+      <c-avatar icon="fas fa-user" inline></c-avatar>
+      <c-avatar initials="YLY" inline></c-avatar>
+      <c-avatar :src="img" inline :size="80"></c-avatar>
+    </div>
   </div>
 </template>
 
 <script>
+  import pic from '../docs/.vuepress/public/hero.jpg'
   import CButton from './packages/CButton/Button'
   import CButtonGroup from './packages/CButton/ButtonGroup'
   import CCard from './packages/CCard/CCard'
@@ -82,24 +87,18 @@
   import CToolbarItem from './packages/CToolbar/CToolbarItem'
   import CIcon from './packages/CIcon/CIcon'
   import CTag from './packages/CTag/CTag'
+  import CAvatar from './packages/CAvatar/CAvatar'
   // import CDialog from './packages/CDialog'
 
   export default {
     name: 'app',
     data() {
       return {
-        v1: true,
-        v2: true, 
-        v3: true,
-        radio: '',
-        e: [],
-        radioGroup: '',
-        checkboxGroup: [],
-        dialog: false,
         str: 'text',
         tagInputVal: '',
         tagInputVisible: false,
         dynamicTags: ['标签1', '标签2', '标签3', '标签4'],
+        img: pic
       }
     },
     components: {
@@ -123,7 +122,8 @@
       CToolbar,
       CToolbarGroup,
       CIcon,
-      CTag
+      CTag,
+      CAvatar
     },
     methods: {
       logStatic() {
@@ -171,5 +171,9 @@
   }
   #app {
     padding-top: 64px;
+  }
+  .avatars {
+    display: flex;
+    align-items: center;
   }
 </style>

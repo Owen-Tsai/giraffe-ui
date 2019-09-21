@@ -1,0 +1,20 @@
+@import '../common/mixins/mixins.scss';
+@import '../common/var.scss';
+
+.c-avatar {
+  @include when('pure-text') {
+    background-color: $bg-color-default-dark;
+    color: lighten($bg-color-default-dark, 40%);
+    font-size: 1.3rem;
+  }
+
+  @each $c, $v in $colors {
+    @include when('#{$color-prefix}-#{$c}') {
+      @include when('pure-text') {
+        background-color: $v;
+        color: lighten($v, 40%);
+        font-size: 1.3rem;
+      }
+    }
+  }
+}
