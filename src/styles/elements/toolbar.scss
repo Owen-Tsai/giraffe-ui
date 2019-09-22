@@ -9,6 +9,10 @@
   line-height: 64px;
   box-shadow: $box-shadow-light;
 
+  a:hover {
+    text-decoration: none !important;
+  }
+
   @each $c, $v in $colors {
     @include when('#{$color-prefix}-#{$c}') {
       background-color: $v;
@@ -16,11 +20,9 @@
       .c-toolbar-content {
         color: color-contrast($v);
       }
-      .c-toolbar-group {
-        a.c-toolbar-item:hover {
-          background-color: mix($v, #ffffff, 10%);
-          color: $v;
-        }
+      a:not([title]).c-toolbar-item:hover {
+        background-color: mix($v, #ffffff, 15%);
+        color: $v;
       }
     }
   }
@@ -65,12 +67,12 @@
     }
   }
 
+  a:not([title]).c-toolbar-item:hover {
+    background-color: $bg-color-default-base;
+  }
+
   .c-toolbar-group {
     display: flex;
-
-    & a.c-toolbar-item:hover {
-      background-color: $bg-color-default-base;
-    }
   }
 }
 
