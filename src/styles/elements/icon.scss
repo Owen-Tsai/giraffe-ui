@@ -2,7 +2,7 @@
 @import '../common/mixins/mixins.scss';
 
 .c-icon {
-  font-size: 24px;
+  font-size: inherit;
 
   .c-icon-text {
     display: none !important;

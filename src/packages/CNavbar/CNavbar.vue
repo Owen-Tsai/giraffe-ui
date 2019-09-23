@@ -6,7 +6,7 @@
       'fixed': fixed,
     }
   ]]">
-    <div class="c-toolbar-content">
+    <div class="c-navbar-content">
       <slot></slot>
     </div>
   </div>
@@ -16,7 +16,7 @@
   import { appendColorClass } from '../../utilities/utilities';
 
   export default {
-    name: 'CToolbar',
+    name: 'CNavbar',
     props: {
       color: String,
       dense: Boolean,
@@ -25,7 +25,7 @@
     },
     computed: {
       c() {
-        let classList = Array.of('c-toolbar');
+        let classList = Array.of('c-navbar');
         appendColorClass(this.color, classList);
         return classList;
       }

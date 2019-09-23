@@ -32,7 +32,7 @@
     },
     computed: {
       c() {
-        let classList = Array.of('c-toolbar-item');
+        let classList = Array.of('c-navbar-item');
         if(this.active) {
           classList.push('active');
         }

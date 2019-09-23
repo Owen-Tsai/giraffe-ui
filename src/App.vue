@@ -11,32 +11,37 @@
       </c-dropdown>
     </div>
     <div class="toolbars">
-      <c-toolbar color="primary" fixed>
-        <c-toolbar-item title to="/">Title</c-toolbar-item>
+      <c-navbar color="primary" fixed>
+        <c-navbar-item title to="/">Title</c-navbar-item>
         <div class="c-flex-grow"></div>
-        <c-toolbar-group>
-          <c-toolbar-item to="https://www.baidu.com">link 1</c-toolbar-item>
-          <c-toolbar-item to="https://www.baidu.com">link 2</c-toolbar-item>
-          <c-toolbar-item>text</c-toolbar-item>
-          <c-toolbar-item>
+        <c-navbar-group>
+          <c-navbar-item to="https://www.baidu.com">link 1</c-navbar-item>
+          <c-navbar-item to="https://www.baidu.com">链接</c-navbar-item>
+          <c-navbar-item>
+            <c-button color="info">中文</c-button>
+          </c-navbar-item>
+          <c-navbar-item>
+            <c-button color="info">click</c-button>
+          </c-navbar-item>
+          <c-navbar-item>
             <c-button circle icon="fas fa-camera" color="primary" flat></c-button>
-          </c-toolbar-item>
-          <c-toolbar-item>
+          </c-navbar-item>
+          <c-navbar-item>
             <c-dropdown trigger="click" placement="bottom-start">
-              <c-button color="info" slot="activator" icon="giraffe giraffe-expand-more">button</c-button>
+              <c-button color="info" slot="activator" icon="giraffe giraffe-expand-more">下拉</c-button>
               <c-dropdown-menu :max-width="100">
                 <c-dropdown-item>第一个选项</c-dropdown-item>
                 <c-dropdown-item>第二个选项</c-dropdown-item>
                 <c-dropdown-item>第三个选项稍微长一点</c-dropdown-item>
               </c-dropdown-menu>
             </c-dropdown>
-          </c-toolbar-item>
-        </c-toolbar-group>
-          <c-toolbar-item>
+          </c-navbar-item>
+        </c-navbar-group>
+          <c-navbar-item>
             <c-input prefix-icon="fas fa-search" width="250"></c-input>
-          </c-toolbar-item>
+          </c-navbar-item>
         
-      </c-toolbar>
+      </c-navbar>
     </div>
     <div class="tags">
       <c-tag color="green" outlined v-for="tag in dynamicTags" :key="tag" @close="handleClose(tag)">
@@ -50,7 +55,7 @@
         @blur="confirmInput"
         width="90px"
       ></c-input>
-      <c-button size="small" v-if="!tagInputVisible" @click="showTagInput">+ Add Tag</c-button>
+      <c-button v-if="!tagInputVisible" @click="showTagInput">+ Add Tag</c-button>
     </div>
 
     <div class="avatars">
@@ -82,9 +87,9 @@
   import CDropdownItem from './packages/CDropdown/CDropdownItem'
   import CDropdown from './packages/CDropdown/CDropdown'
   import CTooltip from './packages/CTooltip/CTooltip'
-  import CToolbar from './packages/CToolbar/CToolbar'
-  import CToolbarGroup from './packages/CToolbar/CToolbarGroup'
-  import CToolbarItem from './packages/CToolbar/CToolbarItem'
+  import CNavbar from './packages/CNavbar/CNavbar'
+  import CToolbarGroup from './packages/CNavbar/CToolbarGroup'
+  import CToolbarItem from './packages/CNavbar/CToolbarItem'
   import CIcon from './packages/CIcon/CIcon'
   import CTag from './packages/CTag/CTag'
   import CAvatar from './packages/CAvatar/CAvatar'
@@ -119,7 +124,7 @@
       CDropdown,
       CTooltip,
       CToolbarItem,
-      CToolbar,
+      CNavbar,
       CToolbarGroup,
       CIcon,
       CTag,

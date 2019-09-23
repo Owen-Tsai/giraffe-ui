@@ -2,7 +2,7 @@
 @import '../common/functions.scss';
 @import '../common/mixins/mixins.scss';
 
-.c-toolbar {
+.c-navbar {
   width: 100%;
   position: relative;
   height: 64px;
@@ -17,10 +17,10 @@
     @include when('#{$color-prefix}-#{$c}') {
       background-color: $v;
 
-      .c-toolbar-content {
+      .c-navbar-content {
         color: color-contrast($v);
       }
-      a:not([title]).c-toolbar-item:hover {
+      a:not([title]).c-navbar-item:hover {
         background-color: mix($v, #ffffff, 15%);
         color: $v;
       }
@@ -43,7 +43,7 @@
     line-height: 48px;
   }
 
-  .c-toolbar-content {
+  .c-navbar-content {
     margin: 0;
     box-sizing: border-box;
     height: 100%;
@@ -53,7 +53,7 @@
     font-size: $font-size-base;
   }
 
-  .c-toolbar-item {
+  .c-navbar-item {
     //line-height: 64px;
     height: 100%;
     padding: 0 16px;
@@ -67,11 +67,11 @@
     }
   }
 
-  a:not([title]).c-toolbar-item:hover {
+  a:not([title]).c-navbar-item:hover {
     background-color: $bg-color-default-base;
   }
 
-  .c-toolbar-group {
+  .c-navbar-group {
     display: flex;
   }
 }

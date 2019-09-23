@@ -44,6 +44,7 @@ function getGuideSidebar (groupA, groupB) {
         'radio',
         'tag',
         'textarea',
+        'toolbar',
         'tooltip'
       ]
     }

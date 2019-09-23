@@ -1,5 +1,5 @@
 <template>
-  <div class="c-toolbar-group">
+  <div class="c-navbar-group">
     <slot></slot>
   </div>
 </template>
