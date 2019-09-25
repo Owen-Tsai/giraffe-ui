@@ -28,9 +28,9 @@ import CDropdown from '../../src/packages/CDropdown/CDropdown';
 import CTooltip from '../../src/packages/CTooltip/CTooltip';
 import CTag from '../../src/packages/CTag/CTag';
 import CAvatar from '../../src/packages/CAvatar/CAvatar';
-import CToolbar from '../../src/packages/CToolbar/CToolbar';
-import CToolbarGroup from '../../src/packages/CToolbar/CToolbarGroup';
-import CToolbarItem from '../../src/packages/CToolbar/CToolbarItem';
+import CNavbar from '../../src/packages/CNavbar/CNavbar';
+import CNavbarGroup from '../../src/packages/CNavbar/CNavbarGroup';
+import CNavbarItem from '../../src/packages/CNavbar/CNavbarItem';
 
 export default ({
   Vue,
@@ -57,7 +57,7 @@ export default ({
   Vue.component('c-dropdown-item', CDropdownItem);
   Vue.component('c-tag', CTag);
   Vue.component('c-avatar', CAvatar);
-  Vue.component('c-toolbar', CToolbar);
-  Vue.component('c-toolbar-group', CToolbarGroup);
-  Vue.component('c-toolbar-item', CToolbarItem);
+  Vue.component('c-navbar', CNavbar);
+  Vue.component('c-navbar-group', CNavbarGroup);
+  Vue.component('c-navbar-item', CNavbarItem);
 }
