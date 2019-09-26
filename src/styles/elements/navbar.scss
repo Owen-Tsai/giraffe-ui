@@ -20,7 +20,7 @@
       .c-navbar-content {
         color: color-contrast($v);
       }
-      a:not([title]).c-navbar-item:hover {
+      a:not([is-title]).c-navbar-item:hover {
         background-color: mix($v, #ffffff, 15%);
         color: $v;
       }
@@ -62,12 +62,12 @@
     text-decoration: none;
     color: inherit;
 
-    &[title] {
+    &[is-title] {
       font-size: 1.25rem;
     }
   }
 
-  a:not([title]).c-navbar-item:hover {
+  a:not([is-title]).c-navbar-item:hover {
     background-color: $bg-color-default-base;
   }
 

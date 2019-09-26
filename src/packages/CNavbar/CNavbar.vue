@@ -17,11 +17,13 @@
 
   export default {
     name: 'CNavbar',
+    componentName: 'CNavbar',
     props: {
       color: String,
       dense: Boolean,
       flat: Boolean,
-      fixed: Boolean
+      fixed: Boolean,
+      paddingX: [String, Number]
     },
     computed: {
       c() {
@@ -29,6 +31,6 @@
         appendColorClass(this.color, classList);
         return classList;
       }
-    }
+    },
   }
 </script>

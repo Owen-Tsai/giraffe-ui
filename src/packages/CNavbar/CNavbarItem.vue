@@ -4,6 +4,7 @@
     :class="c"
     :href="link"
     :target="target"
+    :is-title="title"
     @click="handleClick"
   >
     <slot></slot>
@@ -14,8 +15,10 @@
 </template>
 
 <script>
+  import { findParentComponent } from '../../utilities/utilities';
+
   export default {
-    name: 'CToolbarItem',
+    name: 'CNavbarItem',
     data:() => ({
       active: false
     }),
@@ -29,6 +32,8 @@
         default: '_self'
       },
       append: Boolean,
+      paddingX: [String, Number],
+      title: Boolean
     },
     computed: {
       c() {
@@ -53,10 +58,28 @@
     methods: {
       handleClick() {
         
+      },
+      overridePadding(val) {
+        console.log(`value is ${val}`);
+        if(this.title) return;
+        if(typeof(val) === 'string') {
+          this.$el.style.padding = `0 ${val}`;
+        } else {
+          this.$el.style.padding = `0 ${val}px`;
+        }
+        console.log('excuted');
       }
     },
     mounted() {
-      console.log(this.to, typeof(this.to), this.link)
+      if(this.paddingX) {
+        this.overridePadding(this.paddingX);
+      }
+
+      const parent = findParentComponent(this, 'CNavbar');
+
+      if(parent && parent.paddingX) {
+        this.overridePadding(parent.paddingX);
+      }
     }
   }
 </script>

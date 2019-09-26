@@ -66,6 +66,9 @@
       <c-avatar initials="YLY" inline></c-avatar>
       <c-avatar :src="img" inline :size="80"></c-avatar>
     </div>
+    <div class="table">
+      <c-table :columns="cols" :data="data"></c-table>
+    </div>
   </div>
 </template>
 
@@ -88,11 +91,12 @@
   import CDropdown from './packages/CDropdown/CDropdown'
   import CTooltip from './packages/CTooltip/CTooltip'
   import CNavbar from './packages/CNavbar/CNavbar'
-  import CToolbarGroup from './packages/CNavbar/CToolbarGroup'
-  import CToolbarItem from './packages/CNavbar/CToolbarItem'
+  import CNavbarGroup from './packages/CNavbar/CNavbarGroup'
+  import CNavbarItem from './packages/CNavbar/CNavbarItem'
   import CIcon from './packages/CIcon/CIcon'
   import CTag from './packages/CTag/CTag'
   import CAvatar from './packages/CAvatar/CAvatar'
+  import CTable from './packages/CTable/CTable'
   // import CDialog from './packages/CDialog'
 
   export default {
@@ -103,7 +107,40 @@
         tagInputVal: '',
         tagInputVisible: false,
         dynamicTags: ['标签1', '标签2', '标签3', '标签4'],
-        img: pic
+        img: pic,
+        cols: ['id', 'name', 'studentID', 'mark'],
+        data: [
+          {
+            'id': 1,
+            'name': 'Owen Tsai',
+            'studentID': '14',
+            'mark': 100
+          },
+          {
+            'id': 2,
+            'name': 'Yue Liuyang',
+            'studentID': '15',
+            'mark': 100
+          },
+          {
+            'id': 3,
+            'name': 'Lin Jingya',
+            'studentID': '16',
+            'mark': 90
+          },
+          {
+            'id': 4,
+            'name': 'Wang Na',
+            'studentID': '17',
+            'mark': 80
+          },
+          {
+            'id': 5,
+            'name': 'Liu Lanlan',
+            'studentID': '18',
+            'mark': 70
+          },
+        ]
       }
     },
     components: {
@@ -123,12 +160,13 @@
       CDropdownMenu,
       CDropdown,
       CTooltip,
-      CToolbarItem,
+      CNavbarItem,
       CNavbar,
-      CToolbarGroup,
+      CNavbarGroup,
       CIcon,
       CTag,
-      CAvatar
+      CAvatar,
+      CTable
     },
     methods: {
       logStatic() {
