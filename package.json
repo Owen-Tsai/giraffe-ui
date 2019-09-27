@@ -1,13 +1,14 @@
 {
   "name": "giraffe-ui",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "main": "dist/giraffe-ui.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "docs:build": "vuepress build docs",
+    "lib": "vue-cli-service build --target lib --name giraffe-ui --dest lib src/build.js"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.10.2",
