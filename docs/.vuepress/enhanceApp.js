@@ -9,28 +9,28 @@ import './styles/override.scss';
 
 import { clickOutside as directive } from '../../src/utilities/clickOutside';
 
-import CAlert from '../../src/packages/CAlert/CAlert';
-import CButton from '../../src/packages/CButton/Button';
-import CButtonGroup from '../../src/packages/CButton/ButtonGroup';
+import CAlert from '../../src/packages/CAlert';
+import CButton from '../../src/packages/CButton';
+import CButtonGroup from '../../src/packages/CButtonGroup';
 import CCard from '../../src/packages/CCard/CCard';
-import CRadio from '../../src/packages/CRadio/CRadio';
-import CRadioGroup from '../../src/packages/CRadio/CRadioGroup';
-import CRadioBtn from '../../src/packages/CRadio/CRadioButton';
-import CCheckbox from '../../src/packages/CCheckbox/CCheckbox';
-import CCheckboxGroup from '../../src/packages/CCheckbox/CCheckboxGroup';
-import CCheckboxBtn from '../../src/packages/CCheckbox/CCheckboxButton';
-import CInput from '../../src/packages/CInput/CInput';
-import CTextarea from '../../src/packages/CTextarea/CTextarea';
-import CIcon from '../../src/packages/CIcon/CIcon';
-import CDropdownMenu from '../../src/packages/CDropdown/CDropdownMenu';
-import CDropdownItem from '../../src/packages/CDropdown/CDropdownItem';
-import CDropdown from '../../src/packages/CDropdown/CDropdown';
-import CTooltip from '../../src/packages/CTooltip/CTooltip';
-import CTag from '../../src/packages/CTag/CTag';
-import CAvatar from '../../src/packages/CAvatar/CAvatar';
-import CNavbar from '../../src/packages/CNavbar/CNavbar';
-import CNavbarGroup from '../../src/packages/CNavbar/CNavbarGroup';
-import CNavbarItem from '../../src/packages/CNavbar/CNavbarItem';
+import CRadio from '../../src/packages/CRadio';
+import CRadioGroup from '../../src/packages/CRadioGroup';
+import CRadioBtn from '../../src/packages/CRadioButton';
+import CCheckbox from '../../src/packages/CCheckbox';
+import CCheckboxGroup from '../../src/packages/CCheckboxGroup';
+import CCheckboxBtn from '../../src/packages/CCheckboxButton';
+import CInput from '../../src/packages/CInput';
+import CTextarea from '../../src/packages/CTextarea';
+import CIcon from '../../src/packages/CIcon';
+import CDropdownMenu from '../../src/packages/CDropdownMenu';
+import CDropdownItem from '../../src/packages/CDropdownItem';
+import CDropdown from '../../src/packages/CDropdown';
+import CTooltip from '../../src/packages/CTooltip';
+import CTag from '../../src/packages/CTag';
+import CAvatar from '../../src/packages/CAvatar';
+import CNavbar from '../../src/packages/CNavbar';
+import CNavbarGroup from '../../src/packages/CNavbarGroup';
+import CNavbarItem from '../../src/packages/CNavbarItem';
 
 export default ({
   Vue,

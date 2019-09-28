@@ -24,10 +24,8 @@ cd my-project
 
 yarn add giraffe-ui
 # 或者
-npm install giraffe-ui
+npm install giraffe-ui --save
 ```
-
-*Giraffe UI 目前还未能发布为一个 npm package，这意味着你可能需要通过 git clone 获取 Giraffe UI*。点击[安装](/guide/installation.md)来查看如何安装尚在开发阶段的 Giraffe UI。
 
 ## Hi，我正在找工作~
 

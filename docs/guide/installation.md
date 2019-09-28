@@ -1,12 +1,8 @@
 # 安装
 
-::: warning
-**注意**
+这篇文档将会指引你在本地安装 Giraffe UI 的最新版本。
 
-Giraffe UI 目前仍在开发中，并没有发布成为一个 npm 包。这意味着下面的“通过包管理工具安装”暂时不可用。不过你依然可以通过“从 Github 克隆”来下载和在项目中使用 Giraffe UI。
-:::
-
-## 通过包管理工具安装 <Badge text="暂不可用" type="error"/>
+## 通过包管理工具安装
 
 想要通过包管理工具安装 Giraffe UI，你必须已经安装了[node.js](https://nodejs.org/en/)。node.js 的包管理工具有很多，例如 [NPM](https://www.npmjs.com/) 和 [yarn](https://www.yarnpkg.com/lang/en/)。如果你已经安装了 node.js，那么 NPM 将随之一同被安装在你的系统中；如果你想使用 yarn 作为包管理工具，可以在[这个页面](https://www.yarnpkg.com/en/docs/install)下载和安装。
 
@@ -31,12 +27,12 @@ cd my-project
 ```bash
 yarn add giraffe-ui
 # 或者
-npm install giraffe-ui
+npm install giraffe-ui --save
 ```
 
-## 通过 Github 克隆
+## 获取源代码
 
-在 Giraffe UI 还没有发布成为 npm 包的时候，使用 GitHub 克隆是唯一获取 Giraffe UI 的方式。
+你可以从 GitHub 获取 Giraffe UI 的源代码，并进行修改或者自行编译。
 
 你可以直接打开 Giraffe UI 的 [Github 仓库](https://github.com/Owen-Tsai/giraffe-ui)，并点击下载按钮获取包含了 Giraffe UI 所有组件的 `.zip` 压缩包。你可以使用解压工具解压缩，进入到目录内，并且执行下面的命令来安装 Giraffe UI 的依赖。
 

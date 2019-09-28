@@ -27,7 +27,6 @@
 
 <script>
   import CPopper from '../CPopper/CPopper';
-  import Popper from 'popper.js';
   import { appendColorClass } from '../../utilities/utilities';
 
   export default {

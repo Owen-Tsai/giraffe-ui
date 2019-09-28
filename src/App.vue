@@ -66,38 +66,11 @@
       <c-avatar initials="YLY" inline></c-avatar>
       <c-avatar :src="img" inline :size="80"></c-avatar>
     </div>
-    <div class="table">
-      <c-table :columns="cols" :data="data"></c-table>
-    </div>
   </div>
 </template>
 
 <script>
   import pic from '../docs/.vuepress/public/hero.jpg'
-  import CButton from './packages/CButton/Button'
-  import CButtonGroup from './packages/CButton/ButtonGroup'
-  import CCard from './packages/CCard/CCard'
-  import CAlert from './packages/CAlert/CAlert'
-  import CRadio from './packages/CRadio/CRadio'
-  import CRadioGroup from './packages/CRadio/CRadioGroup'
-  import CRadioBtn from './packages/CRadio/CRadioButton'
-  import CCheckbox from './packages/CCheckbox/CCheckbox'
-  import CCheckboxGroup from './packages/CCheckbox/CCheckboxGroup'
-  import CCheckboxBtn from './packages/CCheckbox/CCheckboxButton'
-  import CInput from './packages/CInput/CInput'
-  import CTextarea from './packages/CTextarea/CTextarea'
-  import CDropdownMenu from './packages/CDropdown/CDropdownMenu'
-  import CDropdownItem from './packages/CDropdown/CDropdownItem'
-  import CDropdown from './packages/CDropdown/CDropdown'
-  import CTooltip from './packages/CTooltip/CTooltip'
-  import CNavbar from './packages/CNavbar/CNavbar'
-  import CNavbarGroup from './packages/CNavbar/CNavbarGroup'
-  import CNavbarItem from './packages/CNavbar/CNavbarItem'
-  import CIcon from './packages/CIcon/CIcon'
-  import CTag from './packages/CTag/CTag'
-  import CAvatar from './packages/CAvatar/CAvatar'
-  import CTable from './packages/CTable/CTable'
-  // import CDialog from './packages/CDialog'
 
   export default {
     name: 'app',
@@ -142,31 +115,6 @@
           },
         ]
       }
-    },
-    components: {
-      CButton,
-      CButtonGroup,
-      CCard,
-      CAlert,
-      CRadio,
-      CRadioGroup,
-      CRadioBtn,
-      CCheckbox,
-      CCheckboxGroup,
-      CCheckboxBtn,
-      CInput,
-      CTextarea,
-      CDropdownItem,
-      CDropdownMenu,
-      CDropdown,
-      CTooltip,
-      CNavbarItem,
-      CNavbar,
-      CNavbarGroup,
-      CIcon,
-      CTag,
-      CAvatar,
-      CTable
     },
     methods: {
       logStatic() {

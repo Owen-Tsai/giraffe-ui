@@ -14,7 +14,6 @@
     name: 'CIcon',
     props: {
       helper: [String, Array],
-      size: String,
       iconSet: {
         type: String,
         validator(val) {
