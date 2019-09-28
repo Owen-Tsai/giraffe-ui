@@ -1,6 +1,6 @@
 {
   "name": "giraffe-ui",
-  "version": "0.0.18",
+  "version": "0.0.19",
   "main": "lib/giraffe-ui.umd.min.js",
   "scripts": {
     "serve": "vue-cli-service serve",
