@@ -1,4 +1,4 @@
-@import '../common/functions.scss';
+@import 'functions';
 /* font-family
 ----------------------------------- */
 $font-list: "Noto Sans", "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB", "Noto Sans CJK SC", "Source Han Sans SC", "Source Han Sans CN", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
@@ -34,7 +34,7 @@ $cui-colors: map-merge($default-colors, $grey-colors);
 $colors: map-merge($cui-colors, $custom-colors);
 
 $primary-color: color('primary');
-$secondary-coor: color('grey-600');
+$secondary-color: color('grey-600');
 
 /* font-color
 ----------------------------------- */
@@ -46,19 +46,20 @@ $font-color-mute: color('grey-400');
 
 /* buttons
 ----------------------------------- */
-$button-lg-padding: 11px 15px;
-$button-padding: 7px 12px;
-$button-sm-padding: 4px 7px;
-$button-mini-padding: 1px 4px;
+$button-lg-padding: 12px 16px;
+$button-padding: 9px 14px;
+$button-sm-padding: 7px 12px;
+$button-mini-padding: 4px 10px;
 
 $button-lg-icon-padding: 10px 14px;
-$button-icon-padding: 7px 11px;
-$button-sm-icon-padding: 4px 7px;
-$button-mini-icon-padding: 1px 4px;
+$button-icon-padding: 8px 11px;
+$button-sm-icon-padding: 6px 7px;
+$button-mini-icon-padding: 4px 4px;
 
-$button-lg-icon-size: 22px;
-$button-icon-size: 20px;
-$button-mini-icon-size: 18px;
+$button-lg-icon-size: 24px;
+$button-icon-size: 22px;
+$button-sm-icon-size: 18px;
+$button-mini-icon-size: 16px;
 
 $button-lg-circle-padding: 12px;
 $button-circle-padding: 10px;
@@ -85,10 +86,10 @@ $bg-color-default-darker: color('grey-600');
 
 /* inputs
 ----------------------------------- */
-$input-lg-height: 44px;
-$input-height: 36px;
-$input-sm-height: 30px;
-$input-mini-height: 24px;
+$input-lg-height: 46px;
+$input-height: 40px;
+$input-sm-height: 36px;
+$input-mini-height: 30px;
 
 /* tags
 ----------------------------------- */

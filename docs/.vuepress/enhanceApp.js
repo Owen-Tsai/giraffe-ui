@@ -1,10 +1,7 @@
 import '../../src/styles/cui.scss';
 import '../../src/styles/custom-colors.scss';
-import '../../src/assets/cicons/iconfont.css';
-import '@mdi/font/css/materialdesignicons.min.css';
-import '@fortawesome/fontawesome-free/css/all.min.css';
-import '@fortawesome/fontawesome-free/js/all.min.js';
-import '../../src/styles/common/transtion.scss';
+import 'material-design-icons/iconfont/material-icons.css'
+import '../../src/styles/common/_transtion.scss';
 import './styles/override.scss';
 
 import { clickOutside as directive } from '../../src/utilities/clickOutside';
@@ -21,7 +18,6 @@ import CCheckboxGroup from '../../src/packages/CCheckboxGroup';
 import CCheckboxBtn from '../../src/packages/CCheckboxButton';
 import CInput from '../../src/packages/CInput';
 import CTextarea from '../../src/packages/CTextarea';
-import CIcon from '../../src/packages/CIcon';
 import CDropdownMenu from '../../src/packages/CDropdownMenu';
 import CDropdownItem from '../../src/packages/CDropdownItem';
 import CDropdown from '../../src/packages/CDropdown';
@@ -50,7 +46,6 @@ export default ({
   Vue.component('c-radio-group', CRadioGroup);
   Vue.component('c-radio-button', CRadioBtn);
   Vue.component('c-textarea', CTextarea);
-  Vue.component('c-icon', CIcon);
   Vue.component('c-tooltip', CTooltip);
   Vue.component('c-dropdown', CDropdown);
   Vue.component('c-dropdown-menu', CDropdownMenu);

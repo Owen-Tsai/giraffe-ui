@@ -105,3 +105,12 @@
 .c-opacity-transition {
   transition: opacity .3s cubic-bezier(.55,0,.1,1);
 }
+
+.c-toggle-up-enter-active, .c-toggle-up-leave-active {
+  transition: all .5s;
+}
+.c-toggle-up-enter, .c-toggle-up-leave-to {
+  opacity: 0;
+  margin-top: 0;
+  transform: translate(0%, -20%);
+}
