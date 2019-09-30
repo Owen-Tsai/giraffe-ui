@@ -19,13 +19,9 @@
 
 <script>
   import { appendColorClass, appendSizeClass } from '../../utilities/utilities';
-  import CIcon from '../CIcon/CIcon';
 
   export default {
     name: 'CTag',
-    components: {
-      CIcon
-    },
     props: {
       color: String,
       size: String,

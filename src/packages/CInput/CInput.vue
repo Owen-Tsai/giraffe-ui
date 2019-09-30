@@ -37,14 +37,18 @@
       @change="handleChange"
       :disabled="isDisabled"
     >
-    <span class="c-input-prefix" v-if="$slots.prefix || prefixIcon" v-show="showPrefixIcon">
-      <slot name="prefix"></slot>
-      <c-icon v-if="!$slots.prefix">{{ prefixIcon }}</c-icon>
-    </span>
-    <span class="c-input-suffix" v-if="$slots.suffix || suffixIcon" v-show="showSuffixIcon">
-      <slot name="suffix"></slot>
-      <c-icon v-if="!$slots.suffix">{{ suffixIcon }}</c-icon>
-    </span>
+    <transition name="c-fade-in">
+      <span class="c-input-prefix" v-if="$slots.prefix || prefixIcon" v-show="showPrefixIcon">
+        <slot name="prefix"></slot>
+        <i v-if="!$slots.prefix" class="input-icon material-icons">{{ prefixIcon }}</i>
+      </span>
+    </transition>
+    <transition name="c-fade-in">
+      <span class="c-input-suffix" v-if="$slots.suffix || suffixIcon" v-show="showSuffixIcon">
+        <slot name="suffix"></slot>
+        <i v-if="!$slots.suffix" class="input-icon material-icons">{{ suffixIcon }}</i>
+      </span>
+    </transition>
     <div
       class="c-input-append"
       v-if="$slots.append"
@@ -53,20 +57,15 @@
     </div>
     <div class="c-input-hint" v-if="$slots.hint || hint">
       <slot name="hint"></slot>
-
     </div>
   </div>
 </template>
 
 <script>
   import { appendColorClass, appendSizeClass } from '../../utilities/utilities';
-  import CIcon from '../CIcon/CIcon';
 
   export default {
     name: 'CInput',
-    components: {
-      CIcon
-    },
 
     props: {
       disabled: Boolean,

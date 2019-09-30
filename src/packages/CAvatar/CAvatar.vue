@@ -1,19 +1,15 @@
 <template>
   <div :class="c" :style="[style, customStyle]">
     <span v-if="!this.isImage && !this.icon">{{ userInitial }}</span>
-    <c-icon v-if="!this.isImage && this.icon">{{ icon }}</c-icon>
+    <i class="material-icons" v-if="!this.isImage && this.icon">{{ icon }}</i>
   </div>
 </template> 
 
 <script>
   import { appendColorClass } from '../../utilities/utilities';
-  import CIcon from '../CIcon/CIcon';
 
   export default {
     name: 'CAvatar',
-    components: {
-      CIcon
-    },
     data: () => ({
 
     }),

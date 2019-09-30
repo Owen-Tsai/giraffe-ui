@@ -1,5 +1,5 @@
 <template>
-  <transition name="c-fade-in-linear">
+  <transition name="c-toggle-up" mode="in-out">
     <div :class="[...c, ...[
       {
         'outlined': outlined
@@ -8,8 +8,7 @@
         'no-icon': !icon
       }
     ]]" v-if="value">
-      <c-icon :class="[...iconClass, 'c-alert-icon']" v-if="icon">{{ icon }}</c-icon>
-      <!-- <i :class="['material-icons', ...iconClass, 'c-alert-icon']" v-if="icon">{{ icon }}</i> -->
+      <i v-if="icon" :class="[iconClass, 'c-alert-icon', 'material-icons',]">{{ icon }}</i>
       <div class="c-alert-content">
         <span class="c-alert-title" v-if="$slots.title || title">
           <slot name="title">{{ title }}</slot>
@@ -21,15 +20,12 @@
       </div>
       <span class="c-alert-close" v-if="!persistent">
         <span class="c-alert-close-text" v-if="closeText" @click="visible = false">{{ closeText }}</span>
-        <c-icon class="c-alert-close-text" v-else-if="closeIcon" @click="visible = false">
+        <i :class="['c-alert-close-icon', 'material-icons']" v-else-if="closeIcon" @click="visible = false">
           {{ closeIcon }}
-        </c-icon>
-        <c-icon class="c-alert-close-icon" icon-set="giraffe" v-else @click="visible = false">
+        </i>
+        <i class="c-alert-close-icon material-icons" v-else @click="visible = false">
           close
-        </c-icon>
-        <!-- <i class="material-icons c-alert-close-icon" v-else @click="visible = false">
-          {{ closeIcon ? closeIcon : 'clear' }}
-        </i> -->
+        </i>
       </span>
     </div>
   </transition>
@@ -37,13 +33,9 @@
 
 <script>
   import { appendColorClass } from '../../utilities/utilities';
-  import CIcon from '../CIcon/CIcon';
 
   export default {
     name: 'CAlert',
-    components: {
-      CIcon
-    },
     props: {
       title: String,
       description: String,
