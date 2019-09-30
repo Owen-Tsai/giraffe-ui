@@ -12,13 +12,13 @@
   }
 
   @include when('prefix') {
-    .c-input-prefix>.c-icon {
+    .c-input-prefix > .input-icon {
       color: mix($color, #ffffff, 60%);
     }
   }
 
   @include when('suffix') {
-    .c-input-suffix>.c-icon {
+    .c-input-suffix > .input-icon {
       color: mix($color, #ffffff, 60%);
     }
   }

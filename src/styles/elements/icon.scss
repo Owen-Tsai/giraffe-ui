@@ -1,16 +1,25 @@
-@import '../common/var.scss';
-@import '../common/mixins/mixins.scss';
-
-.c-icon {
-  font-size: inherit;
-
-  .c-icon-text {
-    display: none !important;
-  }
-
+.material-icons {
   @each $c, $v in $colors {
-    @include when('#{$color-prefix}-#{$c}') {
+    &[color='#{$c}'] {
       color: $v;
     }
+  }
+
+  &.icon-spin {
+    animation: spinning 2s infinite linear;
+  }
+  
+  &.icon-pulse {
+    animation: spinning 1s infinite steps(8);
+  }
+}
+
+@keyframes spinning {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
   }
 }

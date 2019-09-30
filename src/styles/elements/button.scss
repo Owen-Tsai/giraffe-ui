@@ -32,7 +32,12 @@
     outline: 0;
   }
 
-  .c-icon {
+  .c-btn-content {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .c-btn-icon {
     margin-right: 6px;
     font-size: $button-icon-size;
     height: $button-icon-size;
@@ -46,7 +51,7 @@
     &.btn-icon {
       padding: $button-lg-icon-padding
     }
-    .c-icon {
+    .c-btn-icon {
       font-size:$button-lg-icon-size;
       height:$button-lg-icon-size;
       width: $button-lg-icon-size;
@@ -65,7 +70,7 @@
     &.btn-icon {
       padding: $button-mini-icon-padding;
     }
-    .c-icon {
+    .c-btn-icon {
       font-size:$button-mini-icon-size;
       height:$button-mini-icon-size;
       width: $button-mini-icon-size;
@@ -112,7 +117,7 @@
     &.mini {
       padding: $button-mini-circle-padding;
     }
-    .c-icon {
+    .c-btn-icon {
       margin-right: 0;
     }
   }

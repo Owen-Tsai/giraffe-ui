@@ -1,6 +1,6 @@
-@import '../common/var.scss';
+@import '../common/var';
 @import '../common/mixins/mixins.scss';
-@import '../common/functions.scss';
+@import '../common/functions';
 
 html {
   font-family: $font-list;

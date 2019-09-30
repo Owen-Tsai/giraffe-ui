@@ -1,7 +1,7 @@
-@import '../common/var.scss';
+@import '../common/var';
 @import '../common/mixins/mixins.scss';
 @import '../common/mixins/input.scss';
-@import '../common/functions.scss';
+@import '../common/functions';
 
 .c-input {
   position: relative;
@@ -98,7 +98,7 @@
         height: 100%;
       }
 
-      .c-icon {
+      .input-icon {
         height: $input-height;
         width: $input-height;
         line-height: $input-height;
@@ -128,7 +128,7 @@
         color: $font-color-secondary;
       }
 
-      .c-icon {
+      .input-icon {
         height: $input-height;
         line-height: $input-height;
         color: $font-color-mute;
@@ -142,8 +142,8 @@
       line-height: $input-lg-height;
       font-size: $font-size-md;
     }
-    .c-input-prefix > .c-icon,
-    .c-input-suffix > .c-icon {
+    .c-input-prefix > .input-icon,
+    .c-input-suffix > .input-icon {
       height: $input-lg-height;
       line-height: $input-lg-height;
     }
@@ -155,8 +155,8 @@
       line-height: $input-sm-height;
       font-size: $font-size-base;
     }
-    .c-input-prefix > .c-icon,
-    .c-input-suffix > .c-icon {
+    .c-input-prefix > .input-icon,
+    .c-input-suffix > .input-icon {
       height: $input-sm-height;
       line-height: $input-sm-height;
     }
@@ -168,8 +168,8 @@
       line-height: $input-mini-height;
       font-size: $font-size-sm;
     }
-    .c-input-prefix > .c-icon,
-    .c-input-suffix > .c-icon {
+    .c-input-prefix > .input-icon,
+    .c-input-suffix > .input-icon {
       height: $input-mini-height;
       line-height: $input-mini-height;
       font-size: 18px;
@@ -221,9 +221,13 @@
       margin: 0;
       border: 0;
       margin-top: -2px;
+
+      span {
+        margin: 0;
+      }
     }
 
-    * {
+    span {
       margin: 0 10px;
     }
   }

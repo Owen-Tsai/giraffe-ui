@@ -1,7 +1,11 @@
 @import '../common/mixins/mixins.scss';
-@import '../common/var.scss';
+@import '../common/var';
 
 .c-avatar {
+  .material-icons {
+    font-size: 1.3em;
+  }
+
   @include when('pure-text') {
     background-color: $bg-color-default-dark;
     color: lighten($bg-color-default-dark, 40%);

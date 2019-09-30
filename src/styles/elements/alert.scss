@@ -1,5 +1,5 @@
-@import '../common/var.scss';
-@import '../common/functions.scss';
+@import '../common/var';
+@import '../common/functions';
 @import '../common/mixins/alert.scss';
 
 .c-alert {
@@ -28,7 +28,7 @@
 
   .c-alert-icon {
     margin-right: 10px;
-    vertical-align: middle;
+    line-height: 1;
 
     @include when(big-icon) {
       font-size: 30px;
@@ -47,10 +47,9 @@
   .c-alert-close-icon {
     position: absolute;
     font-size: $font-size-lg;
-    line-height: $font-size-lg;
-    top: 12px;
+    line-height: 1;
+    top: 13px;
     right: 20px;
-    font-weight: 300;
     cursor: pointer;
   }
 
