@@ -33,30 +33,32 @@
 可以为下拉列表组件指定`color`属性，来使下拉列表具有背景颜色。
 
 <template>
-  <c-dropdown color="primary">
-    <c-button slot="activator" color="primary" style="margin-right: 20px;">下拉菜单</c-button>
-    <c-dropdown-menu>
-      <c-dropdown-item>第一个选项</c-dropdown-item>
-      <c-dropdown-item>第二个选项</c-dropdown-item>
-      <c-dropdown-item>第三个选项稍微长一点</c-dropdown-item>
-    </c-dropdown-menu>
-  </c-dropdown>
-  <c-dropdown color="cyan">
-    <c-button slot="activator" color="cyan" style="margin-right: 20px;">下拉菜单</c-button>
-    <c-dropdown-menu>
-      <c-dropdown-item>第一个选项</c-dropdown-item>
-      <c-dropdown-item>第二个选项</c-dropdown-item>
-      <c-dropdown-item>第三个选项稍微长一点</c-dropdown-item>
-    </c-dropdown-menu>
-  </c-dropdown>
-  <c-dropdown color="pink">
-    <c-button slot="activator" color="pink">下拉菜单</c-button>
-    <c-dropdown-menu>
-      <c-dropdown-item>第一个选项</c-dropdown-item>
-      <c-dropdown-item>第二个选项</c-dropdown-item>
-      <c-dropdown-item>第三个选项稍微长一点</c-dropdown-item>
-    </c-dropdown-menu>
-  </c-dropdown>
+  <div>
+    <c-dropdown color="primary">
+      <c-button slot="activator" color="primary" style="margin-right: 20px;">下拉菜单</c-button>
+      <c-dropdown-menu>
+        <c-dropdown-item>第一个选项</c-dropdown-item>
+        <c-dropdown-item>第二个选项</c-dropdown-item>
+        <c-dropdown-item>第三个选项稍微长一点</c-dropdown-item>
+      </c-dropdown-menu>
+    </c-dropdown>
+    <c-dropdown color="cyan">
+      <c-button slot="activator" color="cyan" style="margin-right: 20px;">下拉菜单</c-button>
+      <c-dropdown-menu>
+        <c-dropdown-item>第一个选项</c-dropdown-item>
+        <c-dropdown-item>第二个选项</c-dropdown-item>
+        <c-dropdown-item>第三个选项稍微长一点</c-dropdown-item>
+      </c-dropdown-menu>
+    </c-dropdown>
+    <c-dropdown color="pink">
+      <c-button slot="activator" color="pink">下拉菜单</c-button>
+      <c-dropdown-menu>
+        <c-dropdown-item>第一个选项</c-dropdown-item>
+        <c-dropdown-item>第二个选项</c-dropdown-item>
+        <c-dropdown-item>第三个选项稍微长一点</c-dropdown-item>
+      </c-dropdown-menu>
+    </c-dropdown>
+  </div>
 </template>
 
 ```html
@@ -94,9 +96,9 @@
   <c-dropdown>
     <c-button slot="activator">下拉菜单</c-button>
     <c-dropdown-menu>
-      <c-dropdown-item icon="far fa-calendar-alt">日程安排</c-dropdown-item>
-      <c-dropdown-item icon="far fa-calendar-plus">新建日程</c-dropdown-item>
-      <c-dropdown-item icon="fas fa-bookmark">我的收藏</c-dropdown-item>
+      <c-dropdown-item icon="event">日程安排</c-dropdown-item>
+      <c-dropdown-item icon="add_box">新建日程</c-dropdown-item>
+      <c-dropdown-item icon="bookmark">我的收藏</c-dropdown-item>
     </c-dropdown-menu>
   </c-dropdown>
 </template>
@@ -105,9 +107,9 @@
 <c-dropdown>
   <c-button slot="activator">下拉菜单</c-button>
   <c-dropdown-menu>
-    <c-dropdown-item icon="far fa-calendar-alt">日程安排</c-dropdown-item>
-    <c-dropdown-item icon="far fa-calendar-plus">新建日程</c-dropdown-item>
-    <c-dropdown-item icon="fas fa-bookmark">我的收藏</c-dropdown-item>
+    <c-dropdown-item icon="event">日程安排</c-dropdown-item>
+    <c-dropdown-item icon="add_box">新建日程</c-dropdown-item>
+    <c-dropdown-item icon="bookmark">我的收藏</c-dropdown-item>
   </c-dropdown-menu>
 </c-dropdown>
 ```
@@ -117,43 +119,45 @@
 当某个选项或某些选项与之前的选项功能或含义相差较大时，可以使用分割线对下拉列表进行分割。只需要在你想要进行分割的位置的后一个列表项中增加`divided`属性即可。
 
 <template>
-  <c-dropdown>
-    <c-button slot="activator" style="margin-right: 20px;">下拉菜单</c-button>
-    <c-dropdown-menu>
-      <c-dropdown-item icon="far fa-calendar-alt">日程安排</c-dropdown-item>
-      <c-dropdown-item icon="far fa-calendar-plus">新建日程</c-dropdown-item>
-      <c-dropdown-item icon="fas fa-bookmark">我的收藏</c-dropdown-item>
-      <c-dropdown-item icon="fas fa-cog" divided>系统设置</c-dropdown-item>
-    </c-dropdown-menu>
-  </c-dropdown>
-  <c-dropdown color="info">
-    <c-button color="info" slot="activator">下拉菜单</c-button>
-    <c-dropdown-menu>
-      <c-dropdown-item icon="far fa-calendar-alt">日程安排</c-dropdown-item>
-      <c-dropdown-item icon="far fa-calendar-plus">新建日程</c-dropdown-item>
-      <c-dropdown-item icon="fas fa-bookmark">我的收藏</c-dropdown-item>
-      <c-dropdown-item icon="fas fa-cog" divided>系统设置</c-dropdown-item>
-    </c-dropdown-menu>
-  </c-dropdown>
+  <div>
+    <c-dropdown>
+      <c-button slot="activator" style="margin-right: 20px;">下拉菜单</c-button>
+      <c-dropdown-menu>
+        <c-dropdown-item icon="event">日程安排</c-dropdown-item>
+        <c-dropdown-item icon="add_box">新建日程</c-dropdown-item>
+        <c-dropdown-item icon="bookmark">我的收藏</c-dropdown-item>
+        <c-dropdown-item icon="build" divided>系统设置</c-dropdown-item>
+      </c-dropdown-menu>
+    </c-dropdown>
+    <c-dropdown color="info">
+      <c-button color="info" slot="activator">下拉菜单</c-button>
+      <c-dropdown-menu>
+        <c-dropdown-item icon="event">日程安排</c-dropdown-item>
+        <c-dropdown-item icon="add_box">新建日程</c-dropdown-item>
+        <c-dropdown-item icon="bookmark">我的收藏</c-dropdown-item>
+        <c-dropdown-item icon="build" divided>系统设置</c-dropdown-item>
+      </c-dropdown-menu>
+    </c-dropdown>
+  </div>
 </template>
 
 ```html
 <c-dropdown>
   <c-button slot="activator">下拉菜单</c-button>
   <c-dropdown-menu>
-    <c-dropdown-item icon="far fa-calendar-alt">日程安排</c-dropdown-item>
-    <c-dropdown-item icon="far fa-calendar-plus">新建日程</c-dropdown-item>
-    <c-dropdown-item icon="fas fa-bookmark">我的收藏</c-dropdown-item>
-    <c-dropdown-item icon="fas fa-cog" divided>系统设置</c-dropdown-item>
+    <c-dropdown-item icon="event">日程安排</c-dropdown-item>
+    <c-dropdown-item icon="add_box">新建日程</c-dropdown-item>
+    <c-dropdown-item icon="bookmark">我的收藏</c-dropdown-item>
+    <c-dropdown-item icon="build" divided>系统设置</c-dropdown-item>
   </c-dropdown-menu>
 </c-dropdown>
 <c-dropdown color="info">
   <c-button color="info" slot="activator">下拉菜单</c-button>
   <c-dropdown-menu>
-    <c-dropdown-item icon="far fa-calendar-alt">日程安排</c-dropdown-item>
-    <c-dropdown-item icon="far fa-calendar-plus">新建日程</c-dropdown-item>
-    <c-dropdown-item icon="fas fa-bookmark">我的收藏</c-dropdown-item>
-    <c-dropdown-item icon="fas fa-cog" divided>系统设置</c-dropdown-item>
+    <c-dropdown-item icon="event">日程安排</c-dropdown-item>
+    <c-dropdown-item icon="add_box">新建日程</c-dropdown-item>
+    <c-dropdown-item icon="bookmark">我的收藏</c-dropdown-item>
+    <c-dropdown-item icon="build" divided>系统设置</c-dropdown-item>
   </c-dropdown-menu>
 </c-dropdown>
 ```
@@ -227,43 +231,45 @@
 下拉列表默认在鼠标悬浮于索引元素之上时触发。你可以将`trigger`设定为`click`，这样只有当用户点击索引元素的时候，下拉列表才会显示。
 
 <template>
-  <c-dropdown>
-    <c-button slot="activator" style="margin-right: 20px;">hover 触发</c-button>
-    <c-dropdown-menu>
-      <c-dropdown-item icon="far fa-calendar-alt">日程安排</c-dropdown-item>
-      <c-dropdown-item icon="far fa-calendar-plus">新建日程</c-dropdown-item>
-      <c-dropdown-item icon="fas fa-bookmark">我的收藏</c-dropdown-item>
-      <c-dropdown-item icon="fas fa-cog" divided>系统设置</c-dropdown-item>
-    </c-dropdown-menu>
-  </c-dropdown>
-  <c-dropdown color="purple" trigger="click">
-    <c-button color="purple" slot="activator">click 触发</c-button>
-    <c-dropdown-menu>
-      <c-dropdown-item icon="far fa-calendar-alt">日程安排</c-dropdown-item>
-      <c-dropdown-item icon="far fa-calendar-plus">新建日程</c-dropdown-item>
-      <c-dropdown-item icon="fas fa-bookmark">我的收藏</c-dropdown-item>
-      <c-dropdown-item icon="fas fa-cog" divided>系统设置</c-dropdown-item>
-    </c-dropdown-menu>
-  </c-dropdown>
+  <div>
+    <c-dropdown>
+      <c-button slot="activator" style="margin-right: 20px;">hover 触发</c-button>
+      <c-dropdown-menu>
+        <c-dropdown-item icon="event">日程安排</c-dropdown-item>
+        <c-dropdown-item icon="add_box">新建日程</c-dropdown-item>
+        <c-dropdown-item icon="bookmark">我的收藏</c-dropdown-item>
+        <c-dropdown-item icon="build" divided>系统设置</c-dropdown-item>
+      </c-dropdown-menu>
+    </c-dropdown>
+    <c-dropdown color="purple" trigger="click">
+      <c-button color="purple" slot="activator">click 触发</c-button>
+      <c-dropdown-menu>
+        <c-dropdown-item icon="event">日程安排</c-dropdown-item>
+        <c-dropdown-item icon="add_box">新建日程</c-dropdown-item>
+        <c-dropdown-item icon="bookmark">我的收藏</c-dropdown-item>
+        <c-dropdown-item icon="build" divided>系统设置</c-dropdown-item>
+      </c-dropdown-menu>
+    </c-dropdown>
+  </div>
 </template>
 
 ```html
 <c-dropdown>
   <c-button slot="activator">hover 触发</c-button>
   <c-dropdown-menu>
-    <c-dropdown-item icon="far fa-calendar-alt">日程安排</c-dropdown-item>
-    <c-dropdown-item icon="far fa-calendar-plus">新建日程</c-dropdown-item>
-    <c-dropdown-item icon="fas fa-bookmark">我的收藏</c-dropdown-item>
-    <c-dropdown-item icon="fas fa-cog" divided>系统设置</c-dropdown-item>
+    <c-dropdown-item icon="event">日程安排</c-dropdown-item>
+    <c-dropdown-item icon="add_box">新建日程</c-dropdown-item>
+    <c-dropdown-item icon="bookmark">我的收藏</c-dropdown-item>
+    <c-dropdown-item icon="build" divided>系统设置</c-dropdown-item>
   </c-dropdown-menu>
 </c-dropdown>
 <c-dropdown color="purple" trigger="click">
   <c-button color="purple" slot="activator">click 触发</c-button>
   <c-dropdown-menu>
-    <c-dropdown-item icon="far fa-calendar-alt">日程安排</c-dropdown-item>
-    <c-dropdown-item icon="far fa-calendar-plus">新建日程</c-dropdown-item>
-    <c-dropdown-item icon="fas fa-bookmark">我的收藏</c-dropdown-item>
-    <c-dropdown-item icon="fas fa-cog" divided>系统设置</c-dropdown-item>
+    <c-dropdown-item icon="event">日程安排</c-dropdown-item>
+    <c-dropdown-item icon="add_box">新建日程</c-dropdown-item>
+    <c-dropdown-item icon="bookmark">我的收藏</c-dropdown-item>
+    <c-dropdown-item icon="build" divided>系统设置</c-dropdown-item>
   </c-dropdown-menu>
 </c-dropdown>
 ```
@@ -275,43 +281,45 @@
 下面是简单的例子，下拉列表分别出现在索引元素的左侧和右侧。
 
 <template>
-  <c-dropdown color="blue" placement="left-start">
-    <c-button color="blue" slot="activator" style="margin-right: 20px;">左侧</c-button>
-    <c-dropdown-menu>
-      <c-dropdown-item icon="far fa-calendar-alt">日程安排</c-dropdown-item>
-      <c-dropdown-item icon="far fa-calendar-plus">新建日程</c-dropdown-item>
-      <c-dropdown-item icon="fas fa-bookmark">我的收藏</c-dropdown-item>
-      <c-dropdown-item icon="fas fa-cog" divided>系统设置</c-dropdown-item>
-    </c-dropdown-menu>
-  </c-dropdown>
-  <c-dropdown color="purple" placement="right-start">
-    <c-button color="purple" slot="activator">右侧</c-button>
-    <c-dropdown-menu>
-      <c-dropdown-item icon="far fa-calendar-alt">日程安排</c-dropdown-item>
-      <c-dropdown-item icon="far fa-calendar-plus">新建日程</c-dropdown-item>
-      <c-dropdown-item icon="fas fa-bookmark">我的收藏</c-dropdown-item>
-      <c-dropdown-item icon="fas fa-cog" divided>系统设置</c-dropdown-item>
-    </c-dropdown-menu>
-  </c-dropdown>
+  <div>
+    <c-dropdown color="blue" placement="left-start">
+      <c-button color="blue" slot="activator" style="margin-right: 20px;">左侧</c-button>
+      <c-dropdown-menu>
+        <c-dropdown-item icon="event">日程安排</c-dropdown-item>
+        <c-dropdown-item icon="add_box">新建日程</c-dropdown-item>
+        <c-dropdown-item icon="bookmark">我的收藏</c-dropdown-item>
+        <c-dropdown-item icon="build" divided>系统设置</c-dropdown-item>
+      </c-dropdown-menu>
+    </c-dropdown>
+    <c-dropdown color="purple" placement="right-start">
+      <c-button color="purple" slot="activator">右侧</c-button>
+      <c-dropdown-menu>
+        <c-dropdown-item icon="event">日程安排</c-dropdown-item>
+        <c-dropdown-item icon="add_box">新建日程</c-dropdown-item>
+        <c-dropdown-item icon="bookmark">我的收藏</c-dropdown-item>
+        <c-dropdown-item icon="build" divided>系统设置</c-dropdown-item>
+      </c-dropdown-menu>
+    </c-dropdown>
+  </div>
 </template>
 
 ```html
 <c-dropdown color="blue" placement="left-start">
   <c-button color="blue" slot="activator">左侧</c-button>
   <c-dropdown-menu>
-    <c-dropdown-item icon="far fa-calendar-alt">日程安排</c-dropdown-item>
-    <c-dropdown-item icon="far fa-calendar-plus">新建日程</c-dropdown-item>
-    <c-dropdown-item icon="fas fa-bookmark">我的收藏</c-dropdown-item>
-    <c-dropdown-item icon="fas fa-cog" divided>系统设置</c-dropdown-item>
+    <c-dropdown-item icon="event">日程安排</c-dropdown-item>
+    <c-dropdown-item icon="add_box">新建日程</c-dropdown-item>
+    <c-dropdown-item icon="bookmark">我的收藏</c-dropdown-item>
+    <c-dropdown-item icon="build" divided>系统设置</c-dropdown-item>
   </c-dropdown-menu>
 </c-dropdown>
 <c-dropdown color="purple" placement="right-start">
   <c-button color="purple" slot="activator">右侧</c-button>
   <c-dropdown-menu>
-    <c-dropdown-item icon="far fa-calendar-alt">日程安排</c-dropdown-item>
-    <c-dropdown-item icon="far fa-calendar-plus">新建日程</c-dropdown-item>
-    <c-dropdown-item icon="fas fa-bookmark">我的收藏</c-dropdown-item>
-    <c-dropdown-item icon="fas fa-cog" divided>系统设置</c-dropdown-item>
+    <c-dropdown-item icon="event">日程安排</c-dropdown-item>
+    <c-dropdown-item icon="add_box">新建日程</c-dropdown-item>
+    <c-dropdown-item icon="bookmark">我的收藏</c-dropdown-item>
+    <c-dropdown-item icon="build" divided>系统设置</c-dropdown-item>
   </c-dropdown-menu>
 </c-dropdown>
 ```

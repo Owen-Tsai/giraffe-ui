@@ -28,64 +28,53 @@
 
 输入框的内部可以添加前缀和后缀图标，对应的属性名称分别称为`prefix-icon`和`suffix-icon`。图标既可以直接通过属性名称设置，也可以通过具名插槽传入。
 
-:::warning 注意
-由于 Giraffe UI 默认采用 Font Awesome 图标集，因此当使用其他图标集（例如 Giraffe 和 mdi 时），需要将图标集名称和所要使用的图标名称一并作为`prefix-icon`或`suffix-icon`属性的值（请查看下面的例子）。如果使用具名插槽，则按照常规指定`<c-icon>`组件的`icon-set`属性即可。
-:::
-
 <div style="display: flex; justify-content: space-between; margin-top: 20px;">
-  <c-input width="48%" color="danger" prefix-icon="far fa-smile"></c-input>
-  <c-input width="48%" suffix-icon="giraffe giraffe-chevron-right"></c-input>
+  <c-input width="48%" color="danger" prefix-icon="face"></c-input>
+  <c-input width="48%" suffix-icon="play_arrow"></c-input>
 </div>
 <div style="display: flex; justify-content: space-between; margin-top: 10px;">
   <c-input width="48%">
-    <c-icon slot="prefix">far fa-smile</c-icon>
+    <i class="material-icons" slot="prefix">face</i>
   </c-input>
   <c-input width="48%" color="info">
-    <c-icon slot="suffix" icon-set="giraffe">chevron-right</c-icon>
+    <i class="material-icons" slot="suffix">play_arrow</i>
   </c-input>
 </div>
 
 ```html
-<c-input width="48%" color="danger" prefix-icon="far fa-smile"></c-input>
-<c-input width="48%" suffix-icon="giraffe giraffe-chevron-right"></c-input>
+<c-input width="48%" color="danger" prefix-icon="face"></c-input>
+<c-input width="48%" suffix-icon="play_arrow"></c-input>
 
 <c-input width="48%">
-  <c-icon slot="prefix">far fa-smile</c-icon>
+  <i class="material-icons" slot="prefix">face</i>
 </c-input>
 <c-input width="48%" color="info">
-  <c-icon slot="suffix" icon-set="giraffe">chevron-right</c-icon>
+  <i class="material-icons" slot="suffix">play_arrow</i>
 </c-input>
 ```
 
 ## 输入框组
 
-输入框的外部可以添加前缀和后缀，表现为与输入框相连接的一组元素。前缀和后缀可以通过具名插槽传入。
+输入框的外部可以添加前缀和后缀，表现为与输入框相连接的一组元素。前缀和后缀需要通过具名插槽传入。
 
-<div style="display: flex; justify-content: space-between; margin-top: 20px;">
-  <c-input width="48%" color="danger" prepend-caption="https://" placeholder="example.com"></c-input>
-  <c-input width="48%" append-caption="done" placeholder="请输入待办事项"></c-input>
-</div>
+:::tip
+从 v0.1.2 版本起，移除`<c-input>`组件上`prepend`和`append`属性。你只能通过具名插槽传入输入框组的前缀和后缀。
+:::
+
 <div style="display: flex; justify-content: space-between; margin-top: 10px;">
-  <c-input width="48%">
-    <c-icon slot="prefix">fas fa-search</c-icon>
+  <c-input width="48%" prefix-icon="search">
     <c-button slot="append">谷歌搜索</c-button>
   </c-input>
-  <c-input width="48%" color="info">
-    <c-icon slot="suffix">fas fa-envelope</c-icon>
+  <c-input width="48%" color="info" suffix-icon="email">
     <span slot="prepend">Gmail</span>
   </c-input>
 </div>
 
 ```html
-<c-input width="48%" color="danger" prepend-caption="https://" placeholder="example.com"></c-input>
-<c-input width="48%" append-caption="done" placeholder="请输入待办事项"></c-input>
-
-<c-input width="48%">
-  <c-icon slot="prefix">fas fa-search</c-icon>
+<c-input width="48%" prefix-icon="search">
   <c-button slot="append">谷歌搜索</c-button>
 </c-input>
-<c-input width="48%" color="info">
-  <c-icon slot="suffix">fas fa-envelope</c-icon>
+<c-input width="48%" color="info" suffix-icon="email">
   <span slot="prepend">Gmail</span>
 </c-input>
 ```
@@ -101,13 +90,13 @@
 默认的输入框带有`4px`的边框弧度。使用`round`属性可以使输入框带有圆角样式。
 
 <div style="display: flex; justify-content: space-between; margin-top: 20px;">
-  <c-input width="48%" suffix-icon="giraffe giraffe-close" round></c-input>
-  <c-input width="48%" prefix-icon="fas fa-envelope" round></c-input>
+  <c-input width="48%" suffix-icon="close" round></c-input>
+  <c-input width="48%" prefix-icon="email" round></c-input>
 </div>
 
 ```html
-<c-input width="48%" suffix-icon="fas fa-search" round></c-input>
-<c-input width="48%" prefix-icon="fas fa-envelope" round></c-input>
+<c-input width="48%" suffix-icon="close" round></c-input>
+<c-input width="48%" prefix-icon="email" round></c-input>
 ```
 
 ### 简化输入框
@@ -116,12 +105,12 @@
 
 <div style="display: flex; justify-content: space-between; margin-top: 20px;">
   <c-input width="48%" simplified color="primary"></c-input>
-  <c-input width="48%" prefix-icon="fas fa-envelope" simplified color="danger"></c-input>
+  <c-input width="48%" prefix-icon="email" simplified color="danger"></c-input>
 </div>
 
 ```html
 <c-input width="48%" simplified color="primary"></c-input>
-<c-input width="48%" prefix-icon="fas fa-envelope" simplified color="danger"></c-input>
+<c-input width="48%" prefix-icon="email" simplified color="danger"></c-input>
 ```
 
 ## 输入框尺寸
@@ -136,10 +125,10 @@
 </div>
 
 ```html
-<c-input width="48%" color="primary" size="large" placeholder="大号输入框"></c-input><br>
-<c-input width="48%" color="danger" placeholder="普通尺寸输入框"></c-input><br>
-<c-input width="48%" color="info" size="small" placeholder="小号输入框"></c-input><br>
-<c-input width="48%" color="warning" size="mini" placeholder="迷你尺寸输入框"></c-input><br>
+<c-input width="48%" color="primary" size="large" placeholder="大号输入框"></c-input>
+<c-input width="48%" color="danger" placeholder="普通尺寸输入框"></c-input>
+<c-input width="48%" color="info" size="small" placeholder="小号输入框"></c-input>
+<c-input width="48%" color="warning" size="mini" placeholder="迷你尺寸输入框"></c-input>
 ```
 
 ## 只在聚焦时显示图标
@@ -156,7 +145,7 @@
 <c-input width="48%" suffix-icon="clear" show-icon-on-focus></c-input>
 ```
 
-## 输入框提示 <Badge text="下一版本" type="tip"/>
+## 输入框提示
 
 输入框提供了内置的插槽`hint`用于在输入框下方显示一行提示文字。如果提示文字过长，超过父级元素输入框的长度，那么文字将被截断并在结尾添加省略号。
 
@@ -203,22 +192,23 @@
 | round | 圆角输入框 | boolean | — | false |
 | disabled | 禁用状态 | boolean | — | false |
 | readonly | 只读状态 | boolean | — | false |
-| prefix-icon | 前缀图标 | string | — | — |
-| suffix-icon | 后缀图标 | string | — | — |
+| prefix-icon | 前缀图标 | string | [查看所有图标列表](icon.md) | — |
+| suffix-icon | 后缀图标 | string | [查看所有图标列表](icon.md) | — |
 | prepend-caption | 输入框组前缀 | string | — | — |
 | append-caption | 输入框组后缀 | string | — | — |
 | size | 输入框的尺寸 | string | large/—/small/mini | — |
 | hint | 显示在输入框下方的提示文字 | string | — | — |
+| show-icon-on-focus | 只在输入框聚焦或鼠标移过时显示图标 | boolean | — | false |
 
 **你可以在`<c-input>`组件上使用`<input>`标签的原生属性，例如`placeholder`等。**
 
 ### Slots
 | 名称 | 说明                |
 |------|--------------------|
-| prefix-icon | 前缀图标 | string | — | — |
-| suffix-icon | 后缀图标 | string | — | — |
-| prepend-caption | 输入框组前缀 | string | — | — |
-| append-caption | 输入框组后缀 | string | — | — |
+| prefix-icon | 前缀图标 |
+| suffix-icon | 后缀图标 |
+| prepend-caption | 输入框组前缀 |
+| append-caption | 输入框组后缀 |
 
 ### Events
 

@@ -10,7 +10,6 @@ import CCheckboxButton from './packages/CCheckboxButton'
 import CDropdown from './packages/CDropdown'
 import CDropdownItem from './packages/CDropdownItem'
 import CDropdownMenu from './packages/CDropdownMenu'
-import CIcon from './packages/CIcon'
 import CInput from './packages/CInput'
 import CNavbar from './packages/CNavbar'
 import CNavbarItem from './packages/CNavbarItem'
@@ -27,42 +26,41 @@ import config from '../package.json'
 const version = config.version
 
 const components = [
-    CAlert,
-    CAvatar,
-    CButton,
-    CButtonGroup,
-    CCard,
-    CCheckbox,
-    CCheckboxGroup,
-    CCheckboxButton,
-    CDropdown,
-    CDropdownItem,
-    CDropdownMenu,
-    CIcon,
-    CInput,
-    CNavbar,
-    CNavbarItem,
-    CNavbarGroup,
-    CRadio,
-    CRadioGroup,
-    CRadioButton,
-    CTag,
-    CTextarea,
-    CTooltip
+  CAlert,
+  CAvatar,
+  CButton,
+  CButtonGroup,
+  CCard,
+  CCheckbox,
+  CCheckboxGroup,
+  CCheckboxButton,
+  CDropdown,
+  CDropdownItem,
+  CDropdownMenu,
+  CInput,
+  CNavbar,
+  CNavbarItem,
+  CNavbarGroup,
+  CRadio,
+  CRadioGroup,
+  CRadioButton,
+  CTag,
+  CTextarea,
+  CTooltip
 ]
 
 let GiraffeUI = {}
 
 GiraffeUI.install = function(Vue) {
-    console.info(`Welcome using Giraffe-UI, you are currenlty using v${version}`)
-    components.forEach(guiComponent => {
-        Vue.component(guiComponent.name, guiComponent);
-    });
-    console.log(`Giraffe-UI is loaded successfully with ${components.length} component(s)`)
+  console.info(`Welcome using Giraffe-UI, you are currenlty using v${version}`)
+  components.forEach(guiComponent => {
+    Vue.component(guiComponent.name, guiComponent);
+  });
+  console.log(`Giraffe-UI is loaded successfully with ${components.length} component(s)`)
 }
 
 const plugin = [
-    GiraffeUI.install
+  GiraffeUI.install
 ]
 
 let GlobalVue = null;

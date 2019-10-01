@@ -46,12 +46,12 @@
 
 你也可以在头像组件上使用图标，就像在没有传入`src`属性的时候使用文字一样。
 
-<c-avatar inline icon="fas fa-user"></c-avatar>
-<c-avatar inline icon="far fa-user" color="pink"></c-avatar>
+<c-avatar inline icon="account_circle"></c-avatar>
+<c-avatar inline icon="android" color="pink"></c-avatar>
 
 ```html
-<c-avatar inline icon="fas fa-user"></c-avatar>
-<c-avatar inline icon="far fa-user" color="pink"></c-avatar>
+<c-avatar inline icon="account_circle"></c-avatar>
+<c-avatar inline icon="android" color="pink"></c-avatar>
 ```
 
 ## 指定尺寸
@@ -63,14 +63,14 @@
 <template>
   <div style="display: flex; align-items: center">
     <c-avatar inline :src="img" :size="80"></c-avatar>
-    <c-avatar inline icon="fas fa-user" :size="60" color="red" style="margin-left: 5px"></c-avatar>
+    <c-avatar inline icon="account_circle" :size="60" color="red" style="margin-left: 5px"></c-avatar>
     <c-avatar inline username="Owen Tsai" color="green" style="margin-left: 5px"></c-avatar>
   </div>
 </template>
 
 ```html
 <c-avatar inline :src="img" :size="80"></c-avatar>
-<c-avatar inline icon="fas fa-user" :size="60" color="red"></c-avatar>
+<c-avatar inline icon="account_circle" :size="60" color="red"></c-avatar>
 <c-avatar inline username="Owen Tsai" color="green"></c-avatar>
 ```
 

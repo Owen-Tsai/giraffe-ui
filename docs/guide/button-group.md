@@ -26,9 +26,9 @@
   <c-button color="danger">右按钮</c-button>
 </c-button-group>
 <c-button-group style="margin-top: 20px; margin-left: 10px;" color="blue">
-  <c-button icon="fas fa-play">播放</c-button>
-  <c-button icon="fas fa-pause">暂停</c-button>
-  <c-button icon="fas fa-stop">停止</c-button>
+  <c-button icon="play_arrow">播放</c-button>
+  <c-button icon="pause">暂停</c-button>
+  <c-button icon="stop">停止</c-button>
 </c-button-group>
 
 ```html
@@ -38,9 +38,9 @@
   <c-button color="danger">右按钮</c-button>
 </c-button-group>
 <c-button-group color="blue">
-  <c-button icon="fas fa-play">播放</c-button>
-  <c-button icon="fas fa-pause">暂停</c-button>
-  <c-button icon="fas fa-stop">停止</c-button>
+  <c-button icon="play_arrow">播放</c-button>
+  <c-button icon="pause">暂停</c-button>
+  <c-button icon="stop">停止</c-button>
 </c-button-group>
 ```
 
@@ -54,9 +54,9 @@
   <c-button color="danger" sharp>右按钮</c-button>
 </c-button-group>
 <c-button-group style="margin-top: 20px; margin-left: 10px;" color="blue" round>
-  <c-button icon="fas fa-play">播放</c-button>
-  <c-button icon="fas fa-pause">暂停</c-button>
-  <c-button icon="fas fa-stop">停止</c-button>
+  <c-button icon="play_arrow">播放</c-button>
+  <c-button icon="pause">暂停</c-button>
+  <c-button icon="stop">停止</c-button>
 </c-button-group>
 
 ```html
@@ -66,9 +66,9 @@
   <c-button color="danger" sharp>右按钮</c-button>
 </c-button-group>
 <c-button-group color="blue" round>
-  <c-button icon="fas fa-play">播放</c-button>
-  <c-button icon="fas fa-pause">暂停</c-button>
-  <c-button icon="fas fa-stop">停止</c-button>
+  <c-button icon="play_arrow">播放</c-button>
+  <c-button icon="pause">暂停</c-button>
+  <c-button icon="stop">停止</c-button>
 </c-button-group>
 ```
 
@@ -86,9 +86,9 @@
   <c-button color="danger">右按钮</c-button>
 </c-button-group>
 <c-button-group style="margin-top: 20px; margin-left: 10px;" color="blue" size="small" round>
-  <c-button icon="fas fa-play">播放</c-button>
-  <c-button icon="fas fa-pause">暂停</c-button>
-  <c-button icon="fas fa-stop">停止</c-button>
+  <c-button icon="play_arrow">播放</c-button>
+  <c-button icon="pause">暂停</c-button>
+  <c-button icon="stop">停止</c-button>
 </c-button-group>
 
 ```html
@@ -98,9 +98,9 @@
   <c-button color="danger">右按钮</c-button>
 </c-button-group>
 <c-button-group color="blue" size="small" round>
-  <c-button icon="fas fa-play">播放</c-button>
-  <c-button icon="fas fa-pause">暂停</c-button>
-  <c-button icon="fas fa-stop">停止</c-button>
+  <c-button icon="play_arrow">播放</c-button>
+  <c-button icon="pause">暂停</c-button>
+  <c-button icon="stop">停止</c-button>
 </c-button-group>
 ```
 

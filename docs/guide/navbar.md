@@ -88,7 +88,7 @@
       <c-navbar-item to="#">指南</c-navbar-item>
       <c-navbar-item>
         <c-dropdown>
-          <span slot="activator">深入 <c-icon style="line-height: 64px;">fas fa-angle-down</c-icon></span>
+          <span style="display: flex; align-items: center" slot="activator">深入 <i class="material-icons">arrow_drop_down</i></span>
           <c-dropdown-menu>
             <c-dropdown-item>自定义事件</c-dropdown-item>
             <c-dropdown-item>渲染函数</c-dropdown-item>
@@ -104,7 +104,7 @@
       <c-navbar-item to="#">链接 2</c-navbar-item>
       <c-navbar-item>
         <c-dropdown trigger="click" placement="bottom-start">
-          <c-button color="info" slot="activator" icon="giraffe giraffe-expand-more">列表</c-button>
+          <c-button color="info" slot="activator" icon="expand_more">列表</c-button>
           <c-dropdown-menu :max-width="100">
             <c-dropdown-item>第一个选项</c-dropdown-item>
             <c-dropdown-item>第二个选项</c-dropdown-item>
@@ -113,7 +113,7 @@
         </c-dropdown>
       </c-navbar-item>
       <c-navbar-item>
-        <c-button circle icon="fas fa-camera" color="primary" flat></c-button>
+        <c-button circle icon="photo_camera" color="primary" flat></c-button>
       </c-navbar-item>
     </c-navbar>
   </div>
@@ -126,7 +126,7 @@
   <c-navbar-item to="#">指南</c-navbar-item>
   <c-navbar-item>
     <c-dropdown>
-      <span slot="activator">深入 <c-icon style="line-height: 64px;">fas fa-angle-down</c-icon></span>
+      <span style="display: flex; align-items: center" slot="activator">深入 <i class="material-icons">arrow_drop_down</i></span>
       <c-dropdown-menu>
         <c-dropdown-item>自定义事件</c-dropdown-item>
         <c-dropdown-item>渲染函数</c-dropdown-item>
@@ -143,7 +143,7 @@
   <c-navbar-item to="#">链接 2</c-navbar-item>
   <c-navbar-item>
     <c-dropdown trigger="click" placement="bottom-start">
-      <c-button color="info" slot="activator" icon="giraffe giraffe-expand-more">列表</c-button>
+      <c-button color="info" slot="activator" icon="expand_more">列表</c-button>
       <c-dropdown-menu :max-width="100">
         <c-dropdown-item>第一个选项</c-dropdown-item>
         <c-dropdown-item>第二个选项</c-dropdown-item>
@@ -152,7 +152,7 @@
     </c-dropdown>
   </c-navbar-item>
   <c-navbar-item>
-    <c-button circle icon="fas fa-camera" color="primary" flat></c-button>
+    <c-button circle icon="photo_camera" color="primary" flat></c-button>
   </c-navbar-item>
 </c-navbar>
 ```
@@ -262,7 +262,7 @@
     <c-navbar-item to="#">链接 2</c-navbar-item>
     <c-navbar-item>
       <c-dropdown trigger="click" placement="bottom-start">
-        <c-button color="primary" size="small" slot="activator" icon="giraffe giraffe-expand-more">列表</c-button>
+        <c-button color="primary" size="small" slot="activator" icon="expand_more">列表</c-button>
         <c-dropdown-menu :max-width="100">
           <c-dropdown-item>第一个选项</c-dropdown-item>
           <c-dropdown-item>第二个选项</c-dropdown-item>
@@ -271,7 +271,7 @@
       </c-dropdown>
     </c-navbar-item>
     <c-navbar-item>
-      <c-button circle size="small" icon="fas fa-camera" color="primary" flat></c-button>
+      <c-button circle size="small" icon="photo_camera" color="primary" flat></c-button>
     </c-navbar-item>
   </c-navbar>
 </template>
@@ -291,7 +291,7 @@
   <c-navbar-item to="#">链接 2</c-navbar-item>
   <c-navbar-item>
     <c-dropdown trigger="click" placement="bottom-start">
-      <c-button color="primary" size="small" slot="activator" icon="giraffe giraffe-expand-more">列表</c-button>
+      <c-button color="primary" size="small" slot="activator" icon="expand_more">列表</c-button>
       <c-dropdown-menu :max-width="100">
         <c-dropdown-item>第一个选项</c-dropdown-item>
         <c-dropdown-item>第二个选项</c-dropdown-item>
@@ -300,7 +300,7 @@
     </c-dropdown>
   </c-navbar-item>
   <c-navbar-item>
-    <c-button circle size="small" icon="fas fa-camera" color="primary" flat></c-button>
+    <c-button circle size="small" icon="photo_camera" color="primary" flat></c-button>
   </c-navbar-item>
 </c-navbar>
 ```

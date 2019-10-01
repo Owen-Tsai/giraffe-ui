@@ -33,6 +33,7 @@ function getGuideSidebar (groupA, groupB) {
       collapsable: false,
       children: [
         'alert',
+        'avatar',
         'button',
         'button-group',
         'card',
