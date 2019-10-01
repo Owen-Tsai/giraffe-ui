@@ -1,6 +1,6 @@
 {
   "name": "giraffe-ui",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "main": "lib/giraffe-ui.umd.min.js",
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -12,14 +12,12 @@
     "scss": "node-sass src/styles/cui.scss lib/giraffe-ui.css --output-style compressed"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.10.2",
     "core-js": "^2.6.5",
     "material-design-icons": "^3.0.1",
     "popper.js": "^1.15.0",
     "vue": "^2.6.10"
   },
   "devDependencies": {
-    "@mdi/font": "^4.4.95",
     "@vue/cli-plugin-babel": "^3.10.0",
     "@vue/cli-plugin-eslint": "^3.10.0",
     "@vue/cli-service": "^3.10.0",
