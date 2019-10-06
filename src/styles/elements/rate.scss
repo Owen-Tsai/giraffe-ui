@@ -1,0 +1,16 @@
+.c-rate {
+  display: inline-flex;
+
+  .rate-icon {
+    font-size: 20px;
+    transition: color .3s;
+  }
+
+  &:not([readonly]) {
+    cursor: pointer;
+  }
+
+  .c-rate-text {
+    margin-left: 10px;
+  }
+}

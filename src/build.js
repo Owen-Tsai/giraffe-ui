@@ -20,6 +20,9 @@ import CRadioButton from './packages/CRadioButton'
 import CTag from './packages/CTag'
 import CTextarea from './packages/CTextarea'
 import CTooltip from './packages/CTooltip'
+import CRate from './packages/CRate'
+import CSelect from './packages/CSelect'
+import COption from './packages/COption'
 
 import config from '../package.json'
 
@@ -46,7 +49,10 @@ const components = [
   CRadioButton,
   CTag,
   CTextarea,
-  CTooltip
+  CTooltip,
+  CSelect,
+  CRate,
+  COption,
 ]
 
 let GiraffeUI = {}

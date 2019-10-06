@@ -11,78 +11,18 @@
       <c-button size="mini" color="primary">按钮</c-button>
     </div>
     <div style="margin-top: 50px;">
-      <c-input color="success" width="300px">
-        <c-button slot="append">按钮</c-button>
-      </c-input>
+      <c-rate v-model="num" show-text></c-rate>
+      <p>{{ num }}</p>
     </div>
-<!--    <div class="dropdowns">-->
-<!--      <c-dropdown trigger="click" placement="bottom" @click:item="logParam" @click:outside="logStatic">-->
-<!--        <c-button slot="activator">下拉菜单</c-button>-->
-<!--        <c-dropdown-menu :max-width="100">-->
-<!--          <c-dropdown-item icon="fas fa-camera">第一个选项</c-dropdown-item>-->
-<!--          <c-dropdown-item>第二个选项</c-dropdown-item>-->
-<!--          <c-dropdown-item>第三个选项稍微长一点</c-dropdown-item>-->
-<!--        </c-dropdown-menu>-->
-<!--      </c-dropdown>-->
-<!--    </div>-->
-<!--    <div class="toolbars">-->
-<!--      <c-navbar color="primary" fixed>-->
-<!--        <c-navbar-item title to="/">Title</c-navbar-item>-->
-<!--        <div class="c-flex-grow"></div>-->
-<!--        <c-navbar-group>-->
-<!--          <c-navbar-item to="https://www.baidu.com">link 1</c-navbar-item>-->
-<!--          <c-navbar-item to="https://www.baidu.com">链接</c-navbar-item>-->
-<!--          <c-navbar-item>-->
-<!--            <c-button color="info">中文</c-button>-->
-<!--          </c-navbar-item>-->
-<!--          <c-navbar-item>-->
-<!--            <c-button color="info">click</c-button>-->
-<!--          </c-navbar-item>-->
-<!--          <c-navbar-item>-->
-<!--            <c-button circle icon="fas fa-camera" color="primary" flat></c-button>-->
-<!--          </c-navbar-item>-->
-<!--          <c-navbar-item>-->
-<!--            <c-dropdown trigger="click" placement="bottom-start">-->
-<!--              <c-button color="info" slot="activator" icon="giraffe giraffe-expand-more">下拉</c-button>-->
-<!--              <c-dropdown-menu :max-width="100">-->
-<!--                <c-dropdown-item>第一个选项</c-dropdown-item>-->
-<!--                <c-dropdown-item>第二个选项</c-dropdown-item>-->
-<!--                <c-dropdown-item>第三个选项稍微长一点</c-dropdown-item>-->
-<!--              </c-dropdown-menu>-->
-<!--            </c-dropdown>-->
-<!--          </c-navbar-item>-->
-<!--        </c-navbar-group>-->
-<!--          <c-navbar-item>-->
-<!--            <c-input prefix-icon="fas fa-search" width="250"></c-input>-->
-<!--          </c-navbar-item>-->
-<!--        -->
-<!--      </c-navbar>-->
-<!--    </div>-->
-<!--    <div class="tags">-->
-<!--      <c-tag color="green" outlined v-for="tag in dynamicTags" :key="tag" @close="handleClose(tag)">-->
-<!--        {{ tag }}-->
-<!--      </c-tag>-->
-<!--      <c-input -->
-<!--        ref="tagInput"-->
-<!--        size="small"-->
-<!--        v-model="tagInputVal"-->
-<!--        v-if="tagInputVisible"-->
-<!--        @blur="confirmInput"-->
-<!--        width="90px"-->
-<!--      ></c-input>-->
-<!--      <c-button v-if="!tagInputVisible" @click="showTagInput">+ Add Tag</c-button>-->
-<!--    </div>-->
-
-<!--    <div class="avatars">-->
-<!--      <c-avatar username="Owen Tsai" color="info" inline></c-avatar>-->
-<!--      <c-avatar username="Yue Liu Yang" color="teal" inline></c-avatar>-->
-<!--      <c-avatar icon="fas fa-user" color="info" inline></c-avatar>-->
-<!--      <c-avatar icon="fas fa-user" inline></c-avatar>-->
-<!--      <c-avatar initials="YLY" inline></c-avatar>-->
-<!--      <c-avatar :src="img" inline :size="80"></c-avatar>-->
-<!--    </div>-->
+    
     <div>
-      <i class="c-icon-access-alarms"></i>
+      <c-select width="300px" :max-selection="3" v-model="select" color="info" size="small" round>
+        <c-option>123</c-option>
+        <c-option>456</c-option>
+        <c-option value="YYY">789</c-option>
+        <c-option>yly</c-option>
+      </c-select>
+      <p>{{ select }}</p>
     </div>
   </div>
 </template>
@@ -100,6 +40,8 @@
         dynamicTags: ['标签1', '标签2', '标签3', '标签4'],
         img: pic,
         cols: ['id', 'name', 'studentID', 'mark'],
+        num: 0,
+        select: null,
         data: [
           {
             'id': 1,

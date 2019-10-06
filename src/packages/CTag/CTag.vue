@@ -12,7 +12,7 @@
       }
     ]]" @click="handleClick">
       <slot></slot>
-      <c-icon icon-set="giraffe" v-if="closable" @click.native.stop="handleClose">close</c-icon>
+      <i class="material-icons tag-close" v-if="closable" @click="handleClose">close</i>
     </span>
   </transition>
 </template>

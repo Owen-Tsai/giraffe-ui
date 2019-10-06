@@ -1,0 +1,100 @@
+.c-option {
+  list-style: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  vertical-align: middle;
+  color: $font-color-common;
+
+  .option-content {
+    display: flex;
+    align-items: center;
+  }
+
+  @include when('is-divided') {
+    position: relative;
+    margin-top: 8px;
+    border-top: 1px solid $border-color-light;
+
+    &:before {
+      content: '';
+      height: 4px;
+      display: block;
+      margin: 0 -16px;
+      margin-top: -8px;
+      margin-bottom: 8px;
+      background-color: #ffffff;
+    }
+  }
+
+  .option-icon {    
+    line-height: $line-height-base;
+    font-size: $line-height-base;
+    margin-right: 6px;
+  }
+
+  &:hover {
+    color: $primary-color;
+    background-color: mix($primary-color, #ffffff, 10%);
+  }
+}
+
+/* dropdown-menu
+----------------------------------- */
+.c-options-list {
+  z-index: 9;
+}
+.c-options-menu {
+  box-shadow: $box-shadow-light;
+  padding: 5px 0;
+  margin: 5px 0;
+  background-color: #ffffff;
+
+  @include when('constrain-height') {
+    overflow-y: scroll;
+  }
+}
+
+.c-select {
+  display: inline-block;
+
+  .c-select-input {
+    input[readonly] {
+      cursor: pointer;
+      color: $font-color-common;
+    }
+  }
+
+  .up {
+    transform: rotate(180deg);
+    transition: transform .3s;
+  }
+  .down {
+    transform: rotate(0deg);
+    transition: transform .3s;
+  }
+
+  @each $c, $v in $colors {
+    @include when('#{$color-prefix}-#{$c}') {
+      .c-options-menu {
+        @include set-colors($v);
+      }
+      .c-option {
+        color: color-contrast($v);
+        &:hover {
+          color: $v;
+          background-color: #ffffff;
+        }
+
+        @include when('is-divided') {
+          border-top: 1px solid color-contrast($v);
+
+          &:before {
+            background-color: $v;
+          }
+        }
+      }
+    }
+  }
+}
