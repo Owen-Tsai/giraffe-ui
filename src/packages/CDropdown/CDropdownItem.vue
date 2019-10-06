@@ -35,6 +35,7 @@
     methods: {
       handleClick() {
         this.dispatch('CDropdown', 'click:item', this);
+        this.$emit('click', this);
       }
     }
   }
