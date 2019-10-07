@@ -27,6 +27,9 @@ import CAvatar from '../../src/packages/CAvatar';
 import CNavbar from '../../src/packages/CNavbar';
 import CNavbarGroup from '../../src/packages/CNavbarGroup';
 import CNavbarItem from '../../src/packages/CNavbarItem';
+import CRate from '../../src/packages/CRate';
+import COption from '../../src/packages/COption';
+import CSelect from '../../src/packages/CSelect';
 
 export default ({
   Vue,
@@ -55,4 +58,7 @@ export default ({
   Vue.component('c-navbar', CNavbar);
   Vue.component('c-navbar-group', CNavbarGroup);
   Vue.component('c-navbar-item', CNavbarItem);
+  Vue.component('c-rate', CRate);
+  Vue.component('c-option', COption);
+  Vue.component('c-select', CSelect);
 }

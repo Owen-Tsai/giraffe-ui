@@ -4,25 +4,13 @@
 
 ## 全局引入 Giraffe UI
 
-:::warning 注意
-当前版本的 Giraffe UI 使用了 sass，且没有将`scss`文件处理成为`css`，因此，想要使用 Giraffe UI，你必须安装 sass 的相关环境。使用 sass 有一定的好处，例如你可以在样式表中使用函数和表达式，还可以定义变量，或是向 Giraffe UI 库中添加自定义颜色。
-:::
-
-在项目目录中，运行下面的代码来安装 sass 的环境。这是一个开发时依赖，而不是运行时。你因此无需担心你的用户必须额外安装这些依赖。
-
-```bash
-yarn add -D sass node-sass sass-loader
-# 或者
-npm install --save-dev sass node-sass sass-loader
-```
-
-在项目的 `main.js` 中写入如下内容：
+在项目的`main.js`中写入如下内容：
 
 ```js
 import Vue from 'vue'
 import GiraffeUI from 'giraffe-ui'
 // 必须单独引入样式：
-import 'giraffe-ui/src/styles/cui.scss'
+import 'giraffe-ui/lib/giraffe-ui.css'
 import App from './App.vue'
 
 Vue.use(GiraffeUI)
@@ -34,6 +22,16 @@ new Vue({
 ```
 
 以上代码便完成了 Giraffe UI 的引入。需要注意的是，第 3 行单独引入了样式文件，这一步是不可缺少的。
+
+Giraffe UI 使用了 sass 作为样式预处理语言。你也可以在项目目录中，运行下面的代码来安装 sass 的环境。这是一个开发时依赖，而不是运行时。你因此无需担心你的用户必须额外安装这些依赖。
+
+```bash
+yarn add -D sass node-sass sass-loader
+# 或者
+npm install --save-dev sass node-sass sass-loader
+```
+
+使用 sass 将会给你带来额外的好处，你会发现自己可以更方便地修改和书写样式，并且还可以客制化 Giraffe UI 的颜色。
 
 ## 使用 Bootstrap-Template <Badge text="暂不可用" type="error"/>
 

@@ -1,5 +1,6 @@
 module.exports = {
   title: 'Giraffe UI',
+  base: '/cui/',
   description: 'Easy to use UI component library for Vue.js',
   plugins: ['@vuepress/active-header-links', '@vuepress/back-to-top'],
   themeConfig: {
@@ -44,6 +45,8 @@ function getGuideSidebar (groupA, groupB) {
         'input',
         'navbar',
         'radio',
+        'rate',
+        'select',
         'tag',
         'textarea',
         'tooltip'
