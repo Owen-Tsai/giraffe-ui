@@ -3,7 +3,8 @@
 @import '../common/functions';
 
 .c-tag {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   height: $tag-height;
   font-size: $font-size-sm;
   line-height: $tag-line-height;
@@ -52,10 +53,9 @@
     }
   }
 
-  .c-icon {
+  .tag-close {
     margin-left: 4px;
     font-size: inherit;
-    line-height: inherit;
     cursor: pointer;
   }
 }
