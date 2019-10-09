@@ -1,7 +1,12 @@
 {
   "name": "giraffe-ui",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "main": "lib/giraffe-ui.umd.min.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Owen-Tsai/giraffe-ui"
+  },
+  "homepage": "http://www.aait-suse.cn/cui",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
