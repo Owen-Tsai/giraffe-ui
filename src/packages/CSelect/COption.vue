@@ -67,9 +67,13 @@
       },
       updateIcon() {
         if(this.icon) {
-          if(this._select.selected.includes(this.optionLabel)) {
-            this.itemIcon = 'check_box';
-          } else {
+          if(this._select.selected && Array.isArray(this._select.selected)) {
+            for(let i = 0; i < this._select.selected.length; i++) {
+              if(this._select.selected[i].label === this.optionLabel) {
+                this.itemIcon = 'check_box';
+                return;
+              }
+            }
             this.itemIcon = 'check_box_outline_blank';
           }
         }

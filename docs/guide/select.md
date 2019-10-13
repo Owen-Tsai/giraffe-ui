@@ -41,7 +41,7 @@
 指定`color`属性将改变文本框和下拉菜单的颜色。
 
 <div class="demo-block">
-  <c-select width="300px" color="teal">
+  <c-select width="300px" color="teal" v-model="spot">
     <c-option>大明湖</c-option>
     <c-option>趵突泉</c-option>
     <c-option>五龙潭</c-option>

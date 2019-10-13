@@ -40,6 +40,7 @@
   import CPopper from '../CPopper/CPopper';
   import { appendColorClass } from '../../utilities/utilities';
 
+
   export default {
     name: 'CSelect',
     componentName: 'CSelect',
@@ -50,7 +51,7 @@
       menuVisible: false,
       popper: null,
       popperStatus: false,
-      selected: [],
+      selected: null,
       models: []
     }),
     props: {
@@ -73,14 +74,23 @@
         appendColorClass(this.color, classList);
         return classList;
       },
-      selectedLabel() {
-        if(this.selected.length === 0) return '';
+      selectedLabel: {
+        get() {
+          if(this.selected === null) return '';
 
-        if(this.maxSelection > 1) {
-          let str = this.selected.toString();
-          return str;
-        } else {
-          return this.selected;
+          if(this.maxSelection > 1) {
+            let str = '';
+            for(let i = 0; i < this.selected.length; i++) {
+              str += this.selected[i].label;
+              if(i != this.selected.length - 1) str += ', ';
+            }
+            return str;
+          } else {
+            return this.selected.label;
+          }
+        },
+        set(val) {
+          
         }
       },
       cls() {
@@ -93,7 +103,7 @@
         this.$emit('change:visible', val);
       },
       value(val) {
-        
+        this.selectedLabel = val.label;
       }
     },
     methods: {
@@ -104,28 +114,39 @@
         if (this.menuVisible) this.$emit('click:outside', e);
         this.menuVisible = false;
       },
+      findItemInArray(item) {
+        for(let i = 0; i < this.selected.length; i++) {
+          if(this.selected[i].label === item.label && this.selected[i].value === item.value) {
+            return i;
+          }
+        }
+        return false;
+      },
       handleItemClick(obj) {
         let item = obj;
         if(item.value === undefined) {
           item.value = item.label;
         }
+
         if(this.maxSelection === 1) {
-          this.selected = item.label;
-          this.models = item.value;
+          this.selected = item;
           this.menuVisible = false;
         } else {
-          if(this.selected && this.selected.includes(item.label)) {
-            this.selected.splice(this.selected.indexOf(item.label), 1);
-            this.models.splice(this.models.indexOf(item.value), 1);
+          if(this.selected && Array.isArray(this.selected)) {
+            let index = this.findItemInArray(item);
+            if(index !== false) {
+              this.selected.splice(index, 1);
+            } else {
+              if(this.selected.length >= this.maxSelection) return;
+              this.selected.push(item);
+            }
           } else {
-            if(this.selected.length >= this.maxSelection) return;
-            this.selected.push(item.label);
-            this.models.push(item.value);
+            this.selected = Array.of(item);
           }
         }
 
-        this.$emit('input', this.models);
-        this.$emit('change:select', this.models);
+        this.$emit('input', this.selected);
+        this.$emit('change:select', this.selected);
       }
     },
     mounted() {

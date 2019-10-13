@@ -66,7 +66,7 @@
 
   export default {
     name: 'CInput',
-
+    componentName: 'CInput',
     props: {
       disabled: Boolean,
       readonly: Boolean,
