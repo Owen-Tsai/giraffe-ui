@@ -40,7 +40,6 @@
   import CPopper from '../CPopper/CPopper';
   import { appendColorClass } from '../../utilities/utilities';
 
-
   export default {
     name: 'CSelect',
     componentName: 'CSelect',
@@ -52,7 +51,7 @@
       popper: null,
       popperStatus: false,
       selected: null,
-      models: []
+      selectedLabel: ''
     }),
     props: {
       color: String,
@@ -74,24 +73,8 @@
         appendColorClass(this.color, classList);
         return classList;
       },
-      selectedLabel: {
-        get() {
-          if(this.selected === null) return '';
-
-          if(this.maxSelection > 1) {
-            let str = '';
-            for(let i = 0; i < this.selected.length; i++) {
-              str += this.selected[i].label;
-              if(i != this.selected.length - 1) str += ', ';
-            }
-            return str;
-          } else {
-            return this.selected.label;
-          }
-        },
-        set(val) {
-          
-        }
+      label(){
+        
       },
       cls() {
         return this.menuVisible ? 'up' : 'down'
@@ -103,7 +86,16 @@
         this.$emit('change:visible', val);
       },
       value(val) {
-        this.selectedLabel = val.label;
+        if(this.maxSelection > 1) {
+          let str = '';
+          for(let i = 0; i < this.selected.length; i++) {
+            str += this.selected[i].label;
+            if(i != this.selected.length - 1) str += ', ';
+          }
+          this.selectedLabel = str;
+        } else {
+          this.selectedLabel = val.label;
+        }
       }
     },
     methods: {
