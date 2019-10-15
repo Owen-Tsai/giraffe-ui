@@ -1,3 +1,15 @@
+function broadcast(componentName, eventName, params) {
+  this.$children.forEach(child => {
+    var name = child.$options.componentName;
+
+    if (name === componentName) {
+      child.$emit.apply(child, event, ...params);
+    } else {
+      broadcast.apply(child, componentName, eventName, ...params);
+    }
+  });
+}
+
 export default {
   methods: {
     dispatch(parentComponentName, event, ...params) {
@@ -17,15 +29,7 @@ export default {
       }
     },
     broadcast(childComponentName, event, ...params) {
-      this.$children.forEach(child => {
-        let name = child.$options.componentName;
-    
-        if(name === childComponentName) {
-          child.$emit(event, ...params);
-        } else {
-          this.broadcast(childComponentName, event, ...params);
-        }
-      })
+      broadcast.call(this, childComponentName, event, ...params);
     }
   }
 }
