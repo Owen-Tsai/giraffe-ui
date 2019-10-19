@@ -5,21 +5,21 @@
 ## 基础用法
 
 <div class="demo-block">
-  <c-rate></c-rate>
+  <c-rate v-model="rate"></c-rate>
 </div>
 
 ```html
-<c-rate></c-rate>
+<c-rate v-model="rate"></c-rate>
 ```
 
 默认情况下，评价组件使用`warning`色作为被激活图标的颜色，选用`grey-300`作为未被激活图标的颜色。你可以在评价组件上指定`color`属性来改变激活图标的颜色，使之符合你的产品环境。
 
 <div class="demo-block">
-  <c-rate color="primary"></c-rate>
+  <c-rate color="primary" v-model="rate"></c-rate>
 </div>
 
 ```html
-<c-rate color="primary"></c-rate>
+<c-rate color="primary" v-model="rate"></c-rate>
 ```
 
 评价组件是一个可以使用`v-model`来实现数据与变量绑定的组件：
@@ -49,11 +49,11 @@
 默认的评价组件使用星星图标，你可以通过传入`icon`和`inactive-icon`这两个属性来分别指定处于激活状态和未激活状态下的图标。但当然，你也可以只指定`icon`属性中的一个，`inactive-icon`未被指定，将会采用与`icon`相同的值。
 
 <div class="demo-block">
-  <c-rate icon="favorite" inactive-icon="favorite_border" color="red"></c-rate>
+  <c-rate icon="favorite" v-model="rate" inactive-icon="favorite_border" color="red"></c-rate>
 </div>
 
 ```html
-<c-rate icon="favorite" inactive-icon="favorite_border" color="red"></c-rate>
+<c-rate icon="favorite" v-model="rate" inactive-icon="favorite_border" color="red"></c-rate>
 ```
 
 ## 改变分值上限
@@ -182,6 +182,7 @@
 <script>
   export default {
     data: () => ({
+      rate: 0,
       rate1: 3,
       rate2: 5,
       rate3: 5,
